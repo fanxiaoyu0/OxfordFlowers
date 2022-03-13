@@ -1,0 +1,32 @@
+{"obj": {"type": "AssignString", "path": ["sys", "name"], "value": "Untitled"}, "version": 1}
+{"obj": {"type": "AssignString", "path": ["sys", "description"], "value": ""}, "version": 2}
+{"obj": {"type": "AssignString", "path": ["sys", "hostname"], "value": "DESKTOP-O2O0IJ7"}, "version": 3}
+{"obj": {"type": "AssignBool", "path": ["sys", "failed"], "value": false}, "version": 4}
+{"obj": {"type": "ClearStringLog", "path": ["monitoring", "stdout"]}, "version": 5}
+{"obj": {"type": "ClearStringLog", "path": ["monitoring", "stderr"]}, "version": 6}
+{"obj": {"type": "AssignString", "path": ["source_code", "entrypoint"], "value": "test.py"}, "version": 7}
+{"obj": {"type": "UploadFileSet", "path": ["source_code", "files"], "file_globs": ["C:\\Users\\fanxiaoyu\\Desktop\\OxfordFlowers\\code\\test.py"], "reset": "False"}, "version": 8}
+{"obj": {"type": "ConfigFloatSeries", "path": ["monitoring", "cpu"], "min": 0.0, "max": 100.0, "unit": "%"}, "version": 9}
+{"obj": {"type": "ClearFloatLog", "path": ["monitoring", "cpu"]}, "version": 10}
+{"obj": {"type": "ConfigFloatSeries", "path": ["monitoring", "memory"], "min": 0.0, "max": 7.84503173828125, "unit": "GB"}, "version": 11}
+{"obj": {"type": "ClearFloatLog", "path": ["monitoring", "memory"]}, "version": 12}
+{"obj": {"type": "ConfigFloatSeries", "path": ["monitoring", "gpu"], "min": 0.0, "max": 100.0, "unit": "%"}, "version": 13}
+{"obj": {"type": "ClearFloatLog", "path": ["monitoring", "gpu"]}, "version": 14}
+{"obj": {"type": "ConfigFloatSeries", "path": ["monitoring", "gpu_memory"], "min": 0.0, "max": 4.0, "unit": "GB"}, "version": 15}
+{"obj": {"type": "ClearFloatLog", "path": ["monitoring", "gpu_memory"]}, "version": 16}
+{"obj": {"type": "AssignFloat", "path": ["parameters", "learning_rate"], "value": 0.001}, "version": 17}
+{"obj": {"type": "AssignString", "path": ["parameters", "optimizer"], "value": "Adam"}, "version": 18}
+{"obj": {"type": "LogFloats", "path": ["train", "loss"], "values": [{"value": 1.0, "step": null, "ts": 1647101334.8952444}]}, "version": 19}
+{"obj": {"type": "LogFloats", "path": ["train", "loss"], "values": [{"value": 0.9, "step": null, "ts": 1647101334.8952444}]}, "version": 20}
+{"obj": {"type": "LogFloats", "path": ["train", "loss"], "values": [{"value": 0.81, "step": null, "ts": 1647101334.8952444}]}, "version": 21}
+{"obj": {"type": "LogFloats", "path": ["train", "loss"], "values": [{"value": 0.7290000000000001, "step": null, "ts": 1647101334.8952444}]}, "version": 22}
+{"obj": {"type": "LogFloats", "path": ["train", "loss"], "values": [{"value": 0.6561, "step": null, "ts": 1647101334.8952444}]}, "version": 23}
+{"obj": {"type": "LogFloats", "path": ["train", "loss"], "values": [{"value": 0.5904900000000001, "step": null, "ts": 1647101334.8952444}]}, "version": 24}
+{"obj": {"type": "LogFloats", "path": ["train", "loss"], "values": [{"value": 0.531441, "step": null, "ts": 1647101334.8952444}]}, "version": 25}
+{"obj": {"type": "LogFloats", "path": ["train", "loss"], "values": [{"value": 0.4782969000000001, "step": null, "ts": 1647101334.8992434}]}, "version": 26}
+{"obj": {"type": "LogFloats", "path": ["train", "loss"], "values": [{"value": 0.4304672100000001, "step": null, "ts": 1647101334.8992434}]}, "version": 27}
+{"obj": {"type": "LogFloats", "path": ["train", "loss"], "values": [{"value": 0.3874204890000001, "step": null, "ts": 1647101334.8992434}]}, "version": 28}
+{"obj": {"type": "AssignFloat", "path": ["eval", "f1_score"], "value": 0.66}, "version": 29}
+{"obj": {"type": "LogFloats", "path": ["monitoring", "cpu"], "values": [{"value": 20.6, "step": null, "ts": 1647101334.8912442}]}, "version": 30}
+{"obj": {"type": "LogFloats", "path": ["monitoring", "memory"], "values": [{"value": 6.826961517333984, "step": null, "ts": 1647101334.8912442}]}, "version": 31}
+{"obj": {"type": "LogFloats", "path": ["monitoring", "gpu_memory"], "values": [{"value": 0.130859375, "step": null, "ts": 1647101334.8912442}]}, "version": 32}
