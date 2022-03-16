@@ -219,3 +219,4 @@ epoch: 37 validAccuracy: 0.152 trainAccuracy: 0.173 delta: -0.011
 epoch: 38 validAccuracy: 0.161 trainAccuracy: 0.196 delta: -0.002
 epoch: 39 validAccuracy: 0.185 trainAccuracy: 0.204 delta: 0.022
 epoch: 40 validAccuracy: 0.17 trainAccuracy: 0.183 delta: -0.015
+epoch: 41 validAccuracy: 0.176 trainAccuracy: 0.212 delta: -0.009
