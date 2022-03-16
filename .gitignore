@@ -2,6 +2,9 @@ cache
 .vscode
 __pycache__
 
-
+/data/
+/model/
+*~
+*.zip
 *.pt
 *.jpg
