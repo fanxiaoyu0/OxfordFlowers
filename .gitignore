@@ -1,10 +1,7 @@
-cache
-.vscode
-__pycache__
-
 /data/
 /model/
-*~
-*.zip
+/code/__pycache__/
+/code/.neptune/
+
 *.pt
 *.jpg

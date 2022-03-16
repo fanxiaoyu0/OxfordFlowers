@@ -12,9 +12,10 @@ import numpy as np
 from mlp_mixer import MLPMixerForImageClassification
 from conv_mixer import ConvMixer
 from vision_transformer import VisionTransformer
+from jittor.models.resnet import Resnet50
 # import os
 # os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"   # see issue #152
-# os.environ["CUDA_VISIBLE_DEVICES"]="3"
+# os.environ["CUDA_VISIBLE_DEVICES"]="2"
 # import neptune.new as neptune
 # import neptune.new as neptune
 # import optuna
@@ -131,8 +132,9 @@ def trial(learningRate=1e-5):
     # model=MLPMixerForImageClassification(
     #     in_channels=3,patch_size = patch_size, d_model = dim, depth = depth, num_classes=102,\
     #     image_size=croppedImagesize,dropout=dropout)
-    model=ConvMixer(dim = 768, depth = 32, kernel_size=7, patch_size=7,n_classes=102)
+    # model=ConvMixer(dim = 768, depth = 32, kernel_size=7, patch_size=7,n_classes=102)
     # model = VisionTransformer(patch_size=16, embed_dim=768, depth=8, num_heads=8, mlp_ratio=3.)
+    model=Resnet50(num_classes=102)
     criterion = nn.CrossEntropyLoss()
     #lr=2e-5#trial.suggest_float("learningRate", 1e-6,5e-4,log=True)
     # weight_decay=trial.suggest_float("weight_decay", 5e-2, 1e-4)
@@ -148,7 +150,7 @@ def trial(learningRate=1e-5):
     # print("dropout:",dropout)
     print("----------------- A new trial ---------------------")
     print("learning rate:",learningRate)
-    epochs = 120
+    epochs = 800
     currentBestAccuracy=0.0
     currentBestEpoch=0
     for epoch in range(epochs):
@@ -167,7 +169,7 @@ def trial(learningRate=1e-5):
 
 if __name__=="__main__":
     globalBestAccuracy=0.0
-    learningRateList=[1e-6,1e-5,5e-5,1e-4,1e-3]
+    learningRateList=[5e-5]#[1e-6,1e-5,5e-5,1e-4,1e-3]
     trialBoard=[]
     for learningRate in learningRateList:
         accuracy,epoch=trial(learningRate=learningRate)

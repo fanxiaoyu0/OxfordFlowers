@@ -1,0 +1,292 @@
+----------------- A new trial ---------------------
+learning rate: 1e-06
+epoch: 0 validAccuracy: 0.011 trainAccuracy: 0.001 delta 0.011
+epoch: 1 validAccuracy: 0.035 trainAccuracy: 0.028 delta 0.024000000000000004
+epoch: 2 validAccuracy: 0.042 trainAccuracy: 0.055 delta 0.006999999999999999
+epoch: 3 validAccuracy: 0.057 trainAccuracy: 0.082 delta 0.015
+epoch: 4 validAccuracy: 0.069 trainAccuracy: 0.089 delta 0.012000000000000004
+epoch: 5 validAccuracy: 0.079 trainAccuracy: 0.105 delta 0.009999999999999995
+epoch: 6 validAccuracy: 0.126 trainAccuracy: 0.132 delta 0.047
+epoch: 7 validAccuracy: 0.133 trainAccuracy: 0.17 delta 0.007000000000000006
+epoch: 8 validAccuracy: 0.162 trainAccuracy: 0.193 delta 0.028999999999999998
+epoch: 9 validAccuracy: 0.168 trainAccuracy: 0.222 delta 0.006000000000000005
+epoch: 10 validAccuracy: 0.209 trainAccuracy: 0.255 delta 0.04099999999999998
+epoch: 11 validAccuracy: 0.216 trainAccuracy: 0.279 delta 0.007000000000000006
+epoch: 12 validAccuracy: 0.218 trainAccuracy: 0.32 delta 0.0020000000000000018
+epoch: 13 validAccuracy: 0.229 trainAccuracy: 0.37 delta 0.01100000000000001
+epoch: 14 validAccuracy: 0.243 trainAccuracy: 0.409 delta 0.013999999999999985
+epoch: 15 validAccuracy: 0.261 trainAccuracy: 0.426 delta 0.018000000000000016
+epoch: 16 validAccuracy: 0.267 trainAccuracy: 0.475 delta 0.006000000000000005
+epoch: 17 validAccuracy: 0.27 trainAccuracy: 0.518 delta 0.0030000000000000027
+epoch: 18 validAccuracy: 0.278 trainAccuracy: 0.557 delta 0.008000000000000007
+epoch: 19 validAccuracy: 0.305 trainAccuracy: 0.605 delta 0.02699999999999997
+epoch: 20 validAccuracy: 0.289 trainAccuracy: 0.659 delta -0.016000000000000014
+epoch: 21 validAccuracy: 0.311 trainAccuracy: 0.713 delta 0.006000000000000005
+epoch: 22 validAccuracy: 0.325 trainAccuracy: 0.76 delta 0.014000000000000012
+epoch: 23 validAccuracy: 0.326 trainAccuracy: 0.818 delta 0.0010000000000000009
+epoch: 24 validAccuracy: 0.325 trainAccuracy: 0.847 delta -0.0010000000000000009
+epoch: 25 validAccuracy: 0.33 trainAccuracy: 0.881 delta 0.0040000000000000036
+epoch: 26 validAccuracy: 0.336 trainAccuracy: 0.908 delta 0.006000000000000005
+epoch: 27 validAccuracy: 0.346 trainAccuracy: 0.908 delta 0.009999999999999953
+epoch: 28 validAccuracy: 0.337 trainAccuracy: 0.939 delta -0.008999999999999952
+epoch: 29 validAccuracy: 0.345 trainAccuracy: 0.939 delta -0.0010000000000000009
+epoch: 30 validAccuracy: 0.348 trainAccuracy: 0.946 delta 0.0020000000000000018
+epoch: 31 validAccuracy: 0.349 trainAccuracy: 0.949 delta 0.0010000000000000009
+epoch: 32 validAccuracy: 0.347 trainAccuracy: 0.949 delta -0.0020000000000000018
+epoch: 33 validAccuracy: 0.342 trainAccuracy: 0.949 delta -0.006999999999999951
+epoch: 34 validAccuracy: 0.344 trainAccuracy: 0.95 delta -0.0050000000000000044
+epoch: 35 validAccuracy: 0.33 trainAccuracy: 0.945 delta -0.01899999999999996
+epoch: 36 validAccuracy: 0.338 trainAccuracy: 0.947 delta -0.010999999999999954
+epoch: 37 validAccuracy: 0.341 trainAccuracy: 0.941 delta -0.007999999999999952
+epoch: 38 validAccuracy: 0.336 trainAccuracy: 0.939 delta -0.012999999999999956
+epoch: 39 validAccuracy: 0.33 trainAccuracy: 0.933 delta -0.01899999999999996
+epoch: 40 validAccuracy: 0.326 trainAccuracy: 0.937 delta -0.022999999999999965
+epoch: 41 validAccuracy: 0.33 trainAccuracy: 0.925 delta -0.01899999999999996
+epoch: 42 validAccuracy: 0.344 trainAccuracy: 0.94 delta -0.0050000000000000044
+epoch: 43 validAccuracy: 0.335 trainAccuracy: 0.946 delta -0.013999999999999957
+epoch: 44 validAccuracy: 0.326 trainAccuracy: 0.95 delta -0.022999999999999965
+epoch: 45 validAccuracy: 0.325 trainAccuracy: 0.943 delta -0.023999999999999966
+epoch: 46 validAccuracy: 0.333 trainAccuracy: 0.955 delta -0.01599999999999996
+epoch: 47 validAccuracy: 0.348 trainAccuracy: 0.969 delta -0.0010000000000000009
+epoch: 48 validAccuracy: 0.337 trainAccuracy: 0.966 delta -0.011999999999999955
+epoch: 49 validAccuracy: 0.321 trainAccuracy: 0.965 delta -0.02799999999999997
+=============================================================================================
+learningRate: 1e-06 accuracy:0.349 epoch: 31 delta: 0.349
+=============================================================================================
+[38;5;2m[i 0315 10:32:34.645981 68 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0315 10:32:34.651268 68 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0315 10:32:34.674599 68 dataset.py:629] Found 102 classes and 6149 images.[m
+----------------- A new trial ---------------------
+learning rate: 1e-05
+epoch: 0 validAccuracy: 0.063 trainAccuracy: 0.026 delta 0.063
+epoch: 1 validAccuracy: 0.104 trainAccuracy: 0.083 delta 0.040999999999999995
+epoch: 2 validAccuracy: 0.124 trainAccuracy: 0.136 delta 0.020000000000000004
+epoch: 3 validAccuracy: 0.173 trainAccuracy: 0.174 delta 0.04899999999999999
+epoch: 4 validAccuracy: 0.207 trainAccuracy: 0.244 delta 0.034
+epoch: 5 validAccuracy: 0.219 trainAccuracy: 0.298 delta 0.01200000000000001
+epoch: 6 validAccuracy: 0.252 trainAccuracy: 0.331 delta 0.033
+epoch: 7 validAccuracy: 0.25 trainAccuracy: 0.365 delta -0.0020000000000000018
+epoch: 8 validAccuracy: 0.271 trainAccuracy: 0.435 delta 0.019000000000000017
+epoch: 9 validAccuracy: 0.293 trainAccuracy: 0.468 delta 0.021999999999999964
+epoch: 10 validAccuracy: 0.289 trainAccuracy: 0.522 delta -0.0040000000000000036
+epoch: 11 validAccuracy: 0.304 trainAccuracy: 0.545 delta 0.01100000000000001
+epoch: 12 validAccuracy: 0.307 trainAccuracy: 0.606 delta 0.0030000000000000027
+epoch: 13 validAccuracy: 0.325 trainAccuracy: 0.666 delta 0.018000000000000016
+epoch: 14 validAccuracy: 0.311 trainAccuracy: 0.718 delta -0.014000000000000012
+epoch: 15 validAccuracy: 0.351 trainAccuracy: 0.758 delta 0.025999999999999968
+epoch: 16 validAccuracy: 0.329 trainAccuracy: 0.792 delta -0.021999999999999964
+epoch: 17 validAccuracy: 0.361 trainAccuracy: 0.834 delta 0.010000000000000009
+epoch: 18 validAccuracy: 0.328 trainAccuracy: 0.877 delta -0.032999999999999974
+epoch: 19 validAccuracy: 0.339 trainAccuracy: 0.899 delta -0.021999999999999964
+epoch: 20 validAccuracy: 0.336 trainAccuracy: 0.908 delta -0.024999999999999967
+epoch: 21 validAccuracy: 0.349 trainAccuracy: 0.924 delta -0.01200000000000001
+epoch: 22 validAccuracy: 0.344 trainAccuracy: 0.93 delta -0.017000000000000015
+epoch: 23 validAccuracy: 0.351 trainAccuracy: 0.949 delta -0.010000000000000009
+epoch: 24 validAccuracy: 0.347 trainAccuracy: 0.954 delta -0.014000000000000012
+epoch: 25 validAccuracy: 0.349 trainAccuracy: 0.963 delta -0.01200000000000001
+epoch: 26 validAccuracy: 0.349 trainAccuracy: 0.979 delta -0.01200000000000001
+epoch: 27 validAccuracy: 0.356 trainAccuracy: 0.97 delta -0.0050000000000000044
+epoch: 28 validAccuracy: 0.346 trainAccuracy: 0.975 delta -0.015000000000000013
+epoch: 29 validAccuracy: 0.356 trainAccuracy: 0.976 delta -0.0050000000000000044
+epoch: 30 validAccuracy: 0.357 trainAccuracy: 0.973 delta -0.0040000000000000036
+epoch: 31 validAccuracy: 0.349 trainAccuracy: 0.978 delta -0.01200000000000001
+epoch: 32 validAccuracy: 0.364 trainAccuracy: 0.981 delta 0.0030000000000000027
+epoch: 33 validAccuracy: 0.358 trainAccuracy: 0.985 delta -0.006000000000000005
+epoch: 34 validAccuracy: 0.366 trainAccuracy: 0.984 delta 0.0020000000000000018
+epoch: 35 validAccuracy: 0.362 trainAccuracy: 0.985 delta -0.0040000000000000036
+epoch: 36 validAccuracy: 0.364 trainAccuracy: 0.987 delta -0.0020000000000000018
+epoch: 37 validAccuracy: 0.359 trainAccuracy: 0.983 delta -0.007000000000000006
+epoch: 38 validAccuracy: 0.366 trainAccuracy: 0.989 delta 0.0
+epoch: 39 validAccuracy: 0.358 trainAccuracy: 0.991 delta -0.008000000000000007
+epoch: 40 validAccuracy: 0.358 trainAccuracy: 0.991 delta -0.008000000000000007
+epoch: 41 validAccuracy: 0.355 trainAccuracy: 0.983 delta -0.01100000000000001
+epoch: 42 validAccuracy: 0.352 trainAccuracy: 0.994 delta -0.014000000000000012
+epoch: 43 validAccuracy: 0.365 trainAccuracy: 0.996 delta -0.0010000000000000009
+epoch: 44 validAccuracy: 0.363 trainAccuracy: 0.994 delta -0.0030000000000000027
+epoch: 45 validAccuracy: 0.373 trainAccuracy: 0.997 delta 0.007000000000000006
+epoch: 46 validAccuracy: 0.363 trainAccuracy: 0.995 delta -0.010000000000000009
+epoch: 47 validAccuracy: 0.363 trainAccuracy: 0.989 delta -0.010000000000000009
+epoch: 48 validAccuracy: 0.363 trainAccuracy: 0.991 delta -0.010000000000000009
+epoch: 49 validAccuracy: 0.355 trainAccuracy: 0.995 delta -0.018000000000000016
+=============================================================================================
+learningRate: 1e-05 accuracy:0.373 epoch: 45 delta: 0.02400000000000002
+=============================================================================================
+[38;5;2m[i 0315 11:05:59.282532 68 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0315 11:05:59.287863 68 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0315 11:05:59.310954 68 dataset.py:629] Found 102 classes and 6149 images.[m
+----------------- A new trial ---------------------
+learning rate: 5e-05
+epoch: 0 validAccuracy: 0.08 trainAccuracy: 0.032 delta 0.08
+epoch: 1 validAccuracy: 0.137 trainAccuracy: 0.084 delta 0.05700000000000001
+epoch: 2 validAccuracy: 0.175 trainAccuracy: 0.126 delta 0.03799999999999998
+epoch: 3 validAccuracy: 0.209 trainAccuracy: 0.213 delta 0.034
+epoch: 4 validAccuracy: 0.234 trainAccuracy: 0.26 delta 0.025000000000000022
+epoch: 5 validAccuracy: 0.242 trainAccuracy: 0.329 delta 0.00799999999999998
+epoch: 6 validAccuracy: 0.285 trainAccuracy: 0.405 delta 0.04299999999999998
+epoch: 7 validAccuracy: 0.302 trainAccuracy: 0.495 delta 0.017000000000000015
+epoch: 8 validAccuracy: 0.32 trainAccuracy: 0.555 delta 0.018000000000000016
+epoch: 9 validAccuracy: 0.328 trainAccuracy: 0.64 delta 0.008000000000000007
+epoch: 10 validAccuracy: 0.338 trainAccuracy: 0.741 delta 0.010000000000000009
+epoch: 11 validAccuracy: 0.351 trainAccuracy: 0.791 delta 0.012999999999999956
+epoch: 12 validAccuracy: 0.36 trainAccuracy: 0.84 delta 0.009000000000000008
+epoch: 13 validAccuracy: 0.37 trainAccuracy: 0.899 delta 0.010000000000000009
+epoch: 14 validAccuracy: 0.37 trainAccuracy: 0.926 delta 0.0
+epoch: 15 validAccuracy: 0.374 trainAccuracy: 0.947 delta 0.0040000000000000036
+epoch: 16 validAccuracy: 0.37 trainAccuracy: 0.968 delta -0.0040000000000000036
+epoch: 17 validAccuracy: 0.368 trainAccuracy: 0.97 delta -0.006000000000000005
+epoch: 18 validAccuracy: 0.387 trainAccuracy: 0.97 delta 0.013000000000000012
+epoch: 19 validAccuracy: 0.379 trainAccuracy: 0.973 delta -0.008000000000000007
+epoch: 20 validAccuracy: 0.373 trainAccuracy: 0.964 delta -0.014000000000000012
+epoch: 21 validAccuracy: 0.376 trainAccuracy: 0.969 delta -0.01100000000000001
+epoch: 22 validAccuracy: 0.355 trainAccuracy: 0.956 delta -0.03200000000000003
+epoch: 23 validAccuracy: 0.362 trainAccuracy: 0.947 delta -0.025000000000000022
+epoch: 24 validAccuracy: 0.363 trainAccuracy: 0.947 delta -0.02400000000000002
+epoch: 25 validAccuracy: 0.336 trainAccuracy: 0.92 delta -0.05099999999999999
+epoch: 26 validAccuracy: 0.341 trainAccuracy: 0.936 delta -0.045999999999999985
+epoch: 27 validAccuracy: 0.344 trainAccuracy: 0.888 delta -0.04300000000000004
+epoch: 28 validAccuracy: 0.349 trainAccuracy: 0.91 delta -0.038000000000000034
+epoch: 29 validAccuracy: 0.345 trainAccuracy: 0.927 delta -0.04200000000000004
+epoch: 30 validAccuracy: 0.336 trainAccuracy: 0.916 delta -0.05099999999999999
+epoch: 31 validAccuracy: 0.338 trainAccuracy: 0.902 delta -0.04899999999999999
+epoch: 32 validAccuracy: 0.348 trainAccuracy: 0.935 delta -0.039000000000000035
+epoch: 33 validAccuracy: 0.344 trainAccuracy: 0.963 delta -0.04300000000000004
+epoch: 34 validAccuracy: 0.37 trainAccuracy: 0.977 delta -0.017000000000000015
+epoch: 35 validAccuracy: 0.375 trainAccuracy: 0.984 delta -0.01200000000000001
+epoch: 36 validAccuracy: 0.403 trainAccuracy: 0.991 delta 0.016000000000000014
+epoch: 37 validAccuracy: 0.361 trainAccuracy: 0.991 delta -0.04200000000000004
+epoch: 38 validAccuracy: 0.388 trainAccuracy: 0.998 delta -0.015000000000000013
+epoch: 39 validAccuracy: 0.381 trainAccuracy: 0.996 delta -0.02200000000000002
+epoch: 40 validAccuracy: 0.389 trainAccuracy: 0.998 delta -0.014000000000000012
+epoch: 41 validAccuracy: 0.394 trainAccuracy: 1.0 delta -0.009000000000000008
+epoch: 42 validAccuracy: 0.398 trainAccuracy: 1.0 delta -0.0050000000000000044
+epoch: 43 validAccuracy: 0.393 trainAccuracy: 1.0 delta -0.010000000000000009
+epoch: 44 validAccuracy: 0.396 trainAccuracy: 1.0 delta -0.007000000000000006
+epoch: 45 validAccuracy: 0.398 trainAccuracy: 1.0 delta -0.0050000000000000044
+epoch: 46 validAccuracy: 0.396 trainAccuracy: 1.0 delta -0.007000000000000006
+epoch: 47 validAccuracy: 0.399 trainAccuracy: 1.0 delta -0.0040000000000000036
+epoch: 48 validAccuracy: 0.398 trainAccuracy: 1.0 delta -0.0050000000000000044
+epoch: 49 validAccuracy: 0.399 trainAccuracy: 1.0 delta -0.0040000000000000036
+=============================================================================================
+learningRate: 5e-05 accuracy:0.403 epoch: 36 delta: 0.030000000000000027
+=============================================================================================
+[38;5;2m[i 0315 11:38:33.924866 68 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0315 11:38:33.930187 68 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0315 11:38:33.953375 68 dataset.py:629] Found 102 classes and 6149 images.[m
+----------------- A new trial ---------------------
+learning rate: 0.0001
+epoch: 0 validAccuracy: 0.08 trainAccuracy: 0.033 delta 0.08
+epoch: 1 validAccuracy: 0.13 trainAccuracy: 0.083 delta 0.05
+epoch: 2 validAccuracy: 0.146 trainAccuracy: 0.113 delta 0.015999999999999986
+epoch: 3 validAccuracy: 0.192 trainAccuracy: 0.197 delta 0.04600000000000001
+epoch: 4 validAccuracy: 0.196 trainAccuracy: 0.225 delta 0.0040000000000000036
+epoch: 5 validAccuracy: 0.244 trainAccuracy: 0.29 delta 0.04799999999999999
+epoch: 6 validAccuracy: 0.283 trainAccuracy: 0.379 delta 0.03899999999999998
+epoch: 7 validAccuracy: 0.275 trainAccuracy: 0.428 delta -0.007999999999999952
+epoch: 8 validAccuracy: 0.295 trainAccuracy: 0.495 delta 0.01200000000000001
+epoch: 9 validAccuracy: 0.314 trainAccuracy: 0.579 delta 0.019000000000000017
+epoch: 10 validAccuracy: 0.344 trainAccuracy: 0.67 delta 0.02999999999999997
+epoch: 11 validAccuracy: 0.353 trainAccuracy: 0.76 delta 0.009000000000000008
+epoch: 12 validAccuracy: 0.365 trainAccuracy: 0.825 delta 0.01200000000000001
+epoch: 13 validAccuracy: 0.377 trainAccuracy: 0.881 delta 0.01200000000000001
+epoch: 14 validAccuracy: 0.375 trainAccuracy: 0.92 delta -0.0020000000000000018
+epoch: 15 validAccuracy: 0.383 trainAccuracy: 0.928 delta 0.006000000000000005
+epoch: 16 validAccuracy: 0.387 trainAccuracy: 0.956 delta 0.0040000000000000036
+epoch: 17 validAccuracy: 0.382 trainAccuracy: 0.958 delta -0.0050000000000000044
+epoch: 18 validAccuracy: 0.396 trainAccuracy: 0.956 delta 0.009000000000000008
+epoch: 19 validAccuracy: 0.39 trainAccuracy: 0.963 delta -0.006000000000000005
+epoch: 20 validAccuracy: 0.379 trainAccuracy: 0.959 delta -0.017000000000000015
+epoch: 21 validAccuracy: 0.343 trainAccuracy: 0.929 delta -0.05299999999999999
+epoch: 22 validAccuracy: 0.359 trainAccuracy: 0.916 delta -0.03700000000000003
+epoch: 23 validAccuracy: 0.332 trainAccuracy: 0.843 delta -0.064
+epoch: 24 validAccuracy: 0.313 trainAccuracy: 0.804 delta -0.08300000000000002
+epoch: 25 validAccuracy: 0.341 trainAccuracy: 0.807 delta -0.05499999999999999
+epoch: 26 validAccuracy: 0.321 trainAccuracy: 0.855 delta -0.07500000000000001
+epoch: 27 validAccuracy: 0.319 trainAccuracy: 0.832 delta -0.07700000000000001
+epoch: 28 validAccuracy: 0.345 trainAccuracy: 0.86 delta -0.051000000000000045
+epoch: 29 validAccuracy: 0.326 trainAccuracy: 0.855 delta -0.07
+epoch: 30 validAccuracy: 0.337 trainAccuracy: 0.838 delta -0.059
+epoch: 31 validAccuracy: 0.341 trainAccuracy: 0.856 delta -0.05499999999999999
+epoch: 32 validAccuracy: 0.345 trainAccuracy: 0.93 delta -0.051000000000000045
+epoch: 33 validAccuracy: 0.328 trainAccuracy: 0.94 delta -0.068
+epoch: 34 validAccuracy: 0.366 trainAccuracy: 0.933 delta -0.030000000000000027
+epoch: 35 validAccuracy: 0.348 trainAccuracy: 0.961 delta -0.04800000000000004
+epoch: 36 validAccuracy: 0.352 trainAccuracy: 0.966 delta -0.04400000000000004
+epoch: 37 validAccuracy: 0.387 trainAccuracy: 0.975 delta -0.009000000000000008
+epoch: 38 validAccuracy: 0.393 trainAccuracy: 0.994 delta -0.0030000000000000027
+epoch: 39 validAccuracy: 0.396 trainAccuracy: 0.998 delta 0.0
+epoch: 40 validAccuracy: 0.395 trainAccuracy: 1.0 delta -0.0010000000000000009
+epoch: 41 validAccuracy: 0.393 trainAccuracy: 1.0 delta -0.0030000000000000027
+epoch: 42 validAccuracy: 0.396 trainAccuracy: 1.0 delta 0.0
+epoch: 43 validAccuracy: 0.392 trainAccuracy: 1.0 delta -0.0040000000000000036
+epoch: 44 validAccuracy: 0.394 trainAccuracy: 1.0 delta -0.0020000000000000018
+epoch: 45 validAccuracy: 0.393 trainAccuracy: 1.0 delta -0.0030000000000000027
+epoch: 46 validAccuracy: 0.396 trainAccuracy: 1.0 delta 0.0
+epoch: 47 validAccuracy: 0.398 trainAccuracy: 0.999 delta 0.0020000000000000018
+epoch: 48 validAccuracy: 0.4 trainAccuracy: 0.999 delta 0.0020000000000000018
+epoch: 49 validAccuracy: 0.4 trainAccuracy: 1.0 delta 0.0
+=============================================================================================
+learningRate: 0.0001 accuracy:0.4 epoch: 48 delta: -0.0030000000000000027
+=============================================================================================
+[38;5;2m[i 0315 12:11:06.655658 68 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0315 12:11:06.660919 68 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0315 12:11:06.683714 68 dataset.py:629] Found 102 classes and 6149 images.[m
+----------------- A new trial ---------------------
+learning rate: 0.001
+epoch: 0 validAccuracy: 0.04 trainAccuracy: 0.021 delta 0.04
+epoch: 1 validAccuracy: 0.034 trainAccuracy: 0.034 delta -0.005999999999999998
+epoch: 2 validAccuracy: 0.027 trainAccuracy: 0.031 delta -0.013000000000000001
+epoch: 3 validAccuracy: 0.053 trainAccuracy: 0.032 delta 0.012999999999999998
+epoch: 4 validAccuracy: 0.056 trainAccuracy: 0.036 delta 0.0030000000000000027
+epoch: 5 validAccuracy: 0.042 trainAccuracy: 0.037 delta -0.013999999999999999
+epoch: 6 validAccuracy: 0.043 trainAccuracy: 0.036 delta -0.013000000000000005
+epoch: 7 validAccuracy: 0.054 trainAccuracy: 0.035 delta -0.0020000000000000018
+epoch: 8 validAccuracy: 0.043 trainAccuracy: 0.04 delta -0.013000000000000005
+epoch: 9 validAccuracy: 0.067 trainAccuracy: 0.052 delta 0.011000000000000003
+epoch: 10 validAccuracy: 0.075 trainAccuracy: 0.068 delta 0.007999999999999993
+epoch: 11 validAccuracy: 0.082 trainAccuracy: 0.07 delta 0.007000000000000006
+epoch: 12 validAccuracy: 0.102 trainAccuracy: 0.079 delta 0.01999999999999999
+epoch: 13 validAccuracy: 0.09 trainAccuracy: 0.093 delta -0.011999999999999997
+epoch: 14 validAccuracy: 0.106 trainAccuracy: 0.127 delta 0.0040000000000000036
+epoch: 15 validAccuracy: 0.105 trainAccuracy: 0.137 delta -0.0010000000000000009
+epoch: 16 validAccuracy: 0.104 trainAccuracy: 0.122 delta -0.0020000000000000018
+epoch: 17 validAccuracy: 0.094 trainAccuracy: 0.129 delta -0.011999999999999997
+epoch: 18 validAccuracy: 0.104 trainAccuracy: 0.128 delta -0.0020000000000000018
+epoch: 19 validAccuracy: 0.092 trainAccuracy: 0.116 delta -0.013999999999999999
+epoch: 20 validAccuracy: 0.108 trainAccuracy: 0.093 delta 0.0020000000000000018
+epoch: 21 validAccuracy: 0.104 trainAccuracy: 0.097 delta -0.0040000000000000036
+epoch: 22 validAccuracy: 0.102 trainAccuracy: 0.083 delta -0.006000000000000005
+epoch: 23 validAccuracy: 0.07 trainAccuracy: 0.083 delta -0.03799999999999999
+epoch: 24 validAccuracy: 0.081 trainAccuracy: 0.085 delta -0.026999999999999996
+epoch: 25 validAccuracy: 0.097 trainAccuracy: 0.071 delta -0.010999999999999996
+epoch: 26 validAccuracy: 0.08 trainAccuracy: 0.075 delta -0.027999999999999997
+epoch: 27 validAccuracy: 0.069 trainAccuracy: 0.074 delta -0.03899999999999999
+epoch: 28 validAccuracy: 0.09 trainAccuracy: 0.063 delta -0.018000000000000002
+epoch: 29 validAccuracy: 0.029 trainAccuracy: 0.049 delta -0.079
+epoch: 30 validAccuracy: 0.039 trainAccuracy: 0.034 delta -0.069
+epoch: 31 validAccuracy: 0.019 trainAccuracy: 0.044 delta -0.089
+epoch: 32 validAccuracy: 0.025 trainAccuracy: 0.017 delta -0.08299999999999999
+epoch: 33 validAccuracy: 0.039 trainAccuracy: 0.036 delta -0.069
+epoch: 34 validAccuracy: 0.045 trainAccuracy: 0.03 delta -0.063
+epoch: 35 validAccuracy: 0.045 trainAccuracy: 0.032 delta -0.063
+epoch: 36 validAccuracy: 0.044 trainAccuracy: 0.036 delta -0.064
+epoch: 37 validAccuracy: 0.05 trainAccuracy: 0.037 delta -0.057999999999999996
+epoch: 38 validAccuracy: 0.056 trainAccuracy: 0.045 delta -0.052
+epoch: 39 validAccuracy: 0.054 trainAccuracy: 0.041 delta -0.054
+epoch: 40 validAccuracy: 0.07 trainAccuracy: 0.049 delta -0.03799999999999999
+epoch: 41 validAccuracy: 0.064 trainAccuracy: 0.068 delta -0.044
+epoch: 42 validAccuracy: 0.078 trainAccuracy: 0.075 delta -0.03
+epoch: 43 validAccuracy: 0.079 trainAccuracy: 0.078 delta -0.028999999999999998
+epoch: 44 validAccuracy: 0.071 trainAccuracy: 0.095 delta -0.037000000000000005
+epoch: 45 validAccuracy: 0.075 trainAccuracy: 0.105 delta -0.033
+epoch: 46 validAccuracy: 0.072 trainAccuracy: 0.082 delta -0.036000000000000004
+epoch: 47 validAccuracy: 0.073 trainAccuracy: 0.093 delta -0.035
+epoch: 48 validAccuracy: 0.081 trainAccuracy: 0.088 delta -0.026999999999999996
+epoch: 49 validAccuracy: 0.077 trainAccuracy: 0.092 delta -0.031
+=============================================================================================
+learningRate: 0.001 accuracy:0.108 epoch: 20 delta: -0.29500000000000004
+=============================================================================================
+learningRate: 1e-06 accuracy:0.349 epoch: 31
+learningRate: 1e-05 accuracy:0.373 epoch: 45
+learningRate: 5e-05 accuracy:0.403 epoch: 36
+learningRate: 0.0001 accuracy:0.4 epoch: 48
+learningRate: 0.001 accuracy:0.108 epoch: 20

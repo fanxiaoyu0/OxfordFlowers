@@ -11,14 +11,14 @@ import numpy as np
 from PIL import Image
 from tqdm import tqdm
 from mlp_mixer import MLPMixer_S_16
-import neptune.new as neptune
+# import neptune.new as neptune
 from conv_mixer import ConvMixer_768_32
 
-run = neptune.init(
-    project="fanxiaoyu1234/OxfordFlowers",
-    api_token="eyJhcGlfYWRkcmVzcyI6Imh0dHBzOi8vYXBwLm5lcHR1bmUuYWkiLCJhcGlfdXJsIjoiaHR0\
-    cHM6Ly9hcHAubmVwdHVuZS5haSIsImFwaV9rZXkiOiJhNTEyOTJhYi0zN2E2LTQzMWQtODI3ZC1iNWFjY2M2NDdjMmUifQ==",
-)  # your credentials
+# run = neptune.init(
+#     project="fanxiaoyu1234/OxfordFlowers",
+#     api_token="eyJhcGlfYWRkcmVzcyI6Imh0dHBzOi8vYXBwLm5lcHR1bmUuYWkiLCJhcGlfdXJsIjoiaHR0\
+#     cHM6Ly9hcHAubmVwdHVuZS5haSIsImFwaV9rZXkiOiJhNTEyOTJhYi0zN2E2LTQzMWQtODI3ZC1iNWFjY2M2NDdjMmUifQ==",
+# )  # your credentials
 
 
 jt.flags.use_cuda = 1
@@ -58,8 +58,8 @@ def train_one_epoch(model, train_loader, criterion, optimizer, epoch, accum_iter
         pbar.set_description(f'Epoch {epoch} loss={sum(losses) / len(losses):.2f} '
                              f'acc={total_acc / total_num:.2f}')
     scheduler.step()
-    run["train/loss"].log(round(sum(losses) / len(losses),2))
-    run["train/acc"].log(round(total_acc / total_num,2))
+    # run["train/loss"].log(round(sum(losses) / len(losses),2))
+    # run["train/acc"].log(round(total_acc / total_num,2))
 
 def valid_one_epoch(model, val_loader, epoch):
     model.eval()
@@ -78,7 +78,7 @@ def valid_one_epoch(model, val_loader, epoch):
         pbar.set_description(f'Epoch {epoch} acc={total_acc / total_num:.2f}')
 
     acc = total_acc / total_num
-    run["eval/acc"].log(round(acc,2))
+    # run["eval/acc"].log(round(acc,2))
     return acc
 
 # ========== ./datasets/dataloader.py =============== # 
@@ -127,8 +127,8 @@ jt.set_global_seed(648)
 model=MLPMixer_S_16(num_classes=102)
 # model = ConvMixer_768_32(num_classes=102)
 
-run["parameters"] = {"model":"MLPMixer_S_16","learning_rate": 0.003, "weight_decay":1e-4,"optimizer": "Adam",
-                        "scheduler":"CosineAnnealingLR(optimizer, 15, 1e-5)"}
+# run["parameters"] = {"model":"MLPMixer_S_16","learning_rate": 0.003, "weight_decay":1e-4,"optimizer": "Adam",
+#                         "scheduler":"CosineAnnealingLR(optimizer, 15, 1e-5)"}
 
 criterion = nn.CrossEntropyLoss()
 optimizer = nn.Adam(model.parameters(), lr=0.003, weight_decay=1e-4)
@@ -150,4 +150,4 @@ for epoch in range(epochs):
 
 print(best_acc, best_epoch)
 
-run.stop()
+# run.stop()
