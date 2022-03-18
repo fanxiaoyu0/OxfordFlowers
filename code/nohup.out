@@ -1,477 +1,86 @@
-[38;5;2m[i 0316 09:04:34.349119 48 compiler.py:944] Jittor(1.3.1.48) src: /usr/local/lib/python3.7/dist-packages/jittor[m
-[38;5;2m[i 0316 09:04:34.352342 48 compiler.py:945] g++ at /usr/bin/g++(7.5.0)[m
-[38;5;2m[i 0316 09:04:34.352474 48 compiler.py:946] cache_path: /root/.cache/jittor/jt1.3.1/g++7.5.0/py3.7.5/Linux-5.4.0-96x21/IntelRXeonRCPUx84/default[m
-[38;5;2m[i 0316 09:04:34.355980 48 __init__.py:376] Found /usr/local/cuda/bin/nvcc(10.2.89) at /usr/local/cuda/bin/nvcc.[m
-[38;5;2m[i 0316 09:04:34.359464 48 __init__.py:376] Found addr2line(2.30) at /usr/bin/addr2line.[m
-[38;5;2m[i 0316 09:04:35.230697 48 compiler.py:999] cuda key:cu10.2.89_sm_61[m
-[38;5;1m[e 0316 09:04:41.933110 48 compiler.py:875] jit_utils updated, please rerun your command.[m
-[38;5;2m[i 0316 09:06:34.493825 20 compiler.py:944] Jittor(1.3.1.48) src: /usr/local/lib/python3.7/dist-packages/jittor[m
-[38;5;2m[i 0316 09:06:34.496638 20 compiler.py:945] g++ at /usr/bin/g++(7.5.0)[m
-[38;5;2m[i 0316 09:06:34.496749 20 compiler.py:946] cache_path: /root/.cache/jittor/jt1.3.1/g++7.5.0/py3.7.5/Linux-5.4.0-96x21/IntelRXeonRCPUx84/default[m
-[38;5;2m[i 0316 09:06:34.500061 20 __init__.py:376] Found /usr/local/cuda/bin/nvcc(10.2.89) at /usr/local/cuda/bin/nvcc.[m
-[38;5;2m[i 0316 09:06:34.503315 20 __init__.py:376] Found addr2line(2.30) at /usr/bin/addr2line.[m
-[38;5;2m[i 0316 09:06:36.722590 20 compiler.py:999] cuda key:cu10.2.89_sm_61[m
-[38;5;2m[i 0316 09:06:45.285662 20 __init__.py:191] Total mem: 219.71GB, using 16 procs for compiling.[m
-Compiling jittor_core(13/148) used: 2.161s eta: 22.437sCompiling jittor_core(14/148) used: 2.191s eta: 20.971sCompiling jittor_core(15/148) used: 2.227s eta: 19.748sCompiling jittor_core(16/148) used: 2.296s eta: 18.945sCompiling jittor_core(17/148) used: 2.408s eta: 18.559sCompiling jittor_core(18/148) used: 2.438s eta: 17.605sCompiling jittor_core(19/148) used: 2.533s eta: 17.195sCompiling jittor_core(20/148) used: 2.537s eta: 16.238sCompiling jittor_core(21/148) used: 2.539s eta: 15.354sCompiling jittor_core(22/148) used: 2.656s eta: 15.210sCompiling jittor_core(23/148) used: 3.087s eta: 16.778sCompiling jittor_core(24/148) used: 3.226s eta: 16.667sCompiling jittor_core(25/148) used: 3.298s eta: 16.227sCompiling jittor_core(26/148) used: 3.371s eta: 15.816sCompiling jittor_core(27/148) used: 3.610s eta: 16.180sCompiling jittor_core(28/148) used: 3.611s eta: 15.474sCompiling jittor_core(29/148) used: 4.031s eta: 16.540sCompiling jittor_core(30/148) used: 4.093s eta: 16.098sCompiling jittor_core(31/148) used: 4.128s eta: 15.581sCompiling jittor_core(32/148) used: 4.189s eta: 15.184sCompiling jittor_core(33/148) used: 4.250s eta: 14.810sCompiling jittor_core(34/148) used: 4.291s eta: 14.387sCompiling jittor_core(35/148) used: 4.487s eta: 14.488sCompiling jittor_core(36/148) used: 4.701s eta: 14.626sCompiling jittor_core(37/148) used: 4.719s eta: 14.158sCompiling jittor_core(38/148) used: 4.857s eta: 14.059sCompiling jittor_core(39/148) used: 4.917s eta: 13.742sCompiling jittor_core(40/148) used: 5.055s eta: 13.650sCompiling jittor_core(41/148) used: 5.193s eta: 13.553sCompiling jittor_core(42/148) used: 5.336s eta: 13.466sCompiling jittor_core(43/148) used: 5.380s eta: 13.137sCompiling jittor_core(44/148) used: 5.648s eta: 13.350sCompiling jittor_core(45/148) used: 5.845s eta: 13.379sCompiling jittor_core(46/148) used: 6.001s eta: 13.305sCompiling jittor_core(47/148) used: 6.147s eta: 13.209sCompiling jittor_core(48/148) used: 6.413s eta: 13.361sCompiling jittor_core(49/148) used: 6.449s eta: 13.030sCompiling jittor_core(50/148) used: 6.486s eta: 12.712sCompiling jittor_core(51/148) used: 6.540s eta: 12.438sCompiling jittor_core(52/148) used: 6.662s eta: 12.299sCompiling jittor_core(53/148) used: 6.788s eta: 12.167sCompiling jittor_core(54/148) used: 6.933s eta: 12.068sCompiling jittor_core(55/148) used: 7.248s eta: 12.256sCompiling jittor_core(56/148) used: 7.413s eta: 12.179sCompiling jittor_core(57/148) used: 7.697s eta: 12.289sCompiling jittor_core(58/148) used: 7.760s eta: 12.041sCompiling jittor_core(59/148) used: 7.871s eta: 11.874sCompiling jittor_core(60/148) used: 7.973s eta: 11.694sCompiling jittor_core(61/148) used: 8.070s eta: 11.510sCompiling jittor_core(62/148) used: 8.101s eta: 11.237sCompiling jittor_core(63/148) used: 8.259s eta: 11.143sCompiling jittor_core(64/148) used: 8.319s eta: 10.919sCompiling jittor_core(65/148) used: 8.414s eta: 10.744sCompiling jittor_core(66/148) used: 8.904s eta: 11.063sCompiling jittor_core(67/148) used: 9.009s eta: 10.891sCompiling jittor_core(68/148) used: 9.091s eta: 10.695sCompiling jittor_core(69/148) used: 9.201s eta: 10.535sCompiling jittor_core(70/148) used: 9.229s eta: 10.284sCompiling jittor_core(71/148) used: 9.263s eta: 10.046sCompiling jittor_core(72/148) used: 9.282s eta: 9.798sCompiling jittor_core(73/148) used: 9.330s eta: 9.585sCompiling jittor_core(74/148) used: 9.343s eta: 9.343sCompiling jittor_core(75/148) used: 9.355s eta: 9.106sCompiling jittor_core(76/148) used: 9.409s eta: 8.914sCompiling jittor_core(77/148) used: 9.430s eta: 8.695sCompiling jittor_core(78/148) used: 9.823s eta: 8.815sCompiling jittor_core(79/148) used: 10.015s eta: 8.747sCompiling jittor_core(80/148) used: 10.034s eta: 8.529sCompiling jittor_core(81/148) used: 10.111s eta: 8.363sCompiling jittor_core(82/148) used: 10.128s eta: 8.151sCompiling jittor_core(83/148) used: 10.273s eta: 8.045sCompiling jittor_core(84/148) used: 10.463s eta: 7.972sCompiling jittor_core(85/148) used: 10.545s eta: 7.816sCompiling jittor_core(86/148) used: 10.701s eta: 7.714sCompiling jittor_core(87/148) used: 10.717s eta: 7.514sCompiling jittor_core(88/148) used: 10.804s eta: 7.366sCompiling jittor_core(89/148) used: 10.831s eta: 7.180sCompiling jittor_core(90/148) used: 10.873s eta: 7.007sCompiling jittor_core(91/148) used: 10.917s eta: 6.838sCompiling jittor_core(92/148) used: 11.165s eta: 6.796sCompiling jittor_core(93/148) used: 11.277s eta: 6.669sCompiling jittor_core(94/148) used: 11.534s eta: 6.626sCompiling jittor_core(95/148) used: 11.555s eta: 6.447sCompiling jittor_core(96/148) used: 11.595s eta: 6.281sCompiling jittor_core(97/148) used: 11.678s eta: 6.140sCompiling jittor_core(98/148) used: 11.701s eta: 5.970sCompiling jittor_core(99/148) used: 11.825s eta: 5.853sCompiling jittor_core(100/148) used: 12.088s eta: 5.802sCompiling jittor_core(101/148) used: 12.186s eta: 5.671sCompiling jittor_core(102/148) used: 12.216s eta: 5.509sCompiling jittor_core(103/148) used: 12.376s eta: 5.407sCompiling jittor_core(104/148) used: 12.476s eta: 5.278sCompiling jittor_core(105/148) used: 12.517s eta: 5.126sCompiling jittor_core(106/148) used: 12.618s eta: 4.999sCompiling jittor_core(107/148) used: 12.782s eta: 4.898sCompiling jittor_core(108/148) used: 12.830s eta: 4.752sCompiling jittor_core(109/148) used: 13.153s eta: 4.706sCompiling jittor_core(110/148) used: 13.248s eta: 4.576sCompiling jittor_core(111/148) used: 13.270s eta: 4.423sCompiling jittor_core(112/148) used: 13.325s eta: 4.283sCompiling jittor_core(113/148) used: 13.433s eta: 4.161sCompiling jittor_core(114/148) used: 13.469s eta: 4.017sCompiling jittor_core(115/148) used: 13.528s eta: 3.882sCompiling jittor_core(116/148) used: 13.606s eta: 3.753sCompiling jittor_core(117/148) used: 14.083s eta: 3.732sCompiling jittor_core(118/148) used: 14.084s eta: 3.581sCompiling jittor_core(119/148) used: 14.223s eta: 3.466sCompiling jittor_core(120/148) used: 14.231s eta: 3.321sCompiling jittor_core(121/148) used: 14.333s eta: 3.198sCompiling jittor_core(122/148) used: 14.338s eta: 3.056sCompiling jittor_core(123/148) used: 14.622s eta: 2.972sCompiling jittor_core(124/148) used: 14.650s eta: 2.836sCompiling jittor_core(125/148) used: 14.700s eta: 2.705sCompiling jittor_core(126/148) used: 14.943s eta: 2.609sCompiling jittor_core(127/148) used: 15.088s eta: 2.495sCompiling jittor_core(128/148) used: 15.094s eta: 2.358sCompiling jittor_core(129/148) used: 15.110s eta: 2.225sCompiling jittor_core(130/148) used: 15.213s eta: 2.106sCompiling jittor_core(131/148) used: 15.281s eta: 1.983sCompiling jittor_core(132/148) used: 15.365s eta: 1.862sCompiling jittor_core(133/148) used: 15.733s eta: 1.774sCompiling jittor_core(134/148) used: 15.830s eta: 1.654sCompiling jittor_core(135/148) used: 15.852s eta: 1.526sCompiling jittor_core(136/148) used: 15.859s eta: 1.399sCompiling jittor_core(137/148) used: 16.143s eta: 1.296sCompiling jittor_core(138/148) used: 16.375s eta: 1.187sCompiling jittor_core(139/148) used: 16.436s eta: 1.064sCompiling jittor_core(140/148) used: 16.483s eta: 0.942sCompiling jittor_core(141/148) used: 16.500s eta: 0.819sCompiling jittor_core(142/148) used: 16.677s eta: 0.705sCompiling jittor_core(143/148) used: 17.046s eta: 0.596sCompiling jittor_core(144/148) used: 17.954s eta: 0.499sCompiling jittor_core(145/148) used: 18.076s eta: 0.374sCompiling jittor_core(146/148) used: 18.505s eta: 0.253sCompiling jittor_core(147/148) used: 18.697s eta: 0.127sCompiling jittor_core(148/148) used: 27.121s eta: 0.000s
-[38;5;2m[i 0316 09:07:12.757636 20 jit_compiler.cc:27] Load cc_path: /usr/bin/g++[m
-[38;5;2m[i 0316 09:07:13.890419 20 init.cc:62] Found cuda archs: [61,][m
-[38;5;2m[i 0316 09:07:14.034844 20 __init__.py:376] Found mpicc(2.1.1) at /usr/bin/mpicc.[m
-Compiling jittor_mpi_core(7/7) used: 2.317s eta: 0.000s
-Compiling gen_ops_mkl_test_mkl_matmul_mkl_conv_backward_w_mk___hash4f2a14(6/7) used: 2.684s eta: 0.447sCompiling gen_ops_mkl_test_mkl_matmul_mkl_conv_backward_w_mk___hash4f2a14(7/7) used: 3.029s eta: 0.000s
-Compiling libcuda_extern(3/3) used: 2.173s eta: 0.000s
-Compiling gen_ops_cub_arg_reduce_cub_test_cub_cumsum_cub_arg___hash8ac379(6/6) used: 2.592s eta: 0.000s
-[38;5;2m[i 0316 09:07:26.419640 20 compile_extern.py:29] found /usr/include/cublas.h[m
-[38;5;2m[i 0316 09:07:26.429285 20 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcublas.so[m
-[38;5;2m[i 0316 09:07:26.429517 20 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcublasLt.so.10[m
-[38;5;2m[i 0316 09:07:28.669836 20 compile_extern.py:29] found /usr/include/cudnn.h[m
-[38;5;2m[i 0316 09:07:28.686772 20 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcudnn.so[m
-Compiling gen_ops_cudnn_conv_backward_w_cudnn_conv_cudnn_tes___hash10c69c(16/16) used: 4.855s eta: 0.000s
-[38;5;2m[i 0316 09:07:34.276566 20 compile_extern.py:29] found /usr/local/cuda/include/curand.h[m
-[38;5;2m[i 0316 09:07:34.317044 20 compile_extern.py:29] found /usr/local/cuda/lib64/libcurand.so[m
-[38;5;2m[i 0316 09:07:36.002456 20 cuda_flags.cc:32] CUDA enabled.[m
-[38;5;2m[i 0316 09:07:36.013365 20 dataset.py:629] Found 102 classes and 1020 images.[m
-[38;5;2m[i 0316 09:07:36.018862 20 dataset.py:629] Found 102 classes and 1020 images.[m
-[38;5;2m[i 0316 09:07:36.043157 20 dataset.py:629] Found 102 classes and 6149 images.[m
------------------ A new trial ---------------------
-learning rate: 1e-06
-
-Compiling Operators(2/15) used: 4.34s eta: 28.2s Compiling Operators(12/15) used: 5.34s eta: 1.33s Compiling Operators(13/15) used: 6.34s eta: 0.975s Compiling Operators(15/15) used: 8.34s eta:    0s 
-
-Compiling Operators(5/5) used: 4.32s eta:    0s 
-
-Compiling Operators(3/21) used: 5.34s eta:   32s Compiling Operators(12/21) used: 6.34s eta: 4.75s Compiling Operators(17/21) used: 9.34s eta:  2.2s Compiling Operators(21/21) used: 10.3s eta:    0s 
-
-Compiling Operators(5/5) used: 4.32s eta:    0s 
-
-Compiling Operators(11/15) used: 5.34s eta: 1.94s Compiling Operators(15/15) used: 6.34s eta:    0s 
-
-Compiling Operators(2/2) used: 4.31s eta:    0s 
-
-Compiling Operators(1/1) used: 4.11s eta:    0s 
-
-Compiling Operators(4/4) used: 4.33s eta:    0s 
-epoch: 0 validAccuracy: 0.01 trainAccuracy: 0.007 delta: 0.01
-epoch: 1 validAccuracy: 0.011 trainAccuracy: 0.014 delta: 0.001
-epoch: 2 validAccuracy: 0.014 trainAccuracy: 0.014 delta: 0.003
-epoch: 3 validAccuracy: 0.015 trainAccuracy: 0.015 delta: 0.001
-epoch: 4 validAccuracy: 0.023 trainAccuracy: 0.015 delta: 0.008
-epoch: 5 validAccuracy: 0.015 trainAccuracy: 0.019 delta: -0.008
-epoch: 6 validAccuracy: 0.017 trainAccuracy: 0.018 delta: -0.006
-epoch: 7 validAccuracy: 0.02 trainAccuracy: 0.019 delta: -0.003
-epoch: 8 validAccuracy: 0.023 trainAccuracy: 0.018 delta: 0.0
-epoch: 9 validAccuracy: 0.02 trainAccuracy: 0.015 delta: -0.003
-epoch: 10 validAccuracy: 0.015 trainAccuracy: 0.024 delta: -0.008
-epoch: 11 validAccuracy: 0.019 trainAccuracy: 0.025 delta: -0.004
-epoch: 12 validAccuracy: 0.021 trainAccuracy: 0.024 delta: -0.002
-epoch: 13 validAccuracy: 0.021 trainAccuracy: 0.023 delta: -0.002
-epoch: 14 validAccuracy: 0.018 trainAccuracy: 0.021 delta: -0.005
-epoch: 15 validAccuracy: 0.017 trainAccuracy: 0.019 delta: -0.006
-epoch: 16 validAccuracy: 0.02 trainAccuracy: 0.016 delta: -0.003
-epoch: 17 validAccuracy: 0.023 trainAccuracy: 0.016 delta: 0.0
-epoch: 18 validAccuracy: 0.018 trainAccuracy: 0.012 delta: -0.005
-epoch: 19 validAccuracy: 0.018 trainAccuracy: 0.023 delta: -0.005
-epoch: 20 validAccuracy: 0.017 trainAccuracy: 0.017 delta: -0.006
-epoch: 21 validAccuracy: 0.019 trainAccuracy: 0.018 delta: -0.004
-epoch: 22 validAccuracy: 0.015 trainAccuracy: 0.024 delta: -0.008
-epoch: 23 validAccuracy: 0.02 trainAccuracy: 0.02 delta: -0.003
-epoch: 24 validAccuracy: 0.02 trainAccuracy: 0.018 delta: -0.003
-epoch: 25 validAccuracy: 0.018 trainAccuracy: 0.013 delta: -0.005
-epoch: 26 validAccuracy: 0.019 trainAccuracy: 0.024 delta: -0.004
-epoch: 27 validAccuracy: 0.023 trainAccuracy: 0.017 delta: 0.0
-epoch: 28 validAccuracy: 0.025 trainAccuracy: 0.018 delta: 0.002
-epoch: 29 validAccuracy: 0.02 trainAccuracy: 0.014 delta: -0.005
-epoch: 30 validAccuracy: 0.025 trainAccuracy: 0.028 delta: 0.0
-epoch: 31 validAccuracy: 0.022 trainAccuracy: 0.02 delta: -0.003
-epoch: 32 validAccuracy: 0.025 trainAccuracy: 0.021 delta: 0.0
-epoch: 33 validAccuracy: 0.022 trainAccuracy: 0.019 delta: -0.003
-epoch: 34 validAccuracy: 0.026 trainAccuracy: 0.023 delta: 0.001
-epoch: 35 validAccuracy: 0.02 trainAccuracy: 0.025 delta: -0.006
-epoch: 36 validAccuracy: 0.025 trainAccuracy: 0.028 delta: -0.001
-epoch: 37 validAccuracy: 0.027 trainAccuracy: 0.029 delta: 0.001
-epoch: 38 validAccuracy: 0.024 trainAccuracy: 0.029 delta: -0.003
-epoch: 39 validAccuracy: 0.032 trainAccuracy: 0.026 delta: 0.005
-epoch: 40 validAccuracy: 0.029 trainAccuracy: 0.027 delta: -0.003
-epoch: 41 validAccuracy: 0.03 trainAccuracy: 0.027 delta: -0.002
-epoch: 42 validAccuracy: 0.022 trainAccuracy: 0.025 delta: -0.01
-epoch: 43 validAccuracy: 0.022 trainAccuracy: 0.027 delta: -0.01
-epoch: 44 validAccuracy: 0.025 trainAccuracy: 0.033 delta: -0.007
-epoch: 45 validAccuracy: 0.031 trainAccuracy: 0.025 delta: -0.001
-epoch: 46 validAccuracy: 0.027 trainAccuracy: 0.031 delta: -0.005
-epoch: 47 validAccuracy: 0.028 trainAccuracy: 0.03 delta: -0.004
-epoch: 48 validAccuracy: 0.035 trainAccuracy: 0.023 delta: 0.003
-epoch: 49 validAccuracy: 0.032 trainAccuracy: 0.026 delta: -0.003
-epoch: 50 validAccuracy: 0.027 trainAccuracy: 0.026 delta: -0.008
-epoch: 51 validAccuracy: 0.034 trainAccuracy: 0.032 delta: -0.001
-epoch: 52 validAccuracy: 0.025 trainAccuracy: 0.027 delta: -0.01
-epoch: 53 validAccuracy: 0.025 trainAccuracy: 0.031 delta: -0.01
-epoch: 54 validAccuracy: 0.028 trainAccuracy: 0.025 delta: -0.007
-epoch: 55 validAccuracy: 0.035 trainAccuracy: 0.019 delta: 0.0
-epoch: 56 validAccuracy: 0.025 trainAccuracy: 0.027 delta: -0.01
-epoch: 57 validAccuracy: 0.031 trainAccuracy: 0.027 delta: -0.004
-epoch: 58 validAccuracy: 0.039 trainAccuracy: 0.026 delta: 0.004
-epoch: 59 validAccuracy: 0.036 trainAccuracy: 0.029 delta: -0.003
-epoch: 60 validAccuracy: 0.035 trainAccuracy: 0.03 delta: -0.004
-epoch: 61 validAccuracy: 0.04 trainAccuracy: 0.032 delta: 0.001
-epoch: 62 validAccuracy: 0.03 trainAccuracy: 0.033 delta: -0.01
-epoch: 63 validAccuracy: 0.041 trainAccuracy: 0.033 delta: 0.001
-epoch: 64 validAccuracy: 0.032 trainAccuracy: 0.039 delta: -0.009
-epoch: 65 validAccuracy: 0.04 trainAccuracy: 0.04 delta: -0.001
-epoch: 66 validAccuracy: 0.044 trainAccuracy: 0.04 delta: 0.003
-epoch: 67 validAccuracy: 0.04 trainAccuracy: 0.041 delta: -0.004
-epoch: 68 validAccuracy: 0.039 trainAccuracy: 0.036 delta: -0.005
-epoch: 69 validAccuracy: 0.036 trainAccuracy: 0.039 delta: -0.008
-epoch: 70 validAccuracy: 0.04 trainAccuracy: 0.039 delta: -0.004
-epoch: 71 validAccuracy: 0.037 trainAccuracy: 0.039 delta: -0.007
-epoch: 72 validAccuracy: 0.041 trainAccuracy: 0.043 delta: -0.003
-epoch: 73 validAccuracy: 0.041 trainAccuracy: 0.046 delta: -0.003
-epoch: 74 validAccuracy: 0.043 trainAccuracy: 0.043 delta: -0.001
-epoch: 75 validAccuracy: 0.044 trainAccuracy: 0.03 delta: 0.0
-epoch: 76 validAccuracy: 0.042 trainAccuracy: 0.04 delta: -0.002
-epoch: 77 validAccuracy: 0.04 trainAccuracy: 0.043 delta: -0.004
-epoch: 78 validAccuracy: 0.041 trainAccuracy: 0.043 delta: -0.003
-epoch: 79 validAccuracy: 0.044 trainAccuracy: 0.044 delta: 0.0
-epoch: 80 validAccuracy: 0.045 trainAccuracy: 0.043 delta: 0.001
-epoch: 81 validAccuracy: 0.037 trainAccuracy: 0.038 delta: -0.008
-epoch: 82 validAccuracy: 0.044 trainAccuracy: 0.047 delta: -0.001
-epoch: 83 validAccuracy: 0.045 trainAccuracy: 0.037 delta: 0.0
-epoch: 84 validAccuracy: 0.038 trainAccuracy: 0.045 delta: -0.007
-epoch: 85 validAccuracy: 0.038 trainAccuracy: 0.05 delta: -0.007
-epoch: 86 validAccuracy: 0.042 trainAccuracy: 0.04 delta: -0.003
-epoch: 87 validAccuracy: 0.04 trainAccuracy: 0.042 delta: -0.005
-epoch: 88 validAccuracy: 0.042 trainAccuracy: 0.051 delta: -0.003
-epoch: 89 validAccuracy: 0.043 trainAccuracy: 0.043 delta: -0.002
-epoch: 90 validAccuracy: 0.039 trainAccuracy: 0.048 delta: -0.006
-epoch: 91 validAccuracy: 0.049 trainAccuracy: 0.046 delta: 0.004
-epoch: 92 validAccuracy: 0.043 trainAccuracy: 0.049 delta: -0.006
-epoch: 93 validAccuracy: 0.045 trainAccuracy: 0.045 delta: -0.004
-epoch: 94 validAccuracy: 0.046 trainAccuracy: 0.056 delta: -0.003
-epoch: 95 validAccuracy: 0.043 trainAccuracy: 0.046 delta: -0.006
-epoch: 96 validAccuracy: 0.042 trainAccuracy: 0.051 delta: -0.007
-epoch: 97 validAccuracy: 0.042 trainAccuracy: 0.051 delta: -0.007
-epoch: 98 validAccuracy: 0.047 trainAccuracy: 0.049 delta: -0.002
-epoch: 99 validAccuracy: 0.046 trainAccuracy: 0.055 delta: -0.003
-epoch: 100 validAccuracy: 0.046 trainAccuracy: 0.048 delta: -0.003
-epoch: 101 validAccuracy: 0.043 trainAccuracy: 0.05 delta: -0.006
-epoch: 102 validAccuracy: 0.044 trainAccuracy: 0.045 delta: -0.005
-epoch: 103 validAccuracy: 0.048 trainAccuracy: 0.055 delta: -0.001
-epoch: 104 validAccuracy: 0.044 trainAccuracy: 0.055 delta: -0.005
-epoch: 105 validAccuracy: 0.051 trainAccuracy: 0.055 delta: 0.002
-epoch: 106 validAccuracy: 0.046 trainAccuracy: 0.053 delta: -0.005
-epoch: 107 validAccuracy: 0.049 trainAccuracy: 0.049 delta: -0.002
-epoch: 108 validAccuracy: 0.041 trainAccuracy: 0.052 delta: -0.01
-epoch: 109 validAccuracy: 0.045 trainAccuracy: 0.051 delta: -0.006
-epoch: 110 validAccuracy: 0.043 trainAccuracy: 0.05 delta: -0.008
-epoch: 111 validAccuracy: 0.045 trainAccuracy: 0.053 delta: -0.006
-epoch: 112 validAccuracy: 0.047 trainAccuracy: 0.049 delta: -0.004
-epoch: 113 validAccuracy: 0.046 trainAccuracy: 0.049 delta: -0.005
-epoch: 114 validAccuracy: 0.048 trainAccuracy: 0.056 delta: -0.003
-epoch: 115 validAccuracy: 0.051 trainAccuracy: 0.049 delta: 0.0
-epoch: 116 validAccuracy: 0.045 trainAccuracy: 0.057 delta: -0.006
-epoch: 117 validAccuracy: 0.052 trainAccuracy: 0.057 delta: 0.001
-epoch: 118 validAccuracy: 0.055 trainAccuracy: 0.054 delta: 0.003
-epoch: 119 validAccuracy: 0.055 trainAccuracy: 0.052 delta: 0.0
-=============================================================================================
-learningRate: 1e-06 accuracy:0.055 epoch: 118 delta: 0.055
-=============================================================================================
-[38;5;2m[i 0316 14:07:37.066464 20 dataset.py:629] Found 102 classes and 1020 images.[m
-[38;5;2m[i 0316 14:07:37.071870 20 dataset.py:629] Found 102 classes and 1020 images.[m
-[38;5;2m[i 0316 14:07:37.095225 20 dataset.py:629] Found 102 classes and 6149 images.[m
------------------ A new trial ---------------------
-learning rate: 1e-05
-epoch: 0 validAccuracy: 0.021 trainAccuracy: 0.013 delta: 0.021
-epoch: 1 validAccuracy: 0.032 trainAccuracy: 0.025 delta: 0.011
-epoch: 2 validAccuracy: 0.03 trainAccuracy: 0.019 delta: -0.002
-epoch: 3 validAccuracy: 0.04 trainAccuracy: 0.037 delta: 0.008
-epoch: 4 validAccuracy: 0.044 trainAccuracy: 0.037 delta: 0.004
-epoch: 5 validAccuracy: 0.047 trainAccuracy: 0.041 delta: 0.003
-epoch: 6 validAccuracy: 0.058 trainAccuracy: 0.051 delta: 0.011
-epoch: 7 validAccuracy: 0.076 trainAccuracy: 0.056 delta: 0.018
-epoch: 8 validAccuracy: 0.07 trainAccuracy: 0.077 delta: -0.006
-epoch: 9 validAccuracy: 0.072 trainAccuracy: 0.069 delta: -0.004
-epoch: 10 validAccuracy: 0.076 trainAccuracy: 0.087 delta: 0.0
-epoch: 11 validAccuracy: 0.075 trainAccuracy: 0.087 delta: -0.001
-epoch: 12 validAccuracy: 0.084 trainAccuracy: 0.083 delta: 0.008
-epoch: 13 validAccuracy: 0.089 trainAccuracy: 0.084 delta: 0.005
-epoch: 14 validAccuracy: 0.089 trainAccuracy: 0.089 delta: 0.0
-epoch: 15 validAccuracy: 0.088 trainAccuracy: 0.092 delta: -0.001
-epoch: 16 validAccuracy: 0.086 trainAccuracy: 0.099 delta: -0.003
-epoch: 17 validAccuracy: 0.087 trainAccuracy: 0.108 delta: -0.002
-epoch: 18 validAccuracy: 0.085 trainAccuracy: 0.086 delta: -0.004
-epoch: 19 validAccuracy: 0.093 trainAccuracy: 0.103 delta: 0.004
-epoch: 20 validAccuracy: 0.092 trainAccuracy: 0.086 delta: -0.001
-epoch: 21 validAccuracy: 0.091 trainAccuracy: 0.097 delta: -0.002
-epoch: 22 validAccuracy: 0.097 trainAccuracy: 0.089 delta: 0.004
-epoch: 23 validAccuracy: 0.096 trainAccuracy: 0.087 delta: -0.001
-epoch: 24 validAccuracy: 0.097 trainAccuracy: 0.086 delta: 0.0
-epoch: 25 validAccuracy: 0.106 trainAccuracy: 0.103 delta: 0.009
-epoch: 26 validAccuracy: 0.109 trainAccuracy: 0.105 delta: 0.003
-epoch: 27 validAccuracy: 0.101 trainAccuracy: 0.122 delta: -0.008
-epoch: 28 validAccuracy: 0.123 trainAccuracy: 0.123 delta: 0.014
-epoch: 29 validAccuracy: 0.126 trainAccuracy: 0.112 delta: 0.003
-epoch: 30 validAccuracy: 0.143 trainAccuracy: 0.145 delta: 0.017
-epoch: 31 validAccuracy: 0.141 trainAccuracy: 0.142 delta: -0.002
-epoch: 32 validAccuracy: 0.142 trainAccuracy: 0.15 delta: -0.001
-epoch: 33 validAccuracy: 0.152 trainAccuracy: 0.148 delta: 0.009
-epoch: 34 validAccuracy: 0.157 trainAccuracy: 0.15 delta: 0.005
-epoch: 35 validAccuracy: 0.157 trainAccuracy: 0.181 delta: 0.0
-epoch: 36 validAccuracy: 0.163 trainAccuracy: 0.167 delta: 0.006
-epoch: 37 validAccuracy: 0.152 trainAccuracy: 0.173 delta: -0.011
-epoch: 38 validAccuracy: 0.161 trainAccuracy: 0.196 delta: -0.002
-epoch: 39 validAccuracy: 0.185 trainAccuracy: 0.204 delta: 0.022
-epoch: 40 validAccuracy: 0.17 trainAccuracy: 0.183 delta: -0.015
-epoch: 41 validAccuracy: 0.176 trainAccuracy: 0.212 delta: -0.009
-epoch: 42 validAccuracy: 0.172 trainAccuracy: 0.206 delta: -0.013
-epoch: 43 validAccuracy: 0.167 trainAccuracy: 0.211 delta: -0.018
-epoch: 44 validAccuracy: 0.173 trainAccuracy: 0.21 delta: -0.012
-epoch: 45 validAccuracy: 0.175 trainAccuracy: 0.202 delta: -0.01
-epoch: 46 validAccuracy: 0.182 trainAccuracy: 0.207 delta: -0.003
-epoch: 47 validAccuracy: 0.185 trainAccuracy: 0.21 delta: 0.0
-epoch: 48 validAccuracy: 0.176 trainAccuracy: 0.196 delta: -0.009
-epoch: 49 validAccuracy: 0.175 trainAccuracy: 0.209 delta: -0.01
-epoch: 50 validAccuracy: 0.168 trainAccuracy: 0.196 delta: -0.017
-epoch: 51 validAccuracy: 0.175 trainAccuracy: 0.192 delta: -0.01
-epoch: 52 validAccuracy: 0.168 trainAccuracy: 0.204 delta: -0.017
-epoch: 53 validAccuracy: 0.183 trainAccuracy: 0.203 delta: -0.002
-epoch: 54 validAccuracy: 0.17 trainAccuracy: 0.192 delta: -0.015
-epoch: 55 validAccuracy: 0.187 trainAccuracy: 0.202 delta: 0.002
-epoch: 56 validAccuracy: 0.181 trainAccuracy: 0.203 delta: -0.006
-epoch: 57 validAccuracy: 0.17 trainAccuracy: 0.198 delta: -0.017
-epoch: 58 validAccuracy: 0.185 trainAccuracy: 0.208 delta: -0.002
-epoch: 59 validAccuracy: 0.188 trainAccuracy: 0.212 delta: 0.001
-epoch: 60 validAccuracy: 0.188 trainAccuracy: 0.226 delta: 0.0
-epoch: 61 validAccuracy: 0.193 trainAccuracy: 0.21 delta: 0.005
-epoch: 62 validAccuracy: 0.196 trainAccuracy: 0.225 delta: 0.003
-epoch: 63 validAccuracy: 0.197 trainAccuracy: 0.221 delta: 0.001
-epoch: 64 validAccuracy: 0.198 trainAccuracy: 0.222 delta: 0.001
-epoch: 65 validAccuracy: 0.2 trainAccuracy: 0.225 delta: 0.002
-epoch: 66 validAccuracy: 0.196 trainAccuracy: 0.237 delta: -0.004
-epoch: 67 validAccuracy: 0.185 trainAccuracy: 0.235 delta: -0.015
-epoch: 68 validAccuracy: 0.183 trainAccuracy: 0.264 delta: -0.017
-epoch: 69 validAccuracy: 0.198 trainAccuracy: 0.253 delta: -0.002
-epoch: 70 validAccuracy: 0.21 trainAccuracy: 0.25 delta: 0.01
-epoch: 71 validAccuracy: 0.195 trainAccuracy: 0.263 delta: -0.015
-epoch: 72 validAccuracy: 0.195 trainAccuracy: 0.268 delta: -0.015
-epoch: 73 validAccuracy: 0.208 trainAccuracy: 0.265 delta: -0.002
-epoch: 74 validAccuracy: 0.203 trainAccuracy: 0.271 delta: -0.007
-epoch: 75 validAccuracy: 0.212 trainAccuracy: 0.261 delta: 0.002
-epoch: 76 validAccuracy: 0.202 trainAccuracy: 0.256 delta: -0.01
-epoch: 77 validAccuracy: 0.197 trainAccuracy: 0.275 delta: -0.015
-epoch: 78 validAccuracy: 0.204 trainAccuracy: 0.282 delta: -0.008
-epoch: 79 validAccuracy: 0.21 trainAccuracy: 0.243 delta: -0.002
-epoch: 80 validAccuracy: 0.203 trainAccuracy: 0.269 delta: -0.009
-epoch: 81 validAccuracy: 0.216 trainAccuracy: 0.263 delta: 0.004
-epoch: 82 validAccuracy: 0.21 trainAccuracy: 0.257 delta: -0.006
-epoch: 83 validAccuracy: 0.215 trainAccuracy: 0.262 delta: -0.001
-epoch: 84 validAccuracy: 0.206 trainAccuracy: 0.268 delta: -0.01
-epoch: 85 validAccuracy: 0.197 trainAccuracy: 0.27 delta: -0.019
-epoch: 86 validAccuracy: 0.214 trainAccuracy: 0.253 delta: -0.002
-epoch: 87 validAccuracy: 0.216 trainAccuracy: 0.257 delta: 0.0
-epoch: 88 validAccuracy: 0.215 trainAccuracy: 0.242 delta: -0.001
-epoch: 89 validAccuracy: 0.217 trainAccuracy: 0.295 delta: 0.001
-epoch: 90 validAccuracy: 0.196 trainAccuracy: 0.261 delta: -0.021
-epoch: 91 validAccuracy: 0.21 trainAccuracy: 0.266 delta: -0.007
-epoch: 92 validAccuracy: 0.213 trainAccuracy: 0.3 delta: -0.004
-epoch: 93 validAccuracy: 0.203 trainAccuracy: 0.284 delta: -0.014
-epoch: 94 validAccuracy: 0.208 trainAccuracy: 0.286 delta: -0.009
-epoch: 95 validAccuracy: 0.222 trainAccuracy: 0.297 delta: 0.005
-epoch: 96 validAccuracy: 0.22 trainAccuracy: 0.303 delta: -0.002
-epoch: 97 validAccuracy: 0.234 trainAccuracy: 0.309 delta: 0.012
-epoch: 98 validAccuracy: 0.225 trainAccuracy: 0.311 delta: -0.009
-epoch: 99 validAccuracy: 0.227 trainAccuracy: 0.305 delta: -0.007
-epoch: 100 validAccuracy: 0.23 trainAccuracy: 0.322 delta: -0.004
-epoch: 101 validAccuracy: 0.231 trainAccuracy: 0.315 delta: -0.003
-epoch: 102 validAccuracy: 0.231 trainAccuracy: 0.324 delta: -0.003
-epoch: 103 validAccuracy: 0.228 trainAccuracy: 0.324 delta: -0.006
-epoch: 104 validAccuracy: 0.232 trainAccuracy: 0.306 delta: -0.002
-epoch: 105 validAccuracy: 0.225 trainAccuracy: 0.338 delta: -0.009
-epoch: 106 validAccuracy: 0.236 trainAccuracy: 0.325 delta: 0.002
-epoch: 107 validAccuracy: 0.231 trainAccuracy: 0.323 delta: -0.005
-epoch: 108 validAccuracy: 0.243 trainAccuracy: 0.317 delta: 0.007
-epoch: 109 validAccuracy: 0.238 trainAccuracy: 0.324 delta: -0.005
-epoch: 110 validAccuracy: 0.225 trainAccuracy: 0.33 delta: -0.018
-epoch: 111 validAccuracy: 0.225 trainAccuracy: 0.315 delta: -0.018
-epoch: 112 validAccuracy: 0.223 trainAccuracy: 0.349 delta: -0.02
-epoch: 113 validAccuracy: 0.23 trainAccuracy: 0.335 delta: -0.013
-epoch: 114 validAccuracy: 0.226 trainAccuracy: 0.342 delta: -0.017
-epoch: 115 validAccuracy: 0.24 trainAccuracy: 0.347 delta: -0.003
-epoch: 116 validAccuracy: 0.229 trainAccuracy: 0.322 delta: -0.014
-epoch: 117 validAccuracy: 0.234 trainAccuracy: 0.32 delta: -0.009
-epoch: 118 validAccuracy: 0.242 trainAccuracy: 0.325 delta: -0.001
-epoch: 119 validAccuracy: 0.218 trainAccuracy: 0.313 delta: -0.025
-=============================================================================================
-learningRate: 1e-05 accuracy:0.243 epoch: 108 delta: 0.188
-=============================================================================================
-[38;5;2m[i 0316 19:41:02.254704 20 dataset.py:629] Found 102 classes and 1020 images.[m
-[38;5;2m[i 0316 19:41:02.260160 20 dataset.py:629] Found 102 classes and 1020 images.[m
-[38;5;2m[i 0316 19:41:02.293873 20 dataset.py:629] Found 102 classes and 6149 images.[m
------------------ A new trial ---------------------
-learning rate: 5e-05
-epoch: 0 validAccuracy: 0.04 trainAccuracy: 0.017 delta: 0.04
-epoch: 1 validAccuracy: 0.042 trainAccuracy: 0.036 delta: 0.002
-epoch: 2 validAccuracy: 0.064 trainAccuracy: 0.049 delta: 0.022
-epoch: 3 validAccuracy: 0.095 trainAccuracy: 0.062 delta: 0.031
-epoch: 4 validAccuracy: 0.108 trainAccuracy: 0.086 delta: 0.013
-epoch: 5 validAccuracy: 0.12 trainAccuracy: 0.094 delta: 0.012
-epoch: 6 validAccuracy: 0.144 trainAccuracy: 0.139 delta: 0.024
-epoch: 7 validAccuracy: 0.144 trainAccuracy: 0.146 delta: 0.0
-epoch: 8 validAccuracy: 0.164 trainAccuracy: 0.159 delta: 0.02
-epoch: 9 validAccuracy: 0.163 trainAccuracy: 0.202 delta: -0.001
-epoch: 10 validAccuracy: 0.196 trainAccuracy: 0.213 delta: 0.032
-epoch: 11 validAccuracy: 0.195 trainAccuracy: 0.214 delta: -0.001
-epoch: 12 validAccuracy: 0.198 trainAccuracy: 0.209 delta: 0.002
-epoch: 13 validAccuracy: 0.198 trainAccuracy: 0.222 delta: 0.0
-epoch: 14 validAccuracy: 0.2 trainAccuracy: 0.245 delta: 0.002
-epoch: 15 validAccuracy: 0.206 trainAccuracy: 0.266 delta: 0.006
-epoch: 16 validAccuracy: 0.204 trainAccuracy: 0.249 delta: -0.002
-epoch: 17 validAccuracy: 0.202 trainAccuracy: 0.249 delta: -0.004
-epoch: 18 validAccuracy: 0.206 trainAccuracy: 0.238 delta: 0.0
-epoch: 19 validAccuracy: 0.211 trainAccuracy: 0.26 delta: 0.005
-epoch: 20 validAccuracy: 0.203 trainAccuracy: 0.241 delta: -0.008
-epoch: 21 validAccuracy: 0.209 trainAccuracy: 0.253 delta: -0.002
-epoch: 22 validAccuracy: 0.204 trainAccuracy: 0.255 delta: -0.007
-epoch: 23 validAccuracy: 0.204 trainAccuracy: 0.225 delta: -0.007
-epoch: 24 validAccuracy: 0.21 trainAccuracy: 0.236 delta: -0.001
-epoch: 25 validAccuracy: 0.185 trainAccuracy: 0.24 delta: -0.026
-epoch: 26 validAccuracy: 0.224 trainAccuracy: 0.239 delta: 0.013
-epoch: 27 validAccuracy: 0.187 trainAccuracy: 0.233 delta: -0.037
-epoch: 28 validAccuracy: 0.189 trainAccuracy: 0.24 delta: -0.035
-epoch: 29 validAccuracy: 0.174 trainAccuracy: 0.222 delta: -0.05
-epoch: 30 validAccuracy: 0.188 trainAccuracy: 0.229 delta: -0.036
-epoch: 31 validAccuracy: 0.189 trainAccuracy: 0.25 delta: -0.035
-epoch: 32 validAccuracy: 0.206 trainAccuracy: 0.257 delta: -0.018
-epoch: 33 validAccuracy: 0.199 trainAccuracy: 0.26 delta: -0.025
-epoch: 34 validAccuracy: 0.191 trainAccuracy: 0.283 delta: -0.033
-epoch: 35 validAccuracy: 0.249 trainAccuracy: 0.315 delta: 0.025
-epoch: 36 validAccuracy: 0.225 trainAccuracy: 0.302 delta: -0.024
-epoch: 37 validAccuracy: 0.248 trainAccuracy: 0.338 delta: -0.001
-epoch: 38 validAccuracy: 0.246 trainAccuracy: 0.381 delta: -0.003
-epoch: 39 validAccuracy: 0.269 trainAccuracy: 0.398 delta: 0.02
-epoch: 40 validAccuracy: 0.259 trainAccuracy: 0.396 delta: -0.01
-epoch: 41 validAccuracy: 0.288 trainAccuracy: 0.424 delta: 0.019
-epoch: 42 validAccuracy: 0.28 trainAccuracy: 0.423 delta: -0.008
-epoch: 43 validAccuracy: 0.278 trainAccuracy: 0.463 delta: -0.01
-epoch: 44 validAccuracy: 0.279 trainAccuracy: 0.457 delta: -0.009
-epoch: 45 validAccuracy: 0.281 trainAccuracy: 0.449 delta: -0.007
-epoch: 46 validAccuracy: 0.289 trainAccuracy: 0.463 delta: 0.001
-epoch: 47 validAccuracy: 0.297 trainAccuracy: 0.459 delta: 0.008
-epoch: 48 validAccuracy: 0.3 trainAccuracy: 0.462 delta: 0.003
-epoch: 49 validAccuracy: 0.294 trainAccuracy: 0.445 delta: -0.006
-epoch: 50 validAccuracy: 0.282 trainAccuracy: 0.484 delta: -0.018
-epoch: 51 validAccuracy: 0.289 trainAccuracy: 0.467 delta: -0.011
-epoch: 52 validAccuracy: 0.276 trainAccuracy: 0.425 delta: -0.024
-epoch: 53 validAccuracy: 0.272 trainAccuracy: 0.438 delta: -0.028
-epoch: 54 validAccuracy: 0.25 trainAccuracy: 0.391 delta: -0.05
-epoch: 55 validAccuracy: 0.271 trainAccuracy: 0.395 delta: -0.029
-epoch: 56 validAccuracy: 0.289 trainAccuracy: 0.387 delta: -0.011
-epoch: 57 validAccuracy: 0.271 trainAccuracy: 0.381 delta: -0.029
-epoch: 58 validAccuracy: 0.251 trainAccuracy: 0.405 delta: -0.049
-epoch: 59 validAccuracy: 0.267 trainAccuracy: 0.385 delta: -0.033
-epoch: 60 validAccuracy: 0.266 trainAccuracy: 0.412 delta: -0.034
-epoch: 61 validAccuracy: 0.28 trainAccuracy: 0.399 delta: -0.02
-epoch: 62 validAccuracy: 0.286 trainAccuracy: 0.418 delta: -0.014
-epoch: 63 validAccuracy: 0.275 trainAccuracy: 0.402 delta: -0.025
-epoch: 64 validAccuracy: 0.306 trainAccuracy: 0.423 delta: 0.006
-epoch: 65 validAccuracy: 0.29 trainAccuracy: 0.443 delta: -0.016
-epoch: 66 validAccuracy: 0.268 trainAccuracy: 0.475 delta: -0.038
-epoch: 67 validAccuracy: 0.307 trainAccuracy: 0.494 delta: 0.001
-epoch: 68 validAccuracy: 0.315 trainAccuracy: 0.522 delta: 0.008
-epoch: 69 validAccuracy: 0.328 trainAccuracy: 0.552 delta: 0.013
-epoch: 70 validAccuracy: 0.339 trainAccuracy: 0.594 delta: 0.011
-epoch: 71 validAccuracy: 0.341 trainAccuracy: 0.593 delta: 0.002
-epoch: 72 validAccuracy: 0.348 trainAccuracy: 0.614 delta: 0.007
-epoch: 73 validAccuracy: 0.356 trainAccuracy: 0.631 delta: 0.008
-epoch: 74 validAccuracy: 0.349 trainAccuracy: 0.631 delta: -0.007
-epoch: 75 validAccuracy: 0.36 trainAccuracy: 0.638 delta: 0.004
-epoch: 76 validAccuracy: 0.353 trainAccuracy: 0.658 delta: -0.007
-epoch: 77 validAccuracy: 0.348 trainAccuracy: 0.637 delta: -0.012
-epoch: 78 validAccuracy: 0.361 trainAccuracy: 0.643 delta: 0.001
-epoch: 79 validAccuracy: 0.342 trainAccuracy: 0.629 delta: -0.019
-epoch: 80 validAccuracy: 0.35 trainAccuracy: 0.62 delta: -0.011
-epoch: 81 validAccuracy: 0.364 trainAccuracy: 0.656 delta: 0.003
-epoch: 82 validAccuracy: 0.345 trainAccuracy: 0.618 delta: -0.019
-epoch: 83 validAccuracy: 0.357 trainAccuracy: 0.622 delta: -0.007
-epoch: 84 validAccuracy: 0.346 trainAccuracy: 0.575 delta: -0.018
-epoch: 85 validAccuracy: 0.313 trainAccuracy: 0.61 delta: -0.051
-epoch: 86 validAccuracy: 0.325 trainAccuracy: 0.572 delta: -0.039
-epoch: 87 validAccuracy: 0.312 trainAccuracy: 0.55 delta: -0.052
-epoch: 88 validAccuracy: 0.308 trainAccuracy: 0.559 delta: -0.056
-epoch: 89 validAccuracy: 0.323 trainAccuracy: 0.548 delta: -0.041
-epoch: 90 validAccuracy: 0.297 trainAccuracy: 0.541 delta: -0.067
-epoch: 91 validAccuracy: 0.286 trainAccuracy: 0.535 delta: -0.078
-epoch: 92 validAccuracy: 0.306 trainAccuracy: 0.559 delta: -0.058
-epoch: 93 validAccuracy: 0.327 trainAccuracy: 0.59 delta: -0.037
-epoch: 94 validAccuracy: 0.337 trainAccuracy: 0.56 delta: -0.027
-epoch: 95 validAccuracy: 0.348 trainAccuracy: 0.62 delta: -0.016
-epoch: 96 validAccuracy: 0.347 trainAccuracy: 0.628 delta: -0.017
-epoch: 97 validAccuracy: 0.344 trainAccuracy: 0.669 delta: -0.02
-epoch: 98 validAccuracy: 0.357 trainAccuracy: 0.7 delta: -0.007
-epoch: 99 validAccuracy: 0.366 trainAccuracy: 0.762 delta: 0.002
-epoch: 100 validAccuracy: 0.371 trainAccuracy: 0.737 delta: 0.005
-epoch: 101 validAccuracy: 0.381 trainAccuracy: 0.764 delta: 0.01
-epoch: 102 validAccuracy: 0.388 trainAccuracy: 0.795 delta: 0.007
-epoch: 103 validAccuracy: 0.375 trainAccuracy: 0.779 delta: -0.013
-epoch: 104 validAccuracy: 0.389 trainAccuracy: 0.797 delta: 0.001
-epoch: 105 validAccuracy: 0.378 trainAccuracy: 0.794 delta: -0.011
-epoch: 106 validAccuracy: 0.382 trainAccuracy: 0.825 delta: -0.007
-epoch: 107 validAccuracy: 0.387 trainAccuracy: 0.821 delta: -0.002
-epoch: 108 validAccuracy: 0.381 trainAccuracy: 0.791 delta: -0.008
-epoch: 109 validAccuracy: 0.379 trainAccuracy: 0.81 delta: -0.01
-epoch: 110 validAccuracy: 0.374 trainAccuracy: 0.819 delta: -0.015
-epoch: 111 validAccuracy: 0.389 trainAccuracy: 0.797 delta: 0.0
-epoch: 112 validAccuracy: 0.379 trainAccuracy: 0.796 delta: -0.01
-epoch: 113 validAccuracy: 0.375 trainAccuracy: 0.767 delta: -0.014
-epoch: 114 validAccuracy: 0.364 trainAccuracy: 0.783 delta: -0.025
-epoch: 115 validAccuracy: 0.353 trainAccuracy: 0.751 delta: -0.036
-epoch: 116 validAccuracy: 0.353 trainAccuracy: 0.766 delta: -0.036
-epoch: 117 validAccuracy: 0.325 trainAccuracy: 0.734 delta: -0.064
-epoch: 118 validAccuracy: 0.359 trainAccuracy: 0.72 delta: -0.03
-epoch: 119 validAccuracy: 0.35 trainAccuracy: 0.657 delta: -0.039
-=============================================================================================
-learningRate: 5e-05 accuracy:0.389 epoch: 104 delta: 0.146
-=============================================================================================
-[38;5;2m[i 0317 03:54:35.267575 20 dataset.py:629] Found 102 classes and 1020 images.[m
-[38;5;2m[i 0317 03:54:35.272897 20 dataset.py:629] Found 102 classes and 1020 images.[m
-[38;5;2m[i 0317 03:54:35.296112 20 dataset.py:629] Found 102 classes and 6149 images.[m
+[38;5;2m[i 0318 04:20:18.871021 48 compiler.py:944] Jittor(1.3.1.48) src: /root/miniconda3/envs/jittor-fanxiaoyu/lib/python3.9/site-packages/jittor[m
+[38;5;2m[i 0318 04:20:18.874267 48 compiler.py:945] g++ at /usr/bin/g++(7.5.0)[m
+[38;5;2m[i 0318 04:20:18.874376 48 compiler.py:946] cache_path: /root/.cache/jittor/jt1.3.1/g++7.5.0/py3.9.7/Linux-5.4.0-96xb0/IntelRXeonRCPUx84/default[m
+[38;5;2m[i 0318 04:20:18.877601 48 __init__.py:376] Found /usr/local/cuda/bin/nvcc(10.2.89) at /usr/local/cuda/bin/nvcc.[m
+[38;5;2m[i 0318 04:20:18.880989 48 __init__.py:376] Found addr2line(2.30) at /usr/bin/addr2line.[m
+[38;5;2m[i 0318 04:20:19.088439 48 compiler.py:999] cuda key:cu10.2.89_sm_61[m
+[38;5;2m[i 0318 04:20:19.272799 48 __init__.py:191] Total mem: 219.71GB, using 16 procs for compiling.[m
+[38;5;2m[i 0318 04:20:19.384320 48 jit_compiler.cc:27] Load cc_path: /usr/bin/g++[m
+[38;5;2m[i 0318 04:20:19.690642 48 init.cc:62] Found cuda archs: [61,][m
+[38;5;2m[i 0318 04:20:19.784048 48 __init__.py:376] Found mpicc(2.1.1) at /usr/bin/mpicc.[m
+[38;5;2m[i 0318 04:20:19.897193 48 compile_extern.py:29] found /usr/include/cublas.h[m
+[38;5;2m[i 0318 04:20:19.907086 48 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcublas.so[m
+[38;5;2m[i 0318 04:20:19.907303 48 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcublasLt.so.10[m
+[38;5;2m[i 0318 04:20:20.117181 48 compile_extern.py:29] found /usr/include/cudnn.h[m
+[38;5;2m[i 0318 04:20:20.135434 48 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcudnn.so[m
+[38;5;2m[i 0318 04:20:20.822523 48 compile_extern.py:29] found /usr/local/cuda/include/curand.h[m
+[38;5;2m[i 0318 04:20:20.858415 48 compile_extern.py:29] found /usr/local/cuda/lib64/libcurand.so[m
+[38;5;2m[i 0318 04:20:20.900597 48 cuda_flags.cc:32] CUDA enabled.[m
+[38;5;2m[i 0318 04:20:20.911622 48 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0318 04:20:20.917173 48 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0318 04:20:20.941490 48 dataset.py:629] Found 102 classes and 6149 images.[m
 ----------------- A new trial ---------------------
 learning rate: 0.0001
-epoch: 0 validAccuracy: 0.031 trainAccuracy: 0.025 delta: 0.031
-epoch: 1 validAccuracy: 0.045 trainAccuracy: 0.042 delta: 0.014
-epoch: 2 validAccuracy: 0.057 trainAccuracy: 0.052 delta: 0.012
-epoch: 3 validAccuracy: 0.094 trainAccuracy: 0.069 delta: 0.037
-epoch: 4 validAccuracy: 0.105 trainAccuracy: 0.072 delta: 0.011
-epoch: 5 validAccuracy: 0.138 trainAccuracy: 0.104 delta: 0.033
-epoch: 6 validAccuracy: 0.125 trainAccuracy: 0.126 delta: -0.013
-epoch: 7 validAccuracy: 0.17 trainAccuracy: 0.136 delta: 0.032
-epoch: 8 validAccuracy: 0.173 trainAccuracy: 0.149 delta: 0.003
-epoch: 9 validAccuracy: 0.175 trainAccuracy: 0.172 delta: 0.002
-epoch: 10 validAccuracy: 0.194 trainAccuracy: 0.191 delta: 0.019
-epoch: 11 validAccuracy: 0.202 trainAccuracy: 0.212 delta: 0.008
-epoch: 12 validAccuracy: 0.226 trainAccuracy: 0.231 delta: 0.024
-epoch: 13 validAccuracy: 0.209 trainAccuracy: 0.247 delta: -0.017
-epoch: 14 validAccuracy: 0.218 trainAccuracy: 0.254 delta: -0.008
-epoch: 15 validAccuracy: 0.224 trainAccuracy: 0.264 delta: -0.002
-epoch: 16 validAccuracy: 0.223 trainAccuracy: 0.26 delta: -0.003
-epoch: 17 validAccuracy: 0.218 trainAccuracy: 0.263 delta: -0.008
-epoch: 18 validAccuracy: 0.214 trainAccuracy: 0.247 delta: -0.012
-epoch: 19 validAccuracy: 0.227 trainAccuracy: 0.267 delta: 0.001
-epoch: 20 validAccuracy: 0.22 trainAccuracy: 0.268 delta: -0.007
-epoch: 21 validAccuracy: 0.218 trainAccuracy: 0.258 delta: -0.009
-epoch: 22 validAccuracy: 0.188 trainAccuracy: 0.257 delta: -0.039
-epoch: 23 validAccuracy: 0.197 trainAccuracy: 0.229 delta: -0.03
-epoch: 24 validAccuracy: 0.181 trainAccuracy: 0.227 delta: -0.046
-epoch: 25 validAccuracy: 0.211 trainAccuracy: 0.258 delta: -0.016
-epoch: 26 validAccuracy: 0.169 trainAccuracy: 0.213 delta: -0.058
-epoch: 27 validAccuracy: 0.2 trainAccuracy: 0.215 delta: -0.027
-epoch: 28 validAccuracy: 0.213 trainAccuracy: 0.211 delta: -0.014
-epoch: 29 validAccuracy: 0.197 trainAccuracy: 0.219 delta: -0.03
-epoch: 30 validAccuracy: 0.183 trainAccuracy: 0.222 delta: -0.044
-epoch: 31 validAccuracy: 0.196 trainAccuracy: 0.259 delta: -0.031
-epoch: 32 validAccuracy: 0.208 trainAccuracy: 0.253 delta: -0.019
-epoch: 33 validAccuracy: 0.213 trainAccuracy: 0.245 delta: -0.014
-epoch: 34 validAccuracy: 0.244 trainAccuracy: 0.268 delta: 0.017
-epoch: 35 validAccuracy: 0.232 trainAccuracy: 0.29 delta: -0.012
-epoch: 36 validAccuracy: 0.269 trainAccuracy: 0.312 delta: 0.025
-epoch: 37 validAccuracy: 0.275 trainAccuracy: 0.341 delta: 0.006
-epoch: 38 validAccuracy: 0.284 trainAccuracy: 0.38 delta: 0.009
-epoch: 39 validAccuracy: 0.291 trainAccuracy: 0.412 delta: 0.007
-epoch: 40 validAccuracy: 0.306 trainAccuracy: 0.444 delta: 0.015
+
+Compiling Operators(8/15) used: 3.31s eta:  2.9s Compiling Operators(15/15) used: 4.31s eta:    0s 
+
+Compiling Operators(18/21) used: 4.31s eta: 0.719s Compiling Operators(21/21) used: 5.31s eta:    0s 
+epoch: 0 validAccuracy: 0.023 trainAccuracy: 0.017 delta: 0.023
+epoch: 1 validAccuracy: 0.042 trainAccuracy: 0.039 delta: 0.019
+epoch: 2 validAccuracy: 0.075 trainAccuracy: 0.035 delta: 0.033
+epoch: 3 validAccuracy: 0.068 trainAccuracy: 0.069 delta: -0.007
+epoch: 4 validAccuracy: 0.103 trainAccuracy: 0.065 delta: 0.028
+epoch: 5 validAccuracy: 0.113 trainAccuracy: 0.083 delta: 0.01
+epoch: 6 validAccuracy: 0.123 trainAccuracy: 0.1 delta: 0.01
+epoch: 7 validAccuracy: 0.136 trainAccuracy: 0.127 delta: 0.013
+epoch: 8 validAccuracy: 0.146 trainAccuracy: 0.141 delta: 0.01
+epoch: 9 validAccuracy: 0.137 trainAccuracy: 0.164 delta: -0.009
+epoch: 10 validAccuracy: 0.167 trainAccuracy: 0.193 delta: 0.021
+epoch: 11 validAccuracy: 0.196 trainAccuracy: 0.196 delta: 0.029
+epoch: 12 validAccuracy: 0.18 trainAccuracy: 0.203 delta: -0.016
+epoch: 13 validAccuracy: 0.198 trainAccuracy: 0.222 delta: 0.002
+epoch: 14 validAccuracy: 0.196 trainAccuracy: 0.235 delta: -0.002
+epoch: 15 validAccuracy: 0.208 trainAccuracy: 0.249 delta: 0.01
+epoch: 16 validAccuracy: 0.199 trainAccuracy: 0.252 delta: -0.009
+epoch: 17 validAccuracy: 0.199 trainAccuracy: 0.251 delta: -0.009
+epoch: 18 validAccuracy: 0.194 trainAccuracy: 0.225 delta: -0.014
+epoch: 19 validAccuracy: 0.213 trainAccuracy: 0.242 delta: 0.005
+epoch: 20 validAccuracy: 0.215 trainAccuracy: 0.246 delta: 0.002
+epoch: 21 validAccuracy: 0.19 trainAccuracy: 0.247 delta: -0.025
+epoch: 22 validAccuracy: 0.176 trainAccuracy: 0.254 delta: -0.039
+epoch: 23 validAccuracy: 0.187 trainAccuracy: 0.236 delta: -0.028
+epoch: 24 validAccuracy: 0.197 trainAccuracy: 0.211 delta: -0.018
+epoch: 25 validAccuracy: 0.18 trainAccuracy: 0.213 delta: -0.035
+epoch: 26 validAccuracy: 0.188 trainAccuracy: 0.202 delta: -0.027
+epoch: 27 validAccuracy: 0.188 trainAccuracy: 0.218 delta: -0.027
+epoch: 28 validAccuracy: 0.166 trainAccuracy: 0.202 delta: -0.049
+epoch: 29 validAccuracy: 0.199 trainAccuracy: 0.196 delta: -0.016
+epoch: 30 validAccuracy: 0.234 trainAccuracy: 0.193 delta: 0.019
+epoch: 31 validAccuracy: 0.19 trainAccuracy: 0.262 delta: -0.044
+epoch: 32 validAccuracy: 0.218 trainAccuracy: 0.238 delta: -0.016
+epoch: 33 validAccuracy: 0.225 trainAccuracy: 0.252 delta: -0.009
+epoch: 34 validAccuracy: 0.224 trainAccuracy: 0.281 delta: -0.01
+epoch: 35 validAccuracy: 0.254 trainAccuracy: 0.323 delta: 0.02
+epoch: 36 validAccuracy: 0.268 trainAccuracy: 0.318 delta: 0.014
+epoch: 37 validAccuracy: 0.28 trainAccuracy: 0.334 delta: 0.012
+epoch: 38 validAccuracy: 0.296 trainAccuracy: 0.355 delta: 0.016
+epoch: 39 validAccuracy: 0.316 trainAccuracy: 0.391 delta: 0.02
+epoch: 40 validAccuracy: 0.321 trainAccuracy: 0.41 delta: 0.005
+epoch: 41 validAccuracy: 0.329 trainAccuracy: 0.426 delta: 0.008
+epoch: 42 validAccuracy: 0.334 trainAccuracy: 0.466 delta: 0.005
+epoch: 43 validAccuracy: 0.339 trainAccuracy: 0.478 delta: 0.005
+epoch: 44 validAccuracy: 0.345 trainAccuracy: 0.496 delta: 0.006
+epoch: 45 validAccuracy: 0.339 trainAccuracy: 0.495 delta: -0.006
+epoch: 46 validAccuracy: 0.345 trainAccuracy: 0.507 delta: 0.0
+epoch: 47 validAccuracy: 0.344 trainAccuracy: 0.505 delta: -0.001
+epoch: 48 validAccuracy: 0.346 trainAccuracy: 0.502 delta: 0.001
+epoch: 49 validAccuracy: 0.345 trainAccuracy: 0.491 delta: -0.001
+epoch: 50 validAccuracy: 0.342 trainAccuracy: 0.501 delta: -0.004
+epoch: 51 validAccuracy: 0.349 trainAccuracy: 0.486 delta: 0.003
+epoch: 52 validAccuracy: 0.332 trainAccuracy: 0.494 delta: -0.017
+epoch: 53 validAccuracy: 0.334 trainAccuracy: 0.452 delta: -0.015
+epoch: 54 validAccuracy: 0.3 trainAccuracy: 0.452 delta: -0.049
+epoch: 55 validAccuracy: 0.28 trainAccuracy: 0.437 delta: -0.069
+epoch: 56 validAccuracy: 0.287 trainAccuracy: 0.429 delta: -0.062
+epoch: 57 validAccuracy: 0.277 trainAccuracy: 0.41 delta: -0.072
+epoch: 58 validAccuracy: 0.276 trainAccuracy: 0.406 delta: -0.073

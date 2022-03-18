@@ -169,7 +169,7 @@ def trial(learningRate=1e-5):
 
 if __name__=="__main__":
     globalBestAccuracy=0.0
-    learningRateList=[5e-5]#[1e-6,1e-5,5e-5,1e-4,1e-3]
+    learningRateList=[1e-4]#[1e-6,1e-5,5e-5,1e-4,1e-3]
     trialBoard=[]
     for learningRate in learningRateList:
         accuracy,epoch=trial(learningRate=learningRate)
