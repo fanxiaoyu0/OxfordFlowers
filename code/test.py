@@ -103,7 +103,7 @@ def calculate_test_set_accuracy(model, test_loader):
     # run["eval/acc"].log(round(acc,2))
     return round(acc,4)
 
-def trial(model=Resnet50(num_classes=102),modelName="ResNet",learningRate=1e-4,epochs=200,etaMin=5e-6):
+def trial(model=Resnet50(num_classes=102),modelName="ResNet",learningRate=1e-4,epochs=200,etaMin=1e-5):
     jt.set_global_seed(648)  
 
     # region Processing data 
