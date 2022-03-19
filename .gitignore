@@ -2,6 +2,7 @@
 /model/
 /code/__pycache__/
 /code/.neptune/
+/code/runs/
 
 *.pt
 *.jpg

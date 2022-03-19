@@ -1,4 +1,5 @@
 import os
+from tracemalloc import stop
 import jittor as jt
 from jittor import nn
 from jittor import transform
@@ -13,6 +14,8 @@ from mlp_mixer import MLPMixerForImageClassification
 from conv_mixer import ConvMixer
 from vision_transformer import VisionTransformer
 from jittor.models.resnet import Resnet50
+from tensorboardX import SummaryWriter
+writer = SummaryWriter()
 # import os
 # os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"   # see issue #152
 # os.environ["CUDA_VISIBLE_DEVICES"]="2"
@@ -100,7 +103,7 @@ def calculate_test_set_accuracy(model, test_loader):
     # run["eval/acc"].log(round(acc,2))
     return round(acc,4)
 
-def trial(model=Resnet50(num_classes=102),modelName="ResNet",learningRate=1e-4,epochs=200):
+def trial(model=Resnet50(num_classes=102),modelName="ResNet",learningRate=1e-4,epochs=200,etaMin=5e-6):
     jt.set_global_seed(648)  
 
     # region Processing data 
@@ -156,7 +159,8 @@ def trial(model=Resnet50(num_classes=102),modelName="ResNet",learningRate=1e-4,e
     optimizer = nn.Adam(model.parameters(), lr=learningRate, weight_decay=1e-4)
     # scheduler = MultiStepLR(optimizer, milestones=[40, 80, 160, 240], gamma=0.2) #learning rate decay
     # T_max=15
-    scheduler = CosineAnnealingLR(optimizer, 15, 1e-8)
+    
+    scheduler = CosineAnnealingLR(optimizer, 15, eta_min=etaMin)
     # endregion
 
     # region train and valid
@@ -165,6 +169,9 @@ def trial(model=Resnet50(num_classes=102),modelName="ResNet",learningRate=1e-4,e
     # print("dropout:",dropout)
     print("----------------- A new trial ---------------------")
     print("modelName",modelName,"learning rate:",learningRate,"epochs",epochs)
+    maxBearableEpochs=50
+    noProgressEpochs=0
+    stopEpoch=0
     # epochs = 800
     currentBestAccuracy=0.0
     currentBestEpoch=0
@@ -172,10 +179,19 @@ def trial(model=Resnet50(num_classes=102),modelName="ResNet",learningRate=1e-4,e
         trainAccuracy=train_one_epoch(model, traindataset, criterion, optimizer, epoch, 1, scheduler)
         validAccuracy=valid_one_epoch(model, validdataset, epoch)
         print("epoch:",epoch,"validAccuracy:",validAccuracy,"trainAccuracy:",trainAccuracy,"delta:",round(validAccuracy-currentBestAccuracy,4))
+        writer.add_scalar(modelName+'/train', trainAccuracy, epoch)
+        writer.add_scalar(modelName+'/valid', validAccuracy, epoch)
         if validAccuracy > currentBestAccuracy:
             currentBestAccuracy=validAccuracy
             currentBestEpoch=epoch
-            model.save("../model/"+modelName+"/best.pkl")
+            model.save("../model/"+modelName+"/best_1.pkl")
+            noProgressEpochs=0
+        else:
+            noProgressEpochs+=1
+            if noProgressEpochs>=maxBearableEpochs:
+                stopEpoch=epoch
+                break
+        stopEpoch=epoch
         # Report intermediate objective value.
         # trial.report(best_acc, epoch)
         # Handle pruning based on the intermediate value.
@@ -183,20 +199,21 @@ def trial(model=Resnet50(num_classes=102),modelName="ResNet",learningRate=1e-4,e
         #     raise optuna.TrialPruned()
     testAccuracy=calculate_test_set_accuracy(model=model,test_loader=testdataset)
     print("==========================================================================================")
-    print("validAccuracy",currentBestAccuracy,"bestEpoch",currentBestEpoch,"testAccuracy",testAccuracy)
+    print("validAccuracy",currentBestAccuracy,"bestEpoch",currentBestEpoch,"testAccuracy",testAccuracy,"stopEpoch",stopEpoch)
     print("==========================================================================================")
     return currentBestAccuracy,currentBestEpoch,testAccuracy
 
 if __name__=="__main__":
     mlpMixerModel=MLPMixerForImageClassification(
         in_channels=3,patch_size=16, d_model=512, depth=12, num_classes=102,image_size=224,dropout=0)
-    trial(model=mlpMixerModel,modelName="MLPMixer",learningRate=2.3e-5,epochs=2)
-    convMixerModel=ConvMixer(dim = 768, depth = 32, kernel_size=7, patch_size=7,n_classes=102)
-    trial(model=convMixerModel,modelName="ConvMixer",learningRate=1e-4,epochs=2)
+    trial(model=mlpMixerModel,modelName="MLPMixer",learningRate=2.3e-5,epochs=200)
+    # convMixerModel=ConvMixer(dim = 768, depth = 32, kernel_size=7, patch_size=7,n_classes=102)
+    # trial(model=convMixerModel,modelName="ConvMixer",learningRate=1e-4,epochs=500)
     vitModel = VisionTransformer(patch_size=16, embed_dim=768, depth=8, num_heads=8, mlp_ratio=3.)
-    trial(model=vitModel,modelName="ViT",learningRate=5e-5,epochs=2)
-    resnetModel=Resnet50(num_classes=102)
-    trial(model=resnetModel,modelName="ResNet",learningRate=1e-4,epochs=2)
+    trial(model=vitModel,modelName="ViT",learningRate=5e-5,epochs=200)
+    writer.close()
+    # resnetModel=Resnet50(num_classes=102)
+    # trial(model=resnetModel,modelName="ResNet",learningRate=1e-4,epochs=1600)
 
 
 

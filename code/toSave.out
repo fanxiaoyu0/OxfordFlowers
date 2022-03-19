@@ -1,45 +1,747 @@
-[38;5;2m[i 0318 15:44:57.863219 72 compiler.py:944] Jittor(1.3.1.48) src: /root/miniconda3/envs/jittor-fanxiaoyu/lib/python3.9/site-packages/jittor[m
-[38;5;2m[i 0318 15:44:57.867019 72 compiler.py:945] g++ at /usr/bin/g++(7.5.0)[m
-[38;5;2m[i 0318 15:44:57.867131 72 compiler.py:946] cache_path: /root/.cache/jittor/jt1.3.1/g++7.5.0/py3.9.7/Linux-5.4.0-96xb0/IntelRXeonRCPUx84/default[m
-[38;5;2m[i 0318 15:44:57.870512 72 __init__.py:376] Found /usr/local/cuda/bin/nvcc(10.2.89) at /usr/local/cuda/bin/nvcc.[m
-[38;5;2m[i 0318 15:44:57.874449 72 __init__.py:376] Found addr2line(2.30) at /usr/bin/addr2line.[m
-[38;5;2m[i 0318 15:44:57.991333 72 compiler.py:999] cuda key:cu10.2.89_sm_61[m
-[38;5;2m[i 0318 15:44:58.175281 72 __init__.py:191] Total mem: 219.71GB, using 16 procs for compiling.[m
-[38;5;2m[i 0318 15:44:58.298710 72 jit_compiler.cc:27] Load cc_path: /usr/bin/g++[m
-[38;5;2m[i 0318 15:44:58.592157 72 init.cc:62] Found cuda archs: [61,][m
-[38;5;2m[i 0318 15:44:58.780813 72 __init__.py:376] Found mpicc(2.1.1) at /usr/bin/mpicc.[m
-[38;5;2m[i 0318 15:44:58.886749 72 compile_extern.py:29] found /usr/include/cublas.h[m
-[38;5;2m[i 0318 15:44:58.893968 72 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcublas.so[m
-[38;5;2m[i 0318 15:44:58.894205 72 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcublasLt.so.10[m
-[38;5;2m[i 0318 15:44:59.085217 72 compile_extern.py:29] found /usr/include/cudnn.h[m
-[38;5;2m[i 0318 15:44:59.097003 72 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcudnn.so[m
-[38;5;2m[i 0318 15:44:59.782248 72 compile_extern.py:29] found /usr/local/cuda/include/curand.h[m
-[38;5;2m[i 0318 15:44:59.813917 72 compile_extern.py:29] found /usr/local/cuda/lib64/libcurand.so[m
-[38;5;2m[i 0318 15:44:59.855531 72 cuda_flags.cc:32] CUDA enabled.[m
-[38;5;2m[i 0318 15:44:59.870633 72 dataset.py:629] Found 102 classes and 1020 images.[m
-[38;5;2m[i 0318 15:44:59.876106 72 dataset.py:629] Found 102 classes and 1020 images.[m
-[38;5;2m[i 0318 15:44:59.900719 72 dataset.py:629] Found 102 classes and 6149 images.[m
-test_num 6149
+[38;5;2m[i 0318 16:12:24.445416 40 compiler.py:944] Jittor(1.3.1.48) src: /root/miniconda3/envs/jittor-fanxiaoyu/lib/python3.9/site-packages/jittor[m
+[38;5;2m[i 0318 16:12:24.448522 40 compiler.py:945] g++ at /usr/bin/g++(7.5.0)[m
+[38;5;2m[i 0318 16:12:24.448627 40 compiler.py:946] cache_path: /root/.cache/jittor/jt1.3.1/g++7.5.0/py3.9.7/Linux-5.4.0-96xb0/IntelRXeonRCPUx84/default[m
+[38;5;2m[i 0318 16:12:24.451849 40 __init__.py:376] Found /usr/local/cuda/bin/nvcc(10.2.89) at /usr/local/cuda/bin/nvcc.[m
+[38;5;2m[i 0318 16:12:24.455170 40 __init__.py:376] Found addr2line(2.30) at /usr/bin/addr2line.[m
+[38;5;2m[i 0318 16:12:24.566570 40 compiler.py:999] cuda key:cu10.2.89_sm_61[m
+[38;5;2m[i 0318 16:12:24.745889 40 __init__.py:191] Total mem: 219.71GB, using 16 procs for compiling.[m
+[38;5;2m[i 0318 16:12:24.854732 40 jit_compiler.cc:27] Load cc_path: /usr/bin/g++[m
+[38;5;2m[i 0318 16:12:25.126535 40 init.cc:62] Found cuda archs: [61,][m
+[38;5;2m[i 0318 16:12:25.284713 40 __init__.py:376] Found mpicc(2.1.1) at /usr/bin/mpicc.[m
+[38;5;2m[i 0318 16:12:25.415039 40 compile_extern.py:29] found /usr/include/cublas.h[m
+[38;5;2m[i 0318 16:12:25.422257 40 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcublas.so[m
+[38;5;2m[i 0318 16:12:25.422542 40 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcublasLt.so.10[m
+[38;5;2m[i 0318 16:12:25.626904 40 compile_extern.py:29] found /usr/include/cudnn.h[m
+[38;5;2m[i 0318 16:12:25.635686 40 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcudnn.so[m
+[38;5;2m[i 0318 16:12:26.305247 40 compile_extern.py:29] found /usr/local/cuda/include/curand.h[m
+[38;5;2m[i 0318 16:12:26.321508 40 compile_extern.py:29] found /usr/local/cuda/lib64/libcurand.so[m
+[38;5;2m[i 0318 16:12:26.358689 40 cuda_flags.cc:32] CUDA enabled.[m
+[38;5;2m[i 0318 16:12:26.373343 40 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0318 16:12:26.378826 40 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0318 16:12:26.403159 40 dataset.py:629] Found 102 classes and 6149 images.[m
 ----------------- A new trial ---------------------
-modelName MLPMixer learning rate: 2.3e-05 epochs 2
+modelName MLPMixer learning rate: 2.3e-05 epochs 200
 epoch: 0 validAccuracy: 0.0637 trainAccuracy: 0.0216 delta: 0.0637
 epoch: 1 validAccuracy: 0.0882 trainAccuracy: 0.0549 delta: 0.0245
-
-Compiling Operators(1/1) used: 2.77s eta:    0s 
-
-Compiling Operators(1/1) used: 2.75s eta:    0s 
-
-Compiling Operators(1/1) used: 2.79s eta:    0s 
-
-Compiling Operators(1/1) used: 2.77s eta:    0s 
+epoch: 2 validAccuracy: 0.0941 trainAccuracy: 0.0853 delta: 0.0059
+epoch: 3 validAccuracy: 0.1275 trainAccuracy: 0.1108 delta: 0.0334
+epoch: 4 validAccuracy: 0.1539 trainAccuracy: 0.1451 delta: 0.0264
+epoch: 5 validAccuracy: 0.1853 trainAccuracy: 0.201 delta: 0.0314
+epoch: 6 validAccuracy: 0.2108 trainAccuracy: 0.2382 delta: 0.0255
+epoch: 7 validAccuracy: 0.2294 trainAccuracy: 0.2912 delta: 0.0186
+epoch: 8 validAccuracy: 0.2275 trainAccuracy: 0.3108 delta: -0.0019
+epoch: 9 validAccuracy: 0.2569 trainAccuracy: 0.35 delta: 0.0275
+epoch: 10 validAccuracy: 0.2784 trainAccuracy: 0.3931 delta: 0.0215
+epoch: 11 validAccuracy: 0.2686 trainAccuracy: 0.4431 delta: -0.0098
+epoch: 12 validAccuracy: 0.2804 trainAccuracy: 0.4559 delta: 0.002
+epoch: 13 validAccuracy: 0.2843 trainAccuracy: 0.4804 delta: 0.0039
+epoch: 14 validAccuracy: 0.2843 trainAccuracy: 0.498 delta: 0.0
+epoch: 15 validAccuracy: 0.2853 trainAccuracy: 0.5 delta: 0.001
+epoch: 16 validAccuracy: 0.2853 trainAccuracy: 0.4971 delta: 0.0
+epoch: 17 validAccuracy: 0.2853 trainAccuracy: 0.5167 delta: 0.0
+epoch: 18 validAccuracy: 0.2873 trainAccuracy: 0.4922 delta: 0.002
+epoch: 19 validAccuracy: 0.2863 trainAccuracy: 0.499 delta: -0.001
+epoch: 20 validAccuracy: 0.2892 trainAccuracy: 0.4873 delta: 0.0019
+epoch: 21 validAccuracy: 0.2892 trainAccuracy: 0.4706 delta: 0.0
+epoch: 22 validAccuracy: 0.2873 trainAccuracy: 0.4843 delta: -0.0019
+epoch: 23 validAccuracy: 0.2873 trainAccuracy: 0.4892 delta: -0.0019
+epoch: 24 validAccuracy: 0.298 trainAccuracy: 0.4961 delta: 0.0088
+epoch: 25 validAccuracy: 0.2912 trainAccuracy: 0.5098 delta: -0.0068
+epoch: 26 validAccuracy: 0.2951 trainAccuracy: 0.5225 delta: -0.0029
+epoch: 27 validAccuracy: 0.299 trainAccuracy: 0.5284 delta: 0.001
+epoch: 28 validAccuracy: 0.3088 trainAccuracy: 0.5716 delta: 0.0098
+epoch: 29 validAccuracy: 0.301 trainAccuracy: 0.5951 delta: -0.0078
+epoch: 30 validAccuracy: 0.3059 trainAccuracy: 0.6461 delta: -0.0029
+epoch: 31 validAccuracy: 0.299 trainAccuracy: 0.6549 delta: -0.0098
+epoch: 32 validAccuracy: 0.3167 trainAccuracy: 0.7196 delta: 0.0079
+epoch: 33 validAccuracy: 0.3314 trainAccuracy: 0.7725 delta: 0.0147
+epoch: 34 validAccuracy: 0.3235 trainAccuracy: 0.8265 delta: -0.0079
+epoch: 35 validAccuracy: 0.3314 trainAccuracy: 0.8706 delta: 0.0
+epoch: 36 validAccuracy: 0.348 trainAccuracy: 0.9059 delta: 0.0166
+epoch: 37 validAccuracy: 0.351 trainAccuracy: 0.9265 delta: 0.003
+epoch: 38 validAccuracy: 0.3559 trainAccuracy: 0.951 delta: 0.0049
+epoch: 39 validAccuracy: 0.349 trainAccuracy: 0.9696 delta: -0.0069
+epoch: 40 validAccuracy: 0.3588 trainAccuracy: 0.9824 delta: 0.0029
+epoch: 41 validAccuracy: 0.3686 trainAccuracy: 0.9833 delta: 0.0098
+epoch: 42 validAccuracy: 0.3598 trainAccuracy: 0.9873 delta: -0.0088
+epoch: 43 validAccuracy: 0.3627 trainAccuracy: 0.9931 delta: -0.0059
+epoch: 44 validAccuracy: 0.3608 trainAccuracy: 0.9961 delta: -0.0078
+epoch: 45 validAccuracy: 0.3608 trainAccuracy: 0.9971 delta: -0.0078
+epoch: 46 validAccuracy: 0.3608 trainAccuracy: 0.9971 delta: -0.0078
+epoch: 47 validAccuracy: 0.3618 trainAccuracy: 0.9961 delta: -0.0068
+epoch: 48 validAccuracy: 0.3618 trainAccuracy: 0.9941 delta: -0.0068
+epoch: 49 validAccuracy: 0.3657 trainAccuracy: 0.9971 delta: -0.0029
+epoch: 50 validAccuracy: 0.3618 trainAccuracy: 0.9892 delta: -0.0068
+epoch: 51 validAccuracy: 0.3637 trainAccuracy: 0.9902 delta: -0.0049
+epoch: 52 validAccuracy: 0.3578 trainAccuracy: 0.9892 delta: -0.0108
+epoch: 53 validAccuracy: 0.3559 trainAccuracy: 0.9873 delta: -0.0127
+epoch: 54 validAccuracy: 0.3598 trainAccuracy: 0.9882 delta: -0.0088
+epoch: 55 validAccuracy: 0.348 trainAccuracy: 0.9863 delta: -0.0206
+epoch: 56 validAccuracy: 0.3529 trainAccuracy: 0.9882 delta: -0.0157
+epoch: 57 validAccuracy: 0.3402 trainAccuracy: 0.9892 delta: -0.0284
+epoch: 58 validAccuracy: 0.3343 trainAccuracy: 0.9706 delta: -0.0343
+epoch: 59 validAccuracy: 0.3471 trainAccuracy: 0.9853 delta: -0.0215
+epoch: 60 validAccuracy: 0.3382 trainAccuracy: 0.9784 delta: -0.0304
+epoch: 61 validAccuracy: 0.3353 trainAccuracy: 0.9804 delta: -0.0333
+epoch: 62 validAccuracy: 0.3412 trainAccuracy: 0.9863 delta: -0.0274
+epoch: 63 validAccuracy: 0.3461 trainAccuracy: 0.9892 delta: -0.0225
+epoch: 64 validAccuracy: 0.3549 trainAccuracy: 0.9931 delta: -0.0137
+epoch: 65 validAccuracy: 0.3559 trainAccuracy: 0.9961 delta: -0.0127
+epoch: 66 validAccuracy: 0.351 trainAccuracy: 1.0 delta: -0.0176
+epoch: 67 validAccuracy: 0.3539 trainAccuracy: 1.0 delta: -0.0147
+epoch: 68 validAccuracy: 0.3569 trainAccuracy: 1.0 delta: -0.0117
+epoch: 69 validAccuracy: 0.3578 trainAccuracy: 1.0 delta: -0.0108
+epoch: 70 validAccuracy: 0.3598 trainAccuracy: 1.0 delta: -0.0088
+epoch: 71 validAccuracy: 0.3578 trainAccuracy: 1.0 delta: -0.0108
+epoch: 72 validAccuracy: 0.3598 trainAccuracy: 1.0 delta: -0.0088
+epoch: 73 validAccuracy: 0.3608 trainAccuracy: 1.0 delta: -0.0078
+epoch: 74 validAccuracy: 0.3588 trainAccuracy: 1.0 delta: -0.0098
+epoch: 75 validAccuracy: 0.3588 trainAccuracy: 1.0 delta: -0.0098
+epoch: 76 validAccuracy: 0.3588 trainAccuracy: 1.0 delta: -0.0098
+epoch: 77 validAccuracy: 0.3588 trainAccuracy: 1.0 delta: -0.0098
+epoch: 78 validAccuracy: 0.3588 trainAccuracy: 1.0 delta: -0.0098
+epoch: 79 validAccuracy: 0.3578 trainAccuracy: 1.0 delta: -0.0108
+epoch: 80 validAccuracy: 0.3578 trainAccuracy: 1.0 delta: -0.0108
+epoch: 81 validAccuracy: 0.3559 trainAccuracy: 1.0 delta: -0.0127
+epoch: 82 validAccuracy: 0.3588 trainAccuracy: 1.0 delta: -0.0098
+epoch: 83 validAccuracy: 0.3578 trainAccuracy: 1.0 delta: -0.0108
+epoch: 84 validAccuracy: 0.3647 trainAccuracy: 1.0 delta: -0.0039
+epoch: 85 validAccuracy: 0.3657 trainAccuracy: 1.0 delta: -0.0029
+epoch: 86 validAccuracy: 0.3559 trainAccuracy: 1.0 delta: -0.0127
+epoch: 87 validAccuracy: 0.35 trainAccuracy: 1.0 delta: -0.0186
+epoch: 88 validAccuracy: 0.3588 trainAccuracy: 1.0 delta: -0.0098
+epoch: 89 validAccuracy: 0.2961 trainAccuracy: 0.9471 delta: -0.0725
+epoch: 90 validAccuracy: 0.3118 trainAccuracy: 0.8451 delta: -0.0568
+epoch: 91 validAccuracy: 0.2951 trainAccuracy: 0.9559 delta: -0.0735
 ==========================================================================================
-validAccuracy 0.0882 bestEpoch 1 testAccuracy 0.066
+validAccuracy 0.3686 bestEpoch 41 testAccuracy 0.2677 stopEpoch 91
 ==========================================================================================
-[38;5;2m[i 0318 15:47:22.673321 72 dataset.py:629] Found 102 classes and 1020 images.[m
-[38;5;2m[i 0318 15:47:22.678626 72 dataset.py:629] Found 102 classes and 1020 images.[m
-[38;5;2m[i 0318 15:47:22.702416 72 dataset.py:629] Found 102 classes and 6149 images.[m
-test_num 6149
+[38;5;2m[i 0318 16:56:05.356693 40 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0318 16:56:05.361878 40 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0318 16:56:05.385265 40 dataset.py:629] Found 102 classes and 6149 images.[m
 ----------------- A new trial ---------------------
-modelName ConvMixer learning rate: 0.0001 epochs 2
-epoch: 0 validAccuracy: 0.0245 trainAccuracy: 0.0275 delta: 0.0245
-epoch: 1 validAccuracy: 0.0333 trainAccuracy: 0.0431 delta: 0.0088
+modelName ConvMixer learning rate: 0.0001 epochs 500
+epoch: 0 validAccuracy: 0.0343 trainAccuracy: 0.0196 delta: 0.0343
+epoch: 1 validAccuracy: 0.0373 trainAccuracy: 0.0412 delta: 0.003
+epoch: 2 validAccuracy: 0.0588 trainAccuracy: 0.0529 delta: 0.0215
+epoch: 3 validAccuracy: 0.0931 trainAccuracy: 0.0725 delta: 0.0343
+epoch: 4 validAccuracy: 0.1206 trainAccuracy: 0.0755 delta: 0.0275
+epoch: 5 validAccuracy: 0.1118 trainAccuracy: 0.1 delta: -0.0088
+epoch: 6 validAccuracy: 0.1814 trainAccuracy: 0.1382 delta: 0.0608
+epoch: 7 validAccuracy: 0.1451 trainAccuracy: 0.1255 delta: -0.0363
+epoch: 8 validAccuracy: 0.1804 trainAccuracy: 0.1549 delta: -0.001
+epoch: 9 validAccuracy: 0.1863 trainAccuracy: 0.1725 delta: 0.0049
+epoch: 10 validAccuracy: 0.1794 trainAccuracy: 0.202 delta: -0.0069
+epoch: 11 validAccuracy: 0.2078 trainAccuracy: 0.2324 delta: 0.0215
+epoch: 12 validAccuracy: 0.2108 trainAccuracy: 0.2235 delta: 0.003
+epoch: 13 validAccuracy: 0.2147 trainAccuracy: 0.2461 delta: 0.0039
+epoch: 14 validAccuracy: 0.2206 trainAccuracy: 0.249 delta: 0.0059
+epoch: 15 validAccuracy: 0.2235 trainAccuracy: 0.2588 delta: 0.0029
+epoch: 16 validAccuracy: 0.2167 trainAccuracy: 0.2725 delta: -0.0068
+epoch: 17 validAccuracy: 0.2196 trainAccuracy: 0.2608 delta: -0.0039
+epoch: 18 validAccuracy: 0.2137 trainAccuracy: 0.2745 delta: -0.0098
+epoch: 19 validAccuracy: 0.2118 trainAccuracy: 0.2735 delta: -0.0117
+epoch: 20 validAccuracy: 0.2235 trainAccuracy: 0.2647 delta: 0.0
+epoch: 21 validAccuracy: 0.202 trainAccuracy: 0.2549 delta: -0.0215
+epoch: 22 validAccuracy: 0.1951 trainAccuracy: 0.249 delta: -0.0284
+epoch: 23 validAccuracy: 0.1833 trainAccuracy: 0.2294 delta: -0.0402
+epoch: 24 validAccuracy: 0.202 trainAccuracy: 0.2157 delta: -0.0215
+epoch: 25 validAccuracy: 0.2078 trainAccuracy: 0.252 delta: -0.0157
+epoch: 26 validAccuracy: 0.1922 trainAccuracy: 0.2324 delta: -0.0313
+epoch: 27 validAccuracy: 0.2118 trainAccuracy: 0.201 delta: -0.0117
+epoch: 28 validAccuracy: 0.2078 trainAccuracy: 0.2147 delta: -0.0157
+epoch: 29 validAccuracy: 0.1863 trainAccuracy: 0.2069 delta: -0.0372
+epoch: 30 validAccuracy: 0.2127 trainAccuracy: 0.2363 delta: -0.0108
+epoch: 31 validAccuracy: 0.2196 trainAccuracy: 0.2471 delta: -0.0039
+epoch: 32 validAccuracy: 0.2196 trainAccuracy: 0.2725 delta: -0.0039
+epoch: 33 validAccuracy: 0.2402 trainAccuracy: 0.2588 delta: 0.0167
+epoch: 34 validAccuracy: 0.249 trainAccuracy: 0.2971 delta: 0.0088
+epoch: 35 validAccuracy: 0.2735 trainAccuracy: 0.3314 delta: 0.0245
+epoch: 36 validAccuracy: 0.251 trainAccuracy: 0.3275 delta: -0.0225
+epoch: 37 validAccuracy: 0.2951 trainAccuracy: 0.3549 delta: 0.0216
+epoch: 38 validAccuracy: 0.3069 trainAccuracy: 0.4 delta: 0.0118
+epoch: 39 validAccuracy: 0.2941 trainAccuracy: 0.4412 delta: -0.0128
+epoch: 40 validAccuracy: 0.2892 trainAccuracy: 0.4314 delta: -0.0177
+epoch: 41 validAccuracy: 0.3176 trainAccuracy: 0.4412 delta: 0.0107
+epoch: 42 validAccuracy: 0.3206 trainAccuracy: 0.4951 delta: 0.003
+epoch: 43 validAccuracy: 0.3245 trainAccuracy: 0.5353 delta: 0.0039
+epoch: 44 validAccuracy: 0.3422 trainAccuracy: 0.5108 delta: 0.0177
+epoch: 45 validAccuracy: 0.3304 trainAccuracy: 0.5539 delta: -0.0118
+epoch: 46 validAccuracy: 0.3392 trainAccuracy: 0.5284 delta: -0.003
+epoch: 47 validAccuracy: 0.3461 trainAccuracy: 0.5225 delta: 0.0039
+epoch: 48 validAccuracy: 0.3353 trainAccuracy: 0.5225 delta: -0.0108
+epoch: 49 validAccuracy: 0.3235 trainAccuracy: 0.5343 delta: -0.0226
+epoch: 50 validAccuracy: 0.3363 trainAccuracy: 0.5304 delta: -0.0098
+epoch: 51 validAccuracy: 0.348 trainAccuracy: 0.5157 delta: 0.0019
+epoch: 52 validAccuracy: 0.3186 trainAccuracy: 0.5216 delta: -0.0294
+epoch: 53 validAccuracy: 0.3088 trainAccuracy: 0.4824 delta: -0.0392
+epoch: 54 validAccuracy: 0.3225 trainAccuracy: 0.4588 delta: -0.0255
+epoch: 55 validAccuracy: 0.302 trainAccuracy: 0.4529 delta: -0.046
+epoch: 56 validAccuracy: 0.2951 trainAccuracy: 0.4245 delta: -0.0529
+epoch: 57 validAccuracy: 0.2941 trainAccuracy: 0.4098 delta: -0.0539
+epoch: 58 validAccuracy: 0.2824 trainAccuracy: 0.402 delta: -0.0656
+epoch: 59 validAccuracy: 0.2676 trainAccuracy: 0.3804 delta: -0.0804
+epoch: 60 validAccuracy: 0.3 trainAccuracy: 0.4157 delta: -0.048
+epoch: 61 validAccuracy: 0.2892 trainAccuracy: 0.4167 delta: -0.0588
+epoch: 62 validAccuracy: 0.2951 trainAccuracy: 0.4647 delta: -0.0529
+epoch: 63 validAccuracy: 0.3225 trainAccuracy: 0.448 delta: -0.0255
+epoch: 64 validAccuracy: 0.3382 trainAccuracy: 0.4833 delta: -0.0098
+epoch: 65 validAccuracy: 0.3098 trainAccuracy: 0.5451 delta: -0.0382
+epoch: 66 validAccuracy: 0.3461 trainAccuracy: 0.5539 delta: -0.0019
+epoch: 67 validAccuracy: 0.3539 trainAccuracy: 0.5882 delta: 0.0059
+epoch: 68 validAccuracy: 0.3971 trainAccuracy: 0.6137 delta: 0.0432
+epoch: 69 validAccuracy: 0.399 trainAccuracy: 0.6627 delta: 0.0019
+epoch: 70 validAccuracy: 0.4029 trainAccuracy: 0.6853 delta: 0.0039
+epoch: 71 validAccuracy: 0.4039 trainAccuracy: 0.701 delta: 0.001
+epoch: 72 validAccuracy: 0.4167 trainAccuracy: 0.7608 delta: 0.0128
+epoch: 73 validAccuracy: 0.4206 trainAccuracy: 0.7716 delta: 0.0039
+epoch: 74 validAccuracy: 0.4235 trainAccuracy: 0.7627 delta: 0.0029
+epoch: 75 validAccuracy: 0.4235 trainAccuracy: 0.7873 delta: 0.0
+epoch: 76 validAccuracy: 0.4245 trainAccuracy: 0.7853 delta: 0.001
+epoch: 77 validAccuracy: 0.4157 trainAccuracy: 0.7843 delta: -0.0088
+epoch: 78 validAccuracy: 0.4294 trainAccuracy: 0.798 delta: 0.0049
+epoch: 79 validAccuracy: 0.4147 trainAccuracy: 0.7755 delta: -0.0147
+epoch: 80 validAccuracy: 0.4314 trainAccuracy: 0.7637 delta: 0.002
+epoch: 81 validAccuracy: 0.4412 trainAccuracy: 0.7686 delta: 0.0098
+epoch: 82 validAccuracy: 0.4196 trainAccuracy: 0.7588 delta: -0.0216
+epoch: 83 validAccuracy: 0.4 trainAccuracy: 0.7412 delta: -0.0412
+epoch: 84 validAccuracy: 0.3696 trainAccuracy: 0.7 delta: -0.0716
+epoch: 85 validAccuracy: 0.3716 trainAccuracy: 0.6824 delta: -0.0696
+epoch: 86 validAccuracy: 0.351 trainAccuracy: 0.6667 delta: -0.0902
+epoch: 87 validAccuracy: 0.3196 trainAccuracy: 0.6039 delta: -0.1216
+epoch: 88 validAccuracy: 0.349 trainAccuracy: 0.5794 delta: -0.0922
+epoch: 89 validAccuracy: 0.35 trainAccuracy: 0.6049 delta: -0.0912
+epoch: 90 validAccuracy: 0.3412 trainAccuracy: 0.6147 delta: -0.1
+epoch: 91 validAccuracy: 0.3569 trainAccuracy: 0.6049 delta: -0.0843
+epoch: 92 validAccuracy: 0.3431 trainAccuracy: 0.6549 delta: -0.0981
+epoch: 93 validAccuracy: 0.401 trainAccuracy: 0.6549 delta: -0.0402
+epoch: 94 validAccuracy: 0.349 trainAccuracy: 0.6833 delta: -0.0922
+epoch: 95 validAccuracy: 0.4029 trainAccuracy: 0.6853 delta: -0.0383
+epoch: 96 validAccuracy: 0.4 trainAccuracy: 0.7363 delta: -0.0412
+epoch: 97 validAccuracy: 0.4167 trainAccuracy: 0.7922 delta: -0.0245
+epoch: 98 validAccuracy: 0.4451 trainAccuracy: 0.8137 delta: 0.0039
+epoch: 99 validAccuracy: 0.4314 trainAccuracy: 0.8588 delta: -0.0137
+epoch: 100 validAccuracy: 0.452 trainAccuracy: 0.8696 delta: 0.0069
+epoch: 101 validAccuracy: 0.45 trainAccuracy: 0.8971 delta: -0.002
+epoch: 102 validAccuracy: 0.4559 trainAccuracy: 0.9039 delta: 0.0039
+epoch: 103 validAccuracy: 0.4608 trainAccuracy: 0.9029 delta: 0.0049
+epoch: 104 validAccuracy: 0.4637 trainAccuracy: 0.9186 delta: 0.0029
+epoch: 105 validAccuracy: 0.4637 trainAccuracy: 0.9235 delta: 0.0
+epoch: 106 validAccuracy: 0.4676 trainAccuracy: 0.9343 delta: 0.0039
+epoch: 107 validAccuracy: 0.4657 trainAccuracy: 0.9275 delta: -0.0019
+epoch: 108 validAccuracy: 0.4686 trainAccuracy: 0.9353 delta: 0.001
+epoch: 109 validAccuracy: 0.4735 trainAccuracy: 0.9382 delta: 0.0049
+epoch: 110 validAccuracy: 0.4618 trainAccuracy: 0.9294 delta: -0.0117
+epoch: 111 validAccuracy: 0.4676 trainAccuracy: 0.9127 delta: -0.0059
+epoch: 112 validAccuracy: 0.4529 trainAccuracy: 0.9157 delta: -0.0206
+epoch: 113 validAccuracy: 0.4304 trainAccuracy: 0.901 delta: -0.0431
+epoch: 114 validAccuracy: 0.4353 trainAccuracy: 0.8853 delta: -0.0382
+epoch: 115 validAccuracy: 0.4 trainAccuracy: 0.8539 delta: -0.0735
+epoch: 116 validAccuracy: 0.3892 trainAccuracy: 0.8245 delta: -0.0843
+epoch: 117 validAccuracy: 0.3725 trainAccuracy: 0.7647 delta: -0.101
+epoch: 118 validAccuracy: 0.3863 trainAccuracy: 0.7529 delta: -0.0872
+epoch: 119 validAccuracy: 0.3755 trainAccuracy: 0.7382 delta: -0.098
+epoch: 120 validAccuracy: 0.3833 trainAccuracy: 0.7137 delta: -0.0902
+epoch: 121 validAccuracy: 0.3588 trainAccuracy: 0.7108 delta: -0.1147
+epoch: 122 validAccuracy: 0.3863 trainAccuracy: 0.701 delta: -0.0872
+epoch: 123 validAccuracy: 0.4098 trainAccuracy: 0.8 delta: -0.0637
+epoch: 124 validAccuracy: 0.4137 trainAccuracy: 0.8255 delta: -0.0598
+epoch: 125 validAccuracy: 0.4137 trainAccuracy: 0.8304 delta: -0.0598
+epoch: 126 validAccuracy: 0.4304 trainAccuracy: 0.8549 delta: -0.0431
+epoch: 127 validAccuracy: 0.4608 trainAccuracy: 0.898 delta: -0.0127
+epoch: 128 validAccuracy: 0.4412 trainAccuracy: 0.9137 delta: -0.0323
+epoch: 129 validAccuracy: 0.4667 trainAccuracy: 0.949 delta: -0.0068
+epoch: 130 validAccuracy: 0.4627 trainAccuracy: 0.9529 delta: -0.0108
+epoch: 131 validAccuracy: 0.4627 trainAccuracy: 0.9627 delta: -0.0108
+epoch: 132 validAccuracy: 0.4637 trainAccuracy: 0.9716 delta: -0.0098
+epoch: 133 validAccuracy: 0.4794 trainAccuracy: 0.9637 delta: 0.0059
+epoch: 134 validAccuracy: 0.4706 trainAccuracy: 0.9775 delta: -0.0088
+epoch: 135 validAccuracy: 0.4706 trainAccuracy: 0.9745 delta: -0.0088
+epoch: 136 validAccuracy: 0.4676 trainAccuracy: 0.9745 delta: -0.0118
+epoch: 137 validAccuracy: 0.4765 trainAccuracy: 0.9716 delta: -0.0029
+epoch: 138 validAccuracy: 0.4725 trainAccuracy: 0.9745 delta: -0.0069
+epoch: 139 validAccuracy: 0.4755 trainAccuracy: 0.9775 delta: -0.0039
+epoch: 140 validAccuracy: 0.4794 trainAccuracy: 0.9725 delta: 0.0
+epoch: 141 validAccuracy: 0.4824 trainAccuracy: 0.9706 delta: 0.003
+epoch: 142 validAccuracy: 0.4716 trainAccuracy: 0.9814 delta: -0.0108
+epoch: 143 validAccuracy: 0.4529 trainAccuracy: 0.9667 delta: -0.0295
+epoch: 144 validAccuracy: 0.4725 trainAccuracy: 0.9471 delta: -0.0099
+epoch: 145 validAccuracy: 0.4304 trainAccuracy: 0.9255 delta: -0.052
+epoch: 146 validAccuracy: 0.4176 trainAccuracy: 0.9069 delta: -0.0648
+epoch: 147 validAccuracy: 0.4078 trainAccuracy: 0.8608 delta: -0.0746
+epoch: 148 validAccuracy: 0.4088 trainAccuracy: 0.8176 delta: -0.0736
+epoch: 149 validAccuracy: 0.3971 trainAccuracy: 0.7794 delta: -0.0853
+epoch: 150 validAccuracy: 0.398 trainAccuracy: 0.7833 delta: -0.0844
+epoch: 151 validAccuracy: 0.4059 trainAccuracy: 0.7961 delta: -0.0765
+epoch: 152 validAccuracy: 0.398 trainAccuracy: 0.7912 delta: -0.0844
+epoch: 153 validAccuracy: 0.399 trainAccuracy: 0.8539 delta: -0.0834
+epoch: 154 validAccuracy: 0.4216 trainAccuracy: 0.8588 delta: -0.0608
+epoch: 155 validAccuracy: 0.4461 trainAccuracy: 0.8833 delta: -0.0363
+epoch: 156 validAccuracy: 0.4451 trainAccuracy: 0.9225 delta: -0.0373
+epoch: 157 validAccuracy: 0.4647 trainAccuracy: 0.9167 delta: -0.0177
+epoch: 158 validAccuracy: 0.4451 trainAccuracy: 0.9333 delta: -0.0373
+epoch: 159 validAccuracy: 0.4657 trainAccuracy: 0.9618 delta: -0.0167
+epoch: 160 validAccuracy: 0.4922 trainAccuracy: 0.9696 delta: 0.0098
+epoch: 161 validAccuracy: 0.5039 trainAccuracy: 0.9775 delta: 0.0117
+epoch: 162 validAccuracy: 0.5049 trainAccuracy: 0.9843 delta: 0.001
+epoch: 163 validAccuracy: 0.499 trainAccuracy: 0.9853 delta: -0.0059
+epoch: 164 validAccuracy: 0.501 trainAccuracy: 0.9951 delta: -0.0039
+epoch: 165 validAccuracy: 0.5029 trainAccuracy: 0.9853 delta: -0.002
+epoch: 166 validAccuracy: 0.4961 trainAccuracy: 0.9853 delta: -0.0088
+epoch: 167 validAccuracy: 0.4941 trainAccuracy: 0.9892 delta: -0.0108
+epoch: 168 validAccuracy: 0.499 trainAccuracy: 0.9882 delta: -0.0059
+epoch: 169 validAccuracy: 0.4961 trainAccuracy: 0.9873 delta: -0.0088
+epoch: 170 validAccuracy: 0.5059 trainAccuracy: 0.9824 delta: 0.001
+epoch: 171 validAccuracy: 0.5 trainAccuracy: 0.9882 delta: -0.0059
+epoch: 172 validAccuracy: 0.4902 trainAccuracy: 0.9902 delta: -0.0157
+epoch: 173 validAccuracy: 0.4912 trainAccuracy: 0.9892 delta: -0.0147
+epoch: 174 validAccuracy: 0.4667 trainAccuracy: 0.9784 delta: -0.0392
+epoch: 175 validAccuracy: 0.4686 trainAccuracy: 0.9686 delta: -0.0373
+epoch: 176 validAccuracy: 0.4441 trainAccuracy: 0.9402 delta: -0.0618
+epoch: 177 validAccuracy: 0.4373 trainAccuracy: 0.9147 delta: -0.0686
+epoch: 178 validAccuracy: 0.399 trainAccuracy: 0.8245 delta: -0.1069
+epoch: 179 validAccuracy: 0.3539 trainAccuracy: 0.8 delta: -0.152
+epoch: 180 validAccuracy: 0.4059 trainAccuracy: 0.7833 delta: -0.1
+epoch: 181 validAccuracy: 0.3716 trainAccuracy: 0.7676 delta: -0.1343
+epoch: 182 validAccuracy: 0.4373 trainAccuracy: 0.8363 delta: -0.0686
+epoch: 183 validAccuracy: 0.4402 trainAccuracy: 0.8725 delta: -0.0657
+epoch: 184 validAccuracy: 0.4382 trainAccuracy: 0.8824 delta: -0.0677
+epoch: 185 validAccuracy: 0.4686 trainAccuracy: 0.9127 delta: -0.0373
+epoch: 186 validAccuracy: 0.4608 trainAccuracy: 0.948 delta: -0.0451
+epoch: 187 validAccuracy: 0.4686 trainAccuracy: 0.9441 delta: -0.0373
+epoch: 188 validAccuracy: 0.4843 trainAccuracy: 0.9725 delta: -0.0216
+epoch: 189 validAccuracy: 0.499 trainAccuracy: 0.9735 delta: -0.0069
+epoch: 190 validAccuracy: 0.5157 trainAccuracy: 0.9794 delta: 0.0098
+epoch: 191 validAccuracy: 0.5078 trainAccuracy: 0.9853 delta: -0.0079
+epoch: 192 validAccuracy: 0.5039 trainAccuracy: 0.9863 delta: -0.0118
+epoch: 193 validAccuracy: 0.5108 trainAccuracy: 0.9931 delta: -0.0049
+epoch: 194 validAccuracy: 0.5147 trainAccuracy: 0.9882 delta: -0.001
+epoch: 195 validAccuracy: 0.5147 trainAccuracy: 0.9941 delta: -0.001
+epoch: 196 validAccuracy: 0.502 trainAccuracy: 0.9912 delta: -0.0137
+epoch: 197 validAccuracy: 0.5039 trainAccuracy: 0.9833 delta: -0.0118
+epoch: 198 validAccuracy: 0.5176 trainAccuracy: 0.9912 delta: 0.0019
+epoch: 199 validAccuracy: 0.502 trainAccuracy: 0.9922 delta: -0.0156
+epoch: 200 validAccuracy: 0.5078 trainAccuracy: 0.9892 delta: -0.0098
+epoch: 201 validAccuracy: 0.5049 trainAccuracy: 0.9863 delta: -0.0127
+epoch: 202 validAccuracy: 0.5078 trainAccuracy: 0.9951 delta: -0.0098
+epoch: 203 validAccuracy: 0.501 trainAccuracy: 0.9873 delta: -0.0166
+epoch: 204 validAccuracy: 0.4882 trainAccuracy: 0.9853 delta: -0.0294
+epoch: 205 validAccuracy: 0.4627 trainAccuracy: 0.9696 delta: -0.0549
+epoch: 206 validAccuracy: 0.4588 trainAccuracy: 0.9569 delta: -0.0588
+epoch: 207 validAccuracy: 0.4 trainAccuracy: 0.9186 delta: -0.1176
+epoch: 208 validAccuracy: 0.4069 trainAccuracy: 0.8804 delta: -0.1107
+epoch: 209 validAccuracy: 0.402 trainAccuracy: 0.8333 delta: -0.1156
+epoch: 210 validAccuracy: 0.3873 trainAccuracy: 0.8118 delta: -0.1303
+epoch: 211 validAccuracy: 0.4118 trainAccuracy: 0.801 delta: -0.1058
+epoch: 212 validAccuracy: 0.4118 trainAccuracy: 0.8755 delta: -0.1058
+epoch: 213 validAccuracy: 0.4569 trainAccuracy: 0.9235 delta: -0.0607
+epoch: 214 validAccuracy: 0.4392 trainAccuracy: 0.9255 delta: -0.0784
+epoch: 215 validAccuracy: 0.4598 trainAccuracy: 0.9333 delta: -0.0578
+epoch: 216 validAccuracy: 0.4696 trainAccuracy: 0.952 delta: -0.048
+epoch: 217 validAccuracy: 0.4765 trainAccuracy: 0.9696 delta: -0.0411
+epoch: 218 validAccuracy: 0.4882 trainAccuracy: 0.9814 delta: -0.0294
+epoch: 219 validAccuracy: 0.4931 trainAccuracy: 0.9775 delta: -0.0245
+epoch: 220 validAccuracy: 0.5157 trainAccuracy: 0.9873 delta: -0.0019
+epoch: 221 validAccuracy: 0.5157 trainAccuracy: 0.9902 delta: -0.0019
+epoch: 222 validAccuracy: 0.5118 trainAccuracy: 0.9863 delta: -0.0058
+epoch: 223 validAccuracy: 0.5118 trainAccuracy: 0.9912 delta: -0.0058
+epoch: 224 validAccuracy: 0.5127 trainAccuracy: 0.9931 delta: -0.0049
+epoch: 225 validAccuracy: 0.5137 trainAccuracy: 1.0 delta: -0.0039
+epoch: 226 validAccuracy: 0.5186 trainAccuracy: 0.9971 delta: 0.001
+epoch: 227 validAccuracy: 0.5167 trainAccuracy: 0.9922 delta: -0.0019
+epoch: 228 validAccuracy: 0.5206 trainAccuracy: 0.9931 delta: 0.002
+epoch: 229 validAccuracy: 0.5088 trainAccuracy: 0.9951 delta: -0.0118
+epoch: 230 validAccuracy: 0.5049 trainAccuracy: 0.9961 delta: -0.0157
+epoch: 231 validAccuracy: 0.5108 trainAccuracy: 0.9951 delta: -0.0098
+epoch: 232 validAccuracy: 0.5157 trainAccuracy: 0.9971 delta: -0.0049
+epoch: 233 validAccuracy: 0.5147 trainAccuracy: 0.9922 delta: -0.0059
+epoch: 234 validAccuracy: 0.4853 trainAccuracy: 0.9882 delta: -0.0353
+epoch: 235 validAccuracy: 0.498 trainAccuracy: 0.9784 delta: -0.0226
+epoch: 236 validAccuracy: 0.4569 trainAccuracy: 0.9725 delta: -0.0637
+epoch: 237 validAccuracy: 0.3892 trainAccuracy: 0.9118 delta: -0.1314
+epoch: 238 validAccuracy: 0.3647 trainAccuracy: 0.8304 delta: -0.1559
+epoch: 239 validAccuracy: 0.3539 trainAccuracy: 0.8088 delta: -0.1667
+epoch: 240 validAccuracy: 0.4265 trainAccuracy: 0.8441 delta: -0.0941
+epoch: 241 validAccuracy: 0.4147 trainAccuracy: 0.8343 delta: -0.1059
+epoch: 242 validAccuracy: 0.4422 trainAccuracy: 0.8971 delta: -0.0784
+epoch: 243 validAccuracy: 0.4539 trainAccuracy: 0.9137 delta: -0.0667
+epoch: 244 validAccuracy: 0.4559 trainAccuracy: 0.9304 delta: -0.0647
+epoch: 245 validAccuracy: 0.4588 trainAccuracy: 0.9225 delta: -0.0618
+epoch: 246 validAccuracy: 0.4804 trainAccuracy: 0.9618 delta: -0.0402
+epoch: 247 validAccuracy: 0.4657 trainAccuracy: 0.9804 delta: -0.0549
+epoch: 248 validAccuracy: 0.4775 trainAccuracy: 0.9824 delta: -0.0431
+epoch: 249 validAccuracy: 0.4951 trainAccuracy: 0.9814 delta: -0.0255
+epoch: 250 validAccuracy: 0.5059 trainAccuracy: 0.9873 delta: -0.0147
+epoch: 251 validAccuracy: 0.5108 trainAccuracy: 0.9912 delta: -0.0098
+epoch: 252 validAccuracy: 0.5108 trainAccuracy: 0.9931 delta: -0.0098
+epoch: 253 validAccuracy: 0.4931 trainAccuracy: 0.9922 delta: -0.0275
+epoch: 254 validAccuracy: 0.5078 trainAccuracy: 0.9951 delta: -0.0128
+epoch: 255 validAccuracy: 0.5098 trainAccuracy: 0.9971 delta: -0.0108
+epoch: 256 validAccuracy: 0.5069 trainAccuracy: 0.9961 delta: -0.0137
+epoch: 257 validAccuracy: 0.5118 trainAccuracy: 0.9912 delta: -0.0088
+epoch: 258 validAccuracy: 0.502 trainAccuracy: 0.999 delta: -0.0186
+epoch: 259 validAccuracy: 0.5108 trainAccuracy: 0.998 delta: -0.0098
+epoch: 260 validAccuracy: 0.5118 trainAccuracy: 0.9971 delta: -0.0088
+epoch: 261 validAccuracy: 0.5078 trainAccuracy: 0.9971 delta: -0.0128
+epoch: 262 validAccuracy: 0.4951 trainAccuracy: 0.9971 delta: -0.0255
+epoch: 263 validAccuracy: 0.5029 trainAccuracy: 0.9951 delta: -0.0177
+epoch: 264 validAccuracy: 0.502 trainAccuracy: 0.9902 delta: -0.0186
+epoch: 265 validAccuracy: 0.5108 trainAccuracy: 0.9824 delta: -0.0098
+epoch: 266 validAccuracy: 0.4451 trainAccuracy: 0.9745 delta: -0.0755
+epoch: 267 validAccuracy: 0.4333 trainAccuracy: 0.949 delta: -0.0873
+epoch: 268 validAccuracy: 0.4245 trainAccuracy: 0.9108 delta: -0.0961
+epoch: 269 validAccuracy: 0.4176 trainAccuracy: 0.85 delta: -0.103
+epoch: 270 validAccuracy: 0.4088 trainAccuracy: 0.85 delta: -0.1118
+epoch: 271 validAccuracy: 0.4049 trainAccuracy: 0.8873 delta: -0.1157
+epoch: 272 validAccuracy: 0.4265 trainAccuracy: 0.8902 delta: -0.0941
+epoch: 273 validAccuracy: 0.4598 trainAccuracy: 0.9314 delta: -0.0608
+epoch: 274 validAccuracy: 0.4637 trainAccuracy: 0.95 delta: -0.0569
+epoch: 275 validAccuracy: 0.4637 trainAccuracy: 0.9637 delta: -0.0569
+epoch: 276 validAccuracy: 0.4824 trainAccuracy: 0.9618 delta: -0.0382
+epoch: 277 validAccuracy: 0.4922 trainAccuracy: 0.9775 delta: -0.0284
+epoch: 278 validAccuracy: 0.5167 trainAccuracy: 0.9676 delta: -0.0039
+==========================================================================================
+validAccuracy 0.5206 bestEpoch 228 testAccuracy 0.4583 stopEpoch 278
+==========================================================================================
+[38;5;2m[i 0319 03:37:05.575679 40 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0319 03:37:05.580818 40 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0319 03:37:05.612058 40 dataset.py:629] Found 102 classes and 6149 images.[m
+----------------- A new trial ---------------------
+modelName ViT learning rate: 5e-05 epochs 200
+epoch: 0 validAccuracy: 0.0755 trainAccuracy: 0.0373 delta: 0.0755
+epoch: 1 validAccuracy: 0.1402 trainAccuracy: 0.0941 delta: 0.0647
+epoch: 2 validAccuracy: 0.1647 trainAccuracy: 0.1422 delta: 0.0245
+epoch: 3 validAccuracy: 0.2049 trainAccuracy: 0.2118 delta: 0.0402
+epoch: 4 validAccuracy: 0.2353 trainAccuracy: 0.2716 delta: 0.0304
+epoch: 5 validAccuracy: 0.2578 trainAccuracy: 0.3441 delta: 0.0225
+epoch: 6 validAccuracy: 0.2647 trainAccuracy: 0.4235 delta: 0.0069
+epoch: 7 validAccuracy: 0.299 trainAccuracy: 0.4931 delta: 0.0343
+epoch: 8 validAccuracy: 0.3186 trainAccuracy: 0.5667 delta: 0.0196
+epoch: 9 validAccuracy: 0.3324 trainAccuracy: 0.6392 delta: 0.0138
+epoch: 10 validAccuracy: 0.3353 trainAccuracy: 0.7461 delta: 0.0029
+epoch: 11 validAccuracy: 0.3343 trainAccuracy: 0.8304 delta: -0.001
+epoch: 12 validAccuracy: 0.3382 trainAccuracy: 0.8784 delta: 0.0029
+epoch: 13 validAccuracy: 0.348 trainAccuracy: 0.902 delta: 0.0098
+epoch: 14 validAccuracy: 0.3471 trainAccuracy: 0.9284 delta: -0.0009
+epoch: 15 validAccuracy: 0.3451 trainAccuracy: 0.9324 delta: -0.0029
+epoch: 16 validAccuracy: 0.3441 trainAccuracy: 0.9431 delta: -0.0039
+epoch: 17 validAccuracy: 0.3471 trainAccuracy: 0.9382 delta: -0.0009
+epoch: 18 validAccuracy: 0.3431 trainAccuracy: 0.9353 delta: -0.0049
+epoch: 19 validAccuracy: 0.3588 trainAccuracy: 0.9333 delta: 0.0108
+epoch: 20 validAccuracy: 0.3539 trainAccuracy: 0.9294 delta: -0.0049
+epoch: 21 validAccuracy: 0.3549 trainAccuracy: 0.9275 delta: -0.0039
+epoch: 22 validAccuracy: 0.352 trainAccuracy: 0.9059 delta: -0.0068
+epoch: 23 validAccuracy: 0.3382 trainAccuracy: 0.8912 delta: -0.0206
+epoch: 24 validAccuracy: 0.3451 trainAccuracy: 0.8951 delta: -0.0137
+epoch: 25 validAccuracy: 0.349 trainAccuracy: 0.8627 delta: -0.0098
+epoch: 26 validAccuracy: 0.3392 trainAccuracy: 0.8735 delta: -0.0196
+epoch: 27 validAccuracy: 0.3373 trainAccuracy: 0.8461 delta: -0.0215
+epoch: 28 validAccuracy: 0.3431 trainAccuracy: 0.8892 delta: -0.0157
+epoch: 29 validAccuracy: 0.3216 trainAccuracy: 0.8794 delta: -0.0372
+epoch: 30 validAccuracy: 0.3333 trainAccuracy: 0.9118 delta: -0.0255
+epoch: 31 validAccuracy: 0.3304 trainAccuracy: 0.901 delta: -0.0284
+epoch: 32 validAccuracy: 0.3422 trainAccuracy: 0.9353 delta: -0.0166
+epoch: 33 validAccuracy: 0.3304 trainAccuracy: 0.9431 delta: -0.0284
+epoch: 34 validAccuracy: 0.3441 trainAccuracy: 0.95 delta: -0.0147
+epoch: 35 validAccuracy: 0.3637 trainAccuracy: 0.9804 delta: 0.0049
+epoch: 36 validAccuracy: 0.3471 trainAccuracy: 0.9814 delta: -0.0166
+epoch: 37 validAccuracy: 0.3588 trainAccuracy: 0.9912 delta: -0.0049
+epoch: 38 validAccuracy: 0.3686 trainAccuracy: 1.0 delta: 0.0049
+epoch: 39 validAccuracy: 0.3676 trainAccuracy: 0.999 delta: -0.001
+epoch: 40 validAccuracy: 0.3676 trainAccuracy: 1.0 delta: -0.001
+epoch: 41 validAccuracy: 0.3676 trainAccuracy: 1.0 delta: -0.001
+epoch: 42 validAccuracy: 0.3696 trainAccuracy: 1.0 delta: 0.001
+epoch: 43 validAccuracy: 0.3735 trainAccuracy: 0.999 delta: 0.0039
+epoch: 44 validAccuracy: 0.3745 trainAccuracy: 0.999 delta: 0.001
+epoch: 45 validAccuracy: 0.3745 trainAccuracy: 1.0 delta: 0.0
+epoch: 46 validAccuracy: 0.3745 trainAccuracy: 1.0 delta: 0.0
+epoch: 47 validAccuracy: 0.3745 trainAccuracy: 1.0 delta: 0.0
+epoch: 48 validAccuracy: 0.3745 trainAccuracy: 1.0 delta: 0.0
+epoch: 49 validAccuracy: 0.3775 trainAccuracy: 1.0 delta: 0.003
+epoch: 50 validAccuracy: 0.3745 trainAccuracy: 1.0 delta: -0.003
+epoch: 51 validAccuracy: 0.3784 trainAccuracy: 1.0 delta: 0.0009
+epoch: 52 validAccuracy: 0.3735 trainAccuracy: 1.0 delta: -0.0049
+epoch: 53 validAccuracy: 0.3667 trainAccuracy: 1.0 delta: -0.0117
+epoch: 54 validAccuracy: 0.3735 trainAccuracy: 1.0 delta: -0.0049
+epoch: 55 validAccuracy: 0.3804 trainAccuracy: 1.0 delta: 0.002
+epoch: 56 validAccuracy: 0.3804 trainAccuracy: 1.0 delta: 0.0
+epoch: 57 validAccuracy: 0.3843 trainAccuracy: 1.0 delta: 0.0039
+epoch: 58 validAccuracy: 0.2951 trainAccuracy: 0.951 delta: -0.0892
+epoch: 59 validAccuracy: 0.2961 trainAccuracy: 0.6961 delta: -0.0882
+epoch: 60 validAccuracy: 0.3167 trainAccuracy: 0.7716 delta: -0.0676
+epoch: 61 validAccuracy: 0.3294 trainAccuracy: 0.8882 delta: -0.0549
+epoch: 62 validAccuracy: 0.3186 trainAccuracy: 0.9245 delta: -0.0657
+epoch: 63 validAccuracy: 0.3569 trainAccuracy: 0.9706 delta: -0.0274
+epoch: 64 validAccuracy: 0.3529 trainAccuracy: 0.9686 delta: -0.0314
+epoch: 65 validAccuracy: 0.3529 trainAccuracy: 0.9735 delta: -0.0314
+epoch: 66 validAccuracy: 0.3529 trainAccuracy: 0.9873 delta: -0.0314
+epoch: 67 validAccuracy: 0.3647 trainAccuracy: 0.9971 delta: -0.0196
+epoch: 68 validAccuracy: 0.3696 trainAccuracy: 1.0 delta: -0.0147
+epoch: 69 validAccuracy: 0.3618 trainAccuracy: 1.0 delta: -0.0225
+epoch: 70 validAccuracy: 0.3627 trainAccuracy: 1.0 delta: -0.0216
+epoch: 71 validAccuracy: 0.3627 trainAccuracy: 1.0 delta: -0.0216
+epoch: 72 validAccuracy: 0.3618 trainAccuracy: 1.0 delta: -0.0225
+epoch: 73 validAccuracy: 0.3608 trainAccuracy: 1.0 delta: -0.0235
+epoch: 74 validAccuracy: 0.3588 trainAccuracy: 1.0 delta: -0.0255
+epoch: 75 validAccuracy: 0.3598 trainAccuracy: 1.0 delta: -0.0245
+epoch: 76 validAccuracy: 0.3598 trainAccuracy: 1.0 delta: -0.0245
+epoch: 77 validAccuracy: 0.3598 trainAccuracy: 1.0 delta: -0.0245
+epoch: 78 validAccuracy: 0.3608 trainAccuracy: 1.0 delta: -0.0235
+epoch: 79 validAccuracy: 0.3618 trainAccuracy: 1.0 delta: -0.0225
+epoch: 80 validAccuracy: 0.3618 trainAccuracy: 1.0 delta: -0.0225
+epoch: 81 validAccuracy: 0.3657 trainAccuracy: 1.0 delta: -0.0186
+epoch: 82 validAccuracy: 0.3647 trainAccuracy: 1.0 delta: -0.0196
+epoch: 83 validAccuracy: 0.3647 trainAccuracy: 1.0 delta: -0.0196
+epoch: 84 validAccuracy: 0.3657 trainAccuracy: 1.0 delta: -0.0186
+epoch: 85 validAccuracy: 0.3676 trainAccuracy: 1.0 delta: -0.0167
+epoch: 86 validAccuracy: 0.3657 trainAccuracy: 1.0 delta: -0.0186
+epoch: 87 validAccuracy: 0.3725 trainAccuracy: 1.0 delta: -0.0118
+epoch: 88 validAccuracy: 0.3167 trainAccuracy: 0.9735 delta: -0.0676
+epoch: 89 validAccuracy: 0.3078 trainAccuracy: 0.7755 delta: -0.0765
+epoch: 90 validAccuracy: 0.3167 trainAccuracy: 0.8235 delta: -0.0676
+epoch: 91 validAccuracy: 0.3304 trainAccuracy: 0.9088 delta: -0.0539
+epoch: 92 validAccuracy: 0.3588 trainAccuracy: 0.9716 delta: -0.0255
+epoch: 93 validAccuracy: 0.3284 trainAccuracy: 0.9784 delta: -0.0559
+epoch: 94 validAccuracy: 0.3333 trainAccuracy: 0.9745 delta: -0.051
+epoch: 95 validAccuracy: 0.3363 trainAccuracy: 0.9882 delta: -0.048
+epoch: 96 validAccuracy: 0.349 trainAccuracy: 0.9931 delta: -0.0353
+epoch: 97 validAccuracy: 0.3637 trainAccuracy: 0.999 delta: -0.0206
+epoch: 98 validAccuracy: 0.3716 trainAccuracy: 1.0 delta: -0.0127
+epoch: 99 validAccuracy: 0.3686 trainAccuracy: 1.0 delta: -0.0157
+epoch: 100 validAccuracy: 0.3696 trainAccuracy: 1.0 delta: -0.0147
+epoch: 101 validAccuracy: 0.3725 trainAccuracy: 1.0 delta: -0.0118
+epoch: 102 validAccuracy: 0.3686 trainAccuracy: 0.999 delta: -0.0157
+epoch: 103 validAccuracy: 0.3706 trainAccuracy: 1.0 delta: -0.0137
+epoch: 104 validAccuracy: 0.3696 trainAccuracy: 1.0 delta: -0.0147
+epoch: 105 validAccuracy: 0.3696 trainAccuracy: 1.0 delta: -0.0147
+epoch: 106 validAccuracy: 0.3696 trainAccuracy: 1.0 delta: -0.0147
+epoch: 107 validAccuracy: 0.3706 trainAccuracy: 1.0 delta: -0.0137
+==========================================================================================
+validAccuracy 0.3843 bestEpoch 57 testAccuracy 0.3503 stopEpoch 107
+==========================================================================================
+[38;5;2m[i 0319 05:03:49.870393 40 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0319 05:03:49.875608 40 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0319 05:03:49.899228 40 dataset.py:629] Found 102 classes and 6149 images.[m
+----------------- A new trial ---------------------
+modelName ResNet learning rate: 0.0001 epochs 1600
+epoch: 0 validAccuracy: 0.0167 trainAccuracy: 0.0137 delta: 0.0167
+epoch: 1 validAccuracy: 0.0451 trainAccuracy: 0.0255 delta: 0.0284
+epoch: 2 validAccuracy: 0.0922 trainAccuracy: 0.048 delta: 0.0471
+epoch: 3 validAccuracy: 0.0892 trainAccuracy: 0.0853 delta: -0.003
+epoch: 4 validAccuracy: 0.1373 trainAccuracy: 0.1108 delta: 0.0451
+epoch: 5 validAccuracy: 0.1216 trainAccuracy: 0.1392 delta: -0.0157
+epoch: 6 validAccuracy: 0.1667 trainAccuracy: 0.1706 delta: 0.0294
+epoch: 7 validAccuracy: 0.2 trainAccuracy: 0.1863 delta: 0.0333
+epoch: 8 validAccuracy: 0.2157 trainAccuracy: 0.2294 delta: 0.0157
+epoch: 9 validAccuracy: 0.2373 trainAccuracy: 0.2578 delta: 0.0216
+epoch: 10 validAccuracy: 0.2637 trainAccuracy: 0.2941 delta: 0.0264
+epoch: 11 validAccuracy: 0.2775 trainAccuracy: 0.3353 delta: 0.0138
+epoch: 12 validAccuracy: 0.2716 trainAccuracy: 0.3873 delta: -0.0059
+epoch: 13 validAccuracy: 0.2824 trainAccuracy: 0.3824 delta: 0.0049
+epoch: 14 validAccuracy: 0.2912 trainAccuracy: 0.4206 delta: 0.0088
+epoch: 15 validAccuracy: 0.2843 trainAccuracy: 0.4333 delta: -0.0069
+epoch: 16 validAccuracy: 0.2951 trainAccuracy: 0.4225 delta: 0.0039
+epoch: 17 validAccuracy: 0.298 trainAccuracy: 0.4245 delta: 0.0029
+epoch: 18 validAccuracy: 0.2833 trainAccuracy: 0.4108 delta: -0.0147
+epoch: 19 validAccuracy: 0.2882 trainAccuracy: 0.4196 delta: -0.0098
+epoch: 20 validAccuracy: 0.2873 trainAccuracy: 0.402 delta: -0.0107
+epoch: 21 validAccuracy: 0.298 trainAccuracy: 0.3873 delta: 0.0
+epoch: 22 validAccuracy: 0.2784 trainAccuracy: 0.3951 delta: -0.0196
+epoch: 23 validAccuracy: 0.2627 trainAccuracy: 0.3647 delta: -0.0353
+epoch: 24 validAccuracy: 0.2559 trainAccuracy: 0.3716 delta: -0.0421
+epoch: 25 validAccuracy: 0.2922 trainAccuracy: 0.3843 delta: -0.0058
+epoch: 26 validAccuracy: 0.2588 trainAccuracy: 0.3873 delta: -0.0392
+epoch: 27 validAccuracy: 0.2284 trainAccuracy: 0.3578 delta: -0.0696
+epoch: 28 validAccuracy: 0.2588 trainAccuracy: 0.3745 delta: -0.0392
+epoch: 29 validAccuracy: 0.2343 trainAccuracy: 0.3735 delta: -0.0637
+epoch: 30 validAccuracy: 0.2696 trainAccuracy: 0.3902 delta: -0.0284
+epoch: 31 validAccuracy: 0.2735 trainAccuracy: 0.4206 delta: -0.0245
+epoch: 32 validAccuracy: 0.2843 trainAccuracy: 0.4392 delta: -0.0137
+epoch: 33 validAccuracy: 0.2716 trainAccuracy: 0.4598 delta: -0.0264
+epoch: 34 validAccuracy: 0.2912 trainAccuracy: 0.5059 delta: -0.0068
+epoch: 35 validAccuracy: 0.3333 trainAccuracy: 0.5441 delta: 0.0353
+epoch: 36 validAccuracy: 0.3186 trainAccuracy: 0.5667 delta: -0.0147
+epoch: 37 validAccuracy: 0.3225 trainAccuracy: 0.6029 delta: -0.0108
+epoch: 38 validAccuracy: 0.3637 trainAccuracy: 0.6343 delta: 0.0304
+epoch: 39 validAccuracy: 0.3647 trainAccuracy: 0.6676 delta: 0.001
+epoch: 40 validAccuracy: 0.3755 trainAccuracy: 0.7235 delta: 0.0108
+epoch: 41 validAccuracy: 0.3794 trainAccuracy: 0.7363 delta: 0.0039
+epoch: 42 validAccuracy: 0.3804 trainAccuracy: 0.7804 delta: 0.001
+epoch: 43 validAccuracy: 0.4098 trainAccuracy: 0.7971 delta: 0.0294
+epoch: 44 validAccuracy: 0.3931 trainAccuracy: 0.8069 delta: -0.0167
+epoch: 45 validAccuracy: 0.4039 trainAccuracy: 0.799 delta: -0.0059
+epoch: 46 validAccuracy: 0.4029 trainAccuracy: 0.8127 delta: -0.0069
+epoch: 47 validAccuracy: 0.4029 trainAccuracy: 0.8137 delta: -0.0069
+epoch: 48 validAccuracy: 0.4108 trainAccuracy: 0.801 delta: 0.001
+epoch: 49 validAccuracy: 0.4 trainAccuracy: 0.7804 delta: -0.0108
+epoch: 50 validAccuracy: 0.398 trainAccuracy: 0.8049 delta: -0.0128
+epoch: 51 validAccuracy: 0.4059 trainAccuracy: 0.7814 delta: -0.0049
+epoch: 52 validAccuracy: 0.3647 trainAccuracy: 0.7931 delta: -0.0461
+epoch: 53 validAccuracy: 0.3716 trainAccuracy: 0.7441 delta: -0.0392
+epoch: 54 validAccuracy: 0.3422 trainAccuracy: 0.7029 delta: -0.0686
+epoch: 55 validAccuracy: 0.3569 trainAccuracy: 0.6784 delta: -0.0539
+epoch: 56 validAccuracy: 0.3451 trainAccuracy: 0.6775 delta: -0.0657
+epoch: 57 validAccuracy: 0.3333 trainAccuracy: 0.6853 delta: -0.0775
+epoch: 58 validAccuracy: 0.3353 trainAccuracy: 0.6294 delta: -0.0755
+epoch: 59 validAccuracy: 0.3157 trainAccuracy: 0.6304 delta: -0.0951
+epoch: 60 validAccuracy: 0.3265 trainAccuracy: 0.6578 delta: -0.0843
+epoch: 61 validAccuracy: 0.3294 trainAccuracy: 0.6608 delta: -0.0814
+epoch: 62 validAccuracy: 0.3265 trainAccuracy: 0.6588 delta: -0.0843
+epoch: 63 validAccuracy: 0.3549 trainAccuracy: 0.6804 delta: -0.0559
+epoch: 64 validAccuracy: 0.3725 trainAccuracy: 0.7529 delta: -0.0383
+epoch: 65 validAccuracy: 0.3706 trainAccuracy: 0.7922 delta: -0.0402
+epoch: 66 validAccuracy: 0.3775 trainAccuracy: 0.8333 delta: -0.0333
+epoch: 67 validAccuracy: 0.401 trainAccuracy: 0.8422 delta: -0.0098
+epoch: 68 validAccuracy: 0.3971 trainAccuracy: 0.8755 delta: -0.0137
+epoch: 69 validAccuracy: 0.4137 trainAccuracy: 0.9069 delta: 0.0029
+epoch: 70 validAccuracy: 0.4245 trainAccuracy: 0.9255 delta: 0.0108
+epoch: 71 validAccuracy: 0.4245 trainAccuracy: 0.9559 delta: 0.0
+epoch: 72 validAccuracy: 0.4373 trainAccuracy: 0.9392 delta: 0.0128
+epoch: 73 validAccuracy: 0.4471 trainAccuracy: 0.948 delta: 0.0098
+epoch: 74 validAccuracy: 0.4441 trainAccuracy: 0.952 delta: -0.003
+epoch: 75 validAccuracy: 0.4569 trainAccuracy: 0.9608 delta: 0.0098
+epoch: 76 validAccuracy: 0.4431 trainAccuracy: 0.9441 delta: -0.0138
+epoch: 77 validAccuracy: 0.4471 trainAccuracy: 0.951 delta: -0.0098
+epoch: 78 validAccuracy: 0.4529 trainAccuracy: 0.9676 delta: -0.004
+epoch: 79 validAccuracy: 0.451 trainAccuracy: 0.9441 delta: -0.0059
+epoch: 80 validAccuracy: 0.4539 trainAccuracy: 0.9539 delta: -0.003
+epoch: 81 validAccuracy: 0.4412 trainAccuracy: 0.9559 delta: -0.0157
+epoch: 82 validAccuracy: 0.4186 trainAccuracy: 0.9343 delta: -0.0383
+epoch: 83 validAccuracy: 0.4069 trainAccuracy: 0.9265 delta: -0.05
+epoch: 84 validAccuracy: 0.4118 trainAccuracy: 0.9078 delta: -0.0451
+epoch: 85 validAccuracy: 0.3912 trainAccuracy: 0.8804 delta: -0.0657
+epoch: 86 validAccuracy: 0.3804 trainAccuracy: 0.8578 delta: -0.0765
+epoch: 87 validAccuracy: 0.3578 trainAccuracy: 0.7892 delta: -0.0991
+epoch: 88 validAccuracy: 0.3451 trainAccuracy: 0.7696 delta: -0.1118
+epoch: 89 validAccuracy: 0.3676 trainAccuracy: 0.8176 delta: -0.0893
+epoch: 90 validAccuracy: 0.3539 trainAccuracy: 0.7971 delta: -0.103
+epoch: 91 validAccuracy: 0.35 trainAccuracy: 0.7588 delta: -0.1069
+epoch: 92 validAccuracy: 0.3941 trainAccuracy: 0.7951 delta: -0.0628
+epoch: 93 validAccuracy: 0.3843 trainAccuracy: 0.8451 delta: -0.0726
+epoch: 94 validAccuracy: 0.3647 trainAccuracy: 0.8333 delta: -0.0922
+epoch: 95 validAccuracy: 0.3853 trainAccuracy: 0.8618 delta: -0.0716
+epoch: 96 validAccuracy: 0.4245 trainAccuracy: 0.8863 delta: -0.0324
+epoch: 97 validAccuracy: 0.4412 trainAccuracy: 0.9363 delta: -0.0157
+epoch: 98 validAccuracy: 0.4461 trainAccuracy: 0.9578 delta: -0.0108
+epoch: 99 validAccuracy: 0.4461 trainAccuracy: 0.9686 delta: -0.0108
+epoch: 100 validAccuracy: 0.4745 trainAccuracy: 0.9765 delta: 0.0176
+epoch: 101 validAccuracy: 0.4618 trainAccuracy: 0.9784 delta: -0.0127
+epoch: 102 validAccuracy: 0.4716 trainAccuracy: 0.9794 delta: -0.0029
+epoch: 103 validAccuracy: 0.4745 trainAccuracy: 0.9794 delta: 0.0
+epoch: 104 validAccuracy: 0.4745 trainAccuracy: 0.9882 delta: 0.0
+epoch: 105 validAccuracy: 0.4696 trainAccuracy: 0.9833 delta: -0.0049
+epoch: 106 validAccuracy: 0.4745 trainAccuracy: 0.9902 delta: 0.0
+epoch: 107 validAccuracy: 0.4706 trainAccuracy: 0.9804 delta: -0.0039
+epoch: 108 validAccuracy: 0.4637 trainAccuracy: 0.9863 delta: -0.0108
+epoch: 109 validAccuracy: 0.4824 trainAccuracy: 0.9922 delta: 0.0079
+epoch: 110 validAccuracy: 0.4755 trainAccuracy: 0.9892 delta: -0.0069
+epoch: 111 validAccuracy: 0.4676 trainAccuracy: 0.9784 delta: -0.0148
+epoch: 112 validAccuracy: 0.4716 trainAccuracy: 0.9882 delta: -0.0108
+epoch: 113 validAccuracy: 0.4618 trainAccuracy: 0.9784 delta: -0.0206
+epoch: 114 validAccuracy: 0.4353 trainAccuracy: 0.9618 delta: -0.0471
+epoch: 115 validAccuracy: 0.4216 trainAccuracy: 0.95 delta: -0.0608
+epoch: 116 validAccuracy: 0.3882 trainAccuracy: 0.9157 delta: -0.0942
+epoch: 117 validAccuracy: 0.3422 trainAccuracy: 0.8676 delta: -0.1402
+epoch: 118 validAccuracy: 0.3824 trainAccuracy: 0.8186 delta: -0.1
+epoch: 119 validAccuracy: 0.3431 trainAccuracy: 0.7961 delta: -0.1393
+epoch: 120 validAccuracy: 0.3451 trainAccuracy: 0.7725 delta: -0.1373
+epoch: 121 validAccuracy: 0.3863 trainAccuracy: 0.8461 delta: -0.0961
+epoch: 122 validAccuracy: 0.3961 trainAccuracy: 0.8608 delta: -0.0863
+epoch: 123 validAccuracy: 0.3941 trainAccuracy: 0.8696 delta: -0.0883
+epoch: 124 validAccuracy: 0.3833 trainAccuracy: 0.898 delta: -0.0991
+epoch: 125 validAccuracy: 0.4412 trainAccuracy: 0.9382 delta: -0.0412
+epoch: 126 validAccuracy: 0.4647 trainAccuracy: 0.9559 delta: -0.0177
+epoch: 127 validAccuracy: 0.4696 trainAccuracy: 0.9667 delta: -0.0128
+epoch: 128 validAccuracy: 0.4725 trainAccuracy: 0.9804 delta: -0.0099
+epoch: 129 validAccuracy: 0.4794 trainAccuracy: 0.9863 delta: -0.003
+epoch: 130 validAccuracy: 0.4755 trainAccuracy: 0.9882 delta: -0.0069
+epoch: 131 validAccuracy: 0.4745 trainAccuracy: 0.9922 delta: -0.0079
+epoch: 132 validAccuracy: 0.4931 trainAccuracy: 0.9951 delta: 0.0107
+epoch: 133 validAccuracy: 0.4971 trainAccuracy: 0.9951 delta: 0.004
+epoch: 134 validAccuracy: 0.498 trainAccuracy: 0.9931 delta: 0.0009
+epoch: 135 validAccuracy: 0.4863 trainAccuracy: 0.9931 delta: -0.0117
+epoch: 136 validAccuracy: 0.4863 trainAccuracy: 0.9892 delta: -0.0117
+epoch: 137 validAccuracy: 0.4882 trainAccuracy: 0.9941 delta: -0.0098
+epoch: 138 validAccuracy: 0.4951 trainAccuracy: 0.9951 delta: -0.0029
+epoch: 139 validAccuracy: 0.4882 trainAccuracy: 0.9971 delta: -0.0098
+epoch: 140 validAccuracy: 0.4804 trainAccuracy: 0.9931 delta: -0.0176
+epoch: 141 validAccuracy: 0.4892 trainAccuracy: 0.9912 delta: -0.0088
+epoch: 142 validAccuracy: 0.4765 trainAccuracy: 0.9892 delta: -0.0215
+epoch: 143 validAccuracy: 0.4529 trainAccuracy: 0.9824 delta: -0.0451
+epoch: 144 validAccuracy: 0.4412 trainAccuracy: 0.9794 delta: -0.0568
+epoch: 145 validAccuracy: 0.4275 trainAccuracy: 0.9686 delta: -0.0705
+epoch: 146 validAccuracy: 0.3775 trainAccuracy: 0.9314 delta: -0.1205
+epoch: 147 validAccuracy: 0.3441 trainAccuracy: 0.8686 delta: -0.1539
+epoch: 148 validAccuracy: 0.3186 trainAccuracy: 0.8275 delta: -0.1794
+epoch: 149 validAccuracy: 0.3725 trainAccuracy: 0.7706 delta: -0.1255
+epoch: 150 validAccuracy: 0.3824 trainAccuracy: 0.801 delta: -0.1156
+epoch: 151 validAccuracy: 0.3765 trainAccuracy: 0.8676 delta: -0.1215
+epoch: 152 validAccuracy: 0.4284 trainAccuracy: 0.8618 delta: -0.0696
+epoch: 153 validAccuracy: 0.4225 trainAccuracy: 0.9147 delta: -0.0755
+epoch: 154 validAccuracy: 0.4343 trainAccuracy: 0.9431 delta: -0.0637
+epoch: 155 validAccuracy: 0.4745 trainAccuracy: 0.9549 delta: -0.0235
+epoch: 156 validAccuracy: 0.4549 trainAccuracy: 0.9608 delta: -0.0431
+epoch: 157 validAccuracy: 0.4794 trainAccuracy: 0.9824 delta: -0.0186
+epoch: 158 validAccuracy: 0.4794 trainAccuracy: 0.9902 delta: -0.0186
+epoch: 159 validAccuracy: 0.4833 trainAccuracy: 0.9922 delta: -0.0147
+epoch: 160 validAccuracy: 0.4824 trainAccuracy: 0.9922 delta: -0.0156
+epoch: 161 validAccuracy: 0.4951 trainAccuracy: 0.998 delta: -0.0029
+epoch: 162 validAccuracy: 0.5 trainAccuracy: 0.9961 delta: 0.002
+epoch: 163 validAccuracy: 0.501 trainAccuracy: 0.9971 delta: 0.001
+epoch: 164 validAccuracy: 0.5059 trainAccuracy: 0.9961 delta: 0.0049
+epoch: 165 validAccuracy: 0.499 trainAccuracy: 0.9951 delta: -0.0069
+epoch: 166 validAccuracy: 0.5 trainAccuracy: 0.999 delta: -0.0059
+epoch: 167 validAccuracy: 0.5098 trainAccuracy: 0.999 delta: 0.0039
+epoch: 168 validAccuracy: 0.5039 trainAccuracy: 0.998 delta: -0.0059
+epoch: 169 validAccuracy: 0.4912 trainAccuracy: 0.9912 delta: -0.0186
+epoch: 170 validAccuracy: 0.4971 trainAccuracy: 0.9902 delta: -0.0127
+epoch: 171 validAccuracy: 0.4922 trainAccuracy: 0.9961 delta: -0.0176
+epoch: 172 validAccuracy: 0.5039 trainAccuracy: 0.998 delta: -0.0059
+epoch: 173 validAccuracy: 0.4951 trainAccuracy: 0.9941 delta: -0.0147
+epoch: 174 validAccuracy: 0.4902 trainAccuracy: 0.9922 delta: -0.0196
+epoch: 175 validAccuracy: 0.4529 trainAccuracy: 0.9784 delta: -0.0569
+epoch: 176 validAccuracy: 0.3941 trainAccuracy: 0.9471 delta: -0.1157
+epoch: 177 validAccuracy: 0.3745 trainAccuracy: 0.9157 delta: -0.1353
+epoch: 178 validAccuracy: 0.398 trainAccuracy: 0.8559 delta: -0.1118
+epoch: 179 validAccuracy: 0.3735 trainAccuracy: 0.8392 delta: -0.1363
+epoch: 180 validAccuracy: 0.3618 trainAccuracy: 0.8735 delta: -0.148
+epoch: 181 validAccuracy: 0.3922 trainAccuracy: 0.8686 delta: -0.1176
+epoch: 182 validAccuracy: 0.4373 trainAccuracy: 0.9108 delta: -0.0725
+epoch: 183 validAccuracy: 0.4392 trainAccuracy: 0.9314 delta: -0.0706
+epoch: 184 validAccuracy: 0.4392 trainAccuracy: 0.9373 delta: -0.0706
+epoch: 185 validAccuracy: 0.4569 trainAccuracy: 0.9549 delta: -0.0529
+epoch: 186 validAccuracy: 0.4735 trainAccuracy: 0.9765 delta: -0.0363
+epoch: 187 validAccuracy: 0.4569 trainAccuracy: 0.9716 delta: -0.0529
+epoch: 188 validAccuracy: 0.4755 trainAccuracy: 0.9824 delta: -0.0343
+epoch: 189 validAccuracy: 0.4971 trainAccuracy: 0.9961 delta: -0.0127
+epoch: 190 validAccuracy: 0.4941 trainAccuracy: 0.9961 delta: -0.0157
+epoch: 191 validAccuracy: 0.4931 trainAccuracy: 0.999 delta: -0.0167
+epoch: 192 validAccuracy: 0.4902 trainAccuracy: 0.9951 delta: -0.0196
+epoch: 193 validAccuracy: 0.5 trainAccuracy: 0.999 delta: -0.0098
+epoch: 194 validAccuracy: 0.4902 trainAccuracy: 0.9961 delta: -0.0196
+epoch: 195 validAccuracy: 0.4892 trainAccuracy: 0.9961 delta: -0.0206
+epoch: 196 validAccuracy: 0.5029 trainAccuracy: 1.0 delta: -0.0069
+epoch: 197 validAccuracy: 0.4971 trainAccuracy: 0.999 delta: -0.0127
+epoch: 198 validAccuracy: 0.5029 trainAccuracy: 0.998 delta: -0.0069
+epoch: 199 validAccuracy: 0.4912 trainAccuracy: 0.999 delta: -0.0186
+epoch: 200 validAccuracy: 0.4951 trainAccuracy: 0.9971 delta: -0.0147
+epoch: 201 validAccuracy: 0.4971 trainAccuracy: 0.998 delta: -0.0127
+epoch: 202 validAccuracy: 0.4853 trainAccuracy: 0.998 delta: -0.0245
+epoch: 203 validAccuracy: 0.4922 trainAccuracy: 0.9941 delta: -0.0176
+epoch: 204 validAccuracy: 0.5 trainAccuracy: 0.999 delta: -0.0098
+epoch: 205 validAccuracy: 0.4735 trainAccuracy: 0.9922 delta: -0.0363
+epoch: 206 validAccuracy: 0.4422 trainAccuracy: 0.9843 delta: -0.0676
+epoch: 207 validAccuracy: 0.3471 trainAccuracy: 0.9304 delta: -0.1627
+epoch: 208 validAccuracy: 0.3255 trainAccuracy: 0.8725 delta: -0.1843
+epoch: 209 validAccuracy: 0.352 trainAccuracy: 0.7784 delta: -0.1578
+epoch: 210 validAccuracy: 0.4343 trainAccuracy: 0.8559 delta: -0.0755
+epoch: 211 validAccuracy: 0.4137 trainAccuracy: 0.8931 delta: -0.0961
+epoch: 212 validAccuracy: 0.4324 trainAccuracy: 0.9363 delta: -0.0774
+epoch: 213 validAccuracy: 0.4186 trainAccuracy: 0.9529 delta: -0.0912
+epoch: 214 validAccuracy: 0.4392 trainAccuracy: 0.9637 delta: -0.0706
+epoch: 215 validAccuracy: 0.4735 trainAccuracy: 0.9804 delta: -0.0363
+epoch: 216 validAccuracy: 0.4873 trainAccuracy: 0.9892 delta: -0.0225
+epoch: 217 validAccuracy: 0.4804 trainAccuracy: 0.9814 delta: -0.0294
+==========================================================================================
+validAccuracy 0.5098 bestEpoch 167 testAccuracy 0.4575 stopEpoch 217
+==========================================================================================
