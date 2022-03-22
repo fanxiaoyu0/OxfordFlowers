@@ -1,0 +1,109 @@
+[38;5;2m[i 0321 15:28:28.374866 76 compiler.py:944] Jittor(1.3.1.48) src: /root/miniconda3/envs/jittor-fanxiaoyu/lib/python3.9/site-packages/jittor[m
+[38;5;2m[i 0321 15:28:28.379485 76 compiler.py:945] g++ at /usr/bin/g++(7.5.0)[m
+[38;5;2m[i 0321 15:28:28.379654 76 compiler.py:946] cache_path: /root/.cache/jittor/jt1.3.1/g++7.5.0/py3.9.7/Linux-5.4.0-96xb0/IntelRXeonRCPUx84/default[m
+[38;5;2m[i 0321 15:28:28.383900 76 __init__.py:376] Found /usr/local/cuda/bin/nvcc(10.2.89) at /usr/local/cuda/bin/nvcc.[m
+[38;5;2m[i 0321 15:28:28.387958 76 __init__.py:376] Found addr2line(2.30) at /usr/bin/addr2line.[m
+[38;5;2m[i 0321 15:28:28.514736 76 compiler.py:999] cuda key:cu10.2.89_sm_61[m
+[38;5;2m[i 0321 15:28:28.703497 76 __init__.py:191] Total mem: 219.71GB, using 16 procs for compiling.[m
+[38;5;2m[i 0321 15:28:28.850183 76 jit_compiler.cc:27] Load cc_path: /usr/bin/g++[m
+[38;5;2m[i 0321 15:28:29.158147 76 init.cc:62] Found cuda archs: [61,][m
+[38;5;2m[i 0321 15:28:29.313132 76 __init__.py:376] Found mpicc(2.1.1) at /usr/bin/mpicc.[m
+[38;5;2m[i 0321 15:28:29.469962 76 compile_extern.py:29] found /usr/include/cublas.h[m
+[38;5;2m[i 0321 15:28:29.487020 76 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcublas.so[m
+[38;5;2m[i 0321 15:28:29.487211 76 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcublasLt.so.10[m
+[38;5;2m[i 0321 15:28:29.862563 76 compile_extern.py:29] found /usr/include/cudnn.h[m
+[38;5;2m[i 0321 15:28:29.890729 76 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcudnn.so[m
+[38;5;2m[i 0321 15:28:30.978659 76 compile_extern.py:29] found /usr/local/cuda/include/curand.h[m
+[38;5;2m[i 0321 15:28:31.026824 76 compile_extern.py:29] found /usr/local/cuda/lib64/libcurand.so[m
+[38;5;2m[i 0321 15:28:31.114790 76 cuda_flags.cc:32] CUDA enabled.[m
+[38;5;2m[i 0321 15:28:31.150311 76 dataset.py:629] Found 1020 classes and 1020 images.[m
+[38;5;2m[i 0321 15:28:31.155900 76 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0321 15:28:31.179855 76 dataset.py:629] Found 102 classes and 6149 images.[m
+----------------- A new trial ---------------------
+modelName ViT learning rate: 0.0005 epochs 800
+epoch: 0 trainAccuracy: 0.0 delta: 0.0
+
+Compiling Operators(11/11) used: 5.31s eta:    0s 
+
+Compiling Operators(1/2) used: 4.31s eta: 4.31s Compiling Operators(2/2) used: 5.31s eta:    0s 
+
+Compiling Operators(1/1) used: 3.92s eta:    0s 
+
+Compiling Operators(2/2) used: 4.31s eta:    0s 
+epoch: 1 trainAccuracy: 0.0029 delta: 0.0029
+epoch: 2 trainAccuracy: 0.0039 delta: 0.001
+epoch: 3 trainAccuracy: 0.0137 delta: 0.0098
+epoch: 4 trainAccuracy: 0.0196 delta: 0.0059
+epoch: 5 trainAccuracy: 0.0422 delta: 0.0226
+epoch: 6 trainAccuracy: 0.0765 delta: 0.0343
+epoch: 7 trainAccuracy: 0.1118 delta: 0.0353
+epoch: 8 trainAccuracy: 0.1314 delta: 0.0196
+epoch: 9 trainAccuracy: 0.1814 delta: 0.05
+epoch: 10 trainAccuracy: 0.2235 delta: 0.0421
+epoch: 11 trainAccuracy: 0.2755 delta: 0.052
+epoch: 12 trainAccuracy: 0.3225 delta: 0.047
+epoch: 13 trainAccuracy: 0.3598 delta: 0.0373
+epoch: 14 trainAccuracy: 0.398 delta: 0.0382
+epoch: 15 trainAccuracy: 0.4137 delta: 0.0157
+epoch: 16 trainAccuracy: 0.4265 delta: 0.0128
+epoch: 17 trainAccuracy: 0.4373 delta: 0.0108
+epoch: 18 trainAccuracy: 0.4382 delta: 0.0009
+epoch: 19 trainAccuracy: 0.4618 delta: 0.0236
+epoch: 20 trainAccuracy: 0.4725 delta: 0.0107
+epoch: 21 trainAccuracy: 0.5029 delta: 0.0304
+epoch: 22 trainAccuracy: 0.4971 delta: -0.0058
+epoch: 23 trainAccuracy: 0.5 delta: -0.0029
+epoch: 24 trainAccuracy: 0.5235 delta: 0.0206
+epoch: 25 trainAccuracy: 0.5696 delta: 0.0461
+epoch: 26 trainAccuracy: 0.6735 delta: 0.1039
+epoch: 27 trainAccuracy: 0.7461 delta: 0.0726
+epoch: 28 trainAccuracy: 0.7912 delta: 0.0451
+epoch: 29 trainAccuracy: 0.7765 delta: -0.0147
+epoch: 30 trainAccuracy: 0.8078 delta: 0.0166
+epoch: 31 trainAccuracy: 0.8402 delta: 0.0324
+epoch: 32 trainAccuracy: 0.8824 delta: 0.0422
+epoch: 33 trainAccuracy: 0.9186 delta: 0.0362
+epoch: 34 trainAccuracy: 0.9382 delta: 0.0196
+epoch: 35 trainAccuracy: 0.951 delta: 0.0128
+epoch: 36 trainAccuracy: 0.9686 delta: 0.0176
+epoch: 37 trainAccuracy: 0.9745 delta: 0.0059
+epoch: 38 trainAccuracy: 0.9824 delta: 0.0079
+epoch: 39 trainAccuracy: 0.9863 delta: 0.0039
+epoch: 40 trainAccuracy: 0.9882 delta: 0.0019
+epoch: 41 trainAccuracy: 0.9951 delta: 0.0069
+epoch: 42 trainAccuracy: 0.9941 delta: -0.001
+epoch: 43 trainAccuracy: 0.9951 delta: 0.0
+epoch: 44 trainAccuracy: 0.9971 delta: 0.002
+epoch: 45 trainAccuracy: 0.999 delta: 0.0019
+epoch: 46 trainAccuracy: 0.999 delta: 0.0
+epoch: 47 trainAccuracy: 0.999 delta: 0.0
+epoch: 48 trainAccuracy: 0.9971 delta: -0.0019
+epoch: 49 trainAccuracy: 0.9961 delta: -0.0029
+epoch: 50 trainAccuracy: 0.9941 delta: -0.0049
+epoch: 51 trainAccuracy: 0.999 delta: 0.0
+epoch: 52 trainAccuracy: 0.9971 delta: -0.0019
+epoch: 53 trainAccuracy: 0.9941 delta: -0.0049
+epoch: 54 trainAccuracy: 0.9892 delta: -0.0098
+epoch: 55 trainAccuracy: 0.9941 delta: -0.0049
+epoch: 56 trainAccuracy: 0.9912 delta: -0.0078
+epoch: 57 trainAccuracy: 0.9882 delta: -0.0108
+epoch: 58 trainAccuracy: 0.9873 delta: -0.0117
+epoch: 59 trainAccuracy: 0.9843 delta: -0.0147
+epoch: 60 trainAccuracy: 0.9725 delta: -0.0265
+epoch: 61 trainAccuracy: 0.9667 delta: -0.0323
+epoch: 62 trainAccuracy: 0.9735 delta: -0.0255
+epoch: 63 trainAccuracy: 0.9676 delta: -0.0314
+epoch: 64 trainAccuracy: 0.9745 delta: -0.0245
+epoch: 65 trainAccuracy: 0.9755 delta: -0.0235
+epoch: 66 trainAccuracy: 0.9755 delta: -0.0235
+epoch: 67 trainAccuracy: 0.9853 delta: -0.0137
+epoch: 68 trainAccuracy: 0.9863 delta: -0.0127
+epoch: 69 trainAccuracy: 0.9902 delta: -0.0088
+epoch: 70 trainAccuracy: 0.9971 delta: -0.0019
+epoch: 71 trainAccuracy: 0.9951 delta: -0.0039
+epoch: 72 trainAccuracy: 0.999 delta: 0.0
+epoch: 73 trainAccuracy: 0.998 delta: -0.001
+epoch: 74 trainAccuracy: 0.999 delta: 0.0
+epoch: 75 trainAccuracy: 0.999 delta: 0.0
+epoch: 76 trainAccuracy: 1.0 delta: 0.001
+epoch: 77 trainAccuracy: 1.0 delta: 0.0

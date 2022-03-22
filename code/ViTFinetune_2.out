@@ -1,0 +1,32 @@
+[38;5;2m[i 0322 00:23:33.204435 92 compiler.py:944] Jittor(1.3.1.48) src: /root/miniconda3/envs/jittor-fanxiaoyu/lib/python3.9/site-packages/jittor[m
+[38;5;2m[i 0322 00:23:33.208252 92 compiler.py:945] g++ at /usr/bin/g++(7.5.0)[m
+[38;5;2m[i 0322 00:23:33.208380 92 compiler.py:946] cache_path: /root/.cache/jittor/jt1.3.1/g++7.5.0/py3.9.7/Linux-5.4.0-96xb0/IntelRXeonRCPUx84/default[m
+[38;5;2m[i 0322 00:23:33.212361 92 __init__.py:376] Found /usr/local/cuda/bin/nvcc(10.2.89) at /usr/local/cuda/bin/nvcc.[m
+[38;5;2m[i 0322 00:23:33.216951 92 __init__.py:376] Found addr2line(2.30) at /usr/bin/addr2line.[m
+[38;5;2m[i 0322 00:23:33.337776 92 compiler.py:999] cuda key:cu10.2.89_sm_61[m
+[38;5;2m[i 0322 00:23:33.521196 92 __init__.py:191] Total mem: 219.71GB, using 16 procs for compiling.[m
+[38;5;2m[i 0322 00:23:33.641806 92 jit_compiler.cc:27] Load cc_path: /usr/bin/g++[m
+[38;5;2m[i 0322 00:23:33.926506 92 init.cc:62] Found cuda archs: [61,][m
+[38;5;2m[i 0322 00:23:34.119767 92 __init__.py:376] Found mpicc(2.1.1) at /usr/bin/mpicc.[m
+[38;5;2m[i 0322 00:23:34.249652 92 compile_extern.py:29] found /usr/include/cublas.h[m
+[38;5;2m[i 0322 00:23:34.258477 92 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcublas.so[m
+[38;5;2m[i 0322 00:23:34.258679 92 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcublasLt.so.10[m
+[38;5;2m[i 0322 00:23:34.674330 92 compile_extern.py:29] found /usr/include/cudnn.h[m
+[38;5;2m[i 0322 00:23:34.688194 92 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcudnn.so[m
+[38;5;2m[i 0322 00:23:35.794464 92 compile_extern.py:29] found /usr/local/cuda/include/curand.h[m
+[38;5;2m[i 0322 00:23:35.823651 92 compile_extern.py:29] found /usr/local/cuda/lib64/libcurand.so[m
+[38;5;2m[i 0322 00:23:35.915868 92 cuda_flags.cc:32] CUDA enabled.[m
+[38;5;1m[e 0322 00:23:36.614143 92 __init__.py:1126] load parameter pos_embed failed: expect the shape of pos_embed to be [1,785,768,], but got [1,197,768,][m
+[38;5;3m[w 0322 00:23:36.774528 92 __init__.py:1128] load total 96 params, 1 failed[m
+[38;5;2m[i 0322 00:23:36.788152 92 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0322 00:23:36.793608 92 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0322 00:23:36.817449 92 dataset.py:629] Found 102 classes and 6149 images.[m
+----------------- A new trial ---------------------
+modelName ViT learning rate: 0.0005 epochs 800
+epoch: 0 validAccuracy: 0.2804 trainAccuracy: 0.5284 delta: 0.2804
+epoch: 1 validAccuracy: 0.2745 trainAccuracy: 0.5059 delta: -0.0059
+epoch: 2 validAccuracy: 0.3451 trainAccuracy: 0.5471 delta: 0.0647
+epoch: 3 validAccuracy: 0.3284 trainAccuracy: 0.6608 delta: -0.0167
+epoch: 4 validAccuracy: 0.3422 trainAccuracy: 0.7186 delta: -0.0029
+epoch: 5 validAccuracy: 0.3667 trainAccuracy: 0.752 delta: 0.0216
+epoch: 6 validAccuracy: 0.3735 trainAccuracy: 0.8637 delta: 0.0068

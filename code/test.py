@@ -1,3 +1,4 @@
+from audioop import mul
 import os
 from tracemalloc import stop
 import jittor as jt
@@ -14,6 +15,9 @@ from mlp_mixer import MLPMixerForImageClassification
 from conv_mixer import ConvMixer
 from vision_transformer import VisionTransformer
 from jittor.models.resnet import Resnet50
+import shutil
+from tqdm import tqdm
+from jittor import Module
 from tensorboardX import SummaryWriter
 writer = SummaryWriter()
 # import os
@@ -34,7 +38,48 @@ writer = SummaryWriter()
 
 jt.flags.use_cuda = 1
 
-def train_one_epoch(model, train_loader, criterion, optimizer, epoch, accum_iter, scheduler):
+class SoftLabelCrossEntropyLoss(Module):
+    def __init__(self, weight=None, ignore_index=None):
+        self.weight = weight
+        self.ignore_index = ignore_index
+        
+    def execute(self, output, target):
+        return soft_label_cross_entropy_loss(output, target, self.weight, self.ignore_index)
+
+#TODO dims is 4 will cause slowly execution
+def soft_label_cross_entropy_loss(output, target, weight=None, ignore_index=None,reduction='sum'):
+
+    # if len(output.shape) == 4:
+    #     c_dim = output.shape[1]
+    #     output = output.transpose((0, 2, 3, 1))
+    #     output = output.reshape((-1, c_dim))
+
+    target = target.reshape((-1, ))
+    print(target)
+    target_weight = jt.ones(target.shape[0], dtype='float32')
+    # if weight is not None:
+        # target_weight = weight[target]
+    # if ignore_index is not None:
+        # target_weight = jt.ternary(
+        #     target==ignore_index,
+        #     jt.array(0).broadcast(target_weight),
+        #     target_weight
+        # )
+    
+    target = target.broadcast(output, [1])
+    target = target.index(1) == target
+    
+    output = output - output.max([1], keepdims=True)
+    logsum = output.exp().sum(1).log()
+    loss = (logsum - (output*target).sum(1)) * target_weight
+    if reduction == 'sum':
+        return loss.sum() / target_weight.sum()
+    # elif reduction == 'mean':
+        # return loss.mean() / target_weight.mean()
+    # else:
+        # return loss / target_weight
+
+def pretrain_one_epoch(model, train_loader, criterion, optimizer, epoch, accum_iter, scheduler):
     model.train()
     total_acc = 0
     total_num = 0
@@ -62,11 +107,44 @@ def train_one_epoch(model, train_loader, criterion, optimizer, epoch, accum_iter
                             #  f'acc={total_acc / total_num:.2f}')
     scheduler.step()
     return round(total_acc/total_num,4)
+
+def train_one_epoch(model, train_loader, criterion, optimizer, epoch, accum_iter, scheduler):
+    model.train()
+    total_acc = 0
+    total_num = 0
+    losses = []
+
+    # pbar = tqdm(train_loader, desc=f'Epoch {epoch} [TRAIN]')
+    for i, (images, labels) in enumerate(train_loader):
+        # print(labels)
+        # fhdskj
+        # print(images.shape)
+        output = model(images)
+        # print(output)
+        # fsdhkjf
+        loss = criterion(output, labels)
+
+        optimizer.backward(loss)
+        if (i + 1) % accum_iter == 0 or i + 1 == len(train_loader):
+            optimizer.step(loss)
+
+        # print(output)
+        pred = np.argmax(output.data, axis=1)
+        acc = np.sum(pred == labels.data)
+        total_acc += acc
+        total_num += labels.shape[0]
+        losses.append(loss.data[0])
+
+        
+        # pbar.set_description(f'Epoch {epoch} loss={sum(losses) / len(losses):.2f} '
+                            #  f'acc={total_acc / total_num:.2f}')
+    scheduler.step()
+    return round(total_acc/total_num,4)
     # run["train/loss"].log(round(sum(losses) / len(losses),2))
     # run["train/acc"].log(round(total_acc / total_num,2))
 
 def valid_one_epoch(model, val_loader, epoch):
-    model.eval()
+    # model.eval()
     total_acc = 0
     total_num = 0
 
@@ -107,14 +185,15 @@ def trial(model=Resnet50(num_classes=102),modelName="ResNet",learningRate=1e-4,e
     jt.set_global_seed(648)  
 
     # region Processing data 
-    resizedImageSize = 256#trial.suggest_int("resizedImageSize", 256, 512,64)
-    croppedImagesize=resizedImageSize-32
+    resizedImageSize = 512#trial.suggest_int("resizedImageSize", 256, 512,64)
+    croppedImagesize=resizedImageSize-64
     data_transforms = {
         'train': transform.Compose([
             transform.Resize((resizedImageSize,resizedImageSize)),
             transform.RandomCrop((croppedImagesize, croppedImagesize)),       # 从中心开始裁剪
             transform.RandomHorizontalFlip(p=0.5),  # 随机水平翻转 选择一个概率
             transform.RandomVerticalFlip(p=0.5),    # 随机垂直翻转
+            # transform.RandomRotation(90),
             transform.ToTensor(),
             transform.ImageNormalize([0.485, 0.456, 0.406],
                                     [0.229, 0.224, 0.225])  # 均值，标准差
@@ -156,7 +235,7 @@ def trial(model=Resnet50(num_classes=102),modelName="ResNet",learningRate=1e-4,e
     criterion = nn.CrossEntropyLoss()
     #lr=2e-5#trial.suggest_float("learningRate", 1e-6,5e-4,log=True)
     # weight_decay=trial.suggest_float("weight_decay", 5e-2, 1e-4)
-    optimizer = nn.Adam(model.parameters(), lr=learningRate, weight_decay=1e-4)
+    optimizer = nn.Adam(model.parameters(), lr=learningRate, weight_decay=1e-3)
     # scheduler = MultiStepLR(optimizer, milestones=[40, 80, 160, 240], gamma=0.2) #learning rate decay
     # T_max=15
     
@@ -184,7 +263,7 @@ def trial(model=Resnet50(num_classes=102),modelName="ResNet",learningRate=1e-4,e
         if validAccuracy > currentBestAccuracy:
             currentBestAccuracy=validAccuracy
             currentBestEpoch=epoch
-            model.save("../model/"+modelName+"/best_1.pkl")
+            model.save("../model/"+modelName+"/finetuned_2.pkl")
             noProgressEpochs=0
         else:
             noProgressEpochs+=1
@@ -203,15 +282,183 @@ def trial(model=Resnet50(num_classes=102),modelName="ResNet",learningRate=1e-4,e
     print("==========================================================================================")
     return currentBestAccuracy,currentBestEpoch,testAccuracy
 
+def pretrain(model,modelName,learningRate,epochs,etaMin=1e-5):
+    jt.set_global_seed(648)  
+
+    # region Processing data 
+    resizedImageSize = 128#trial.suggest_int("resizedImageSize", 256, 512,64)
+    croppedImagesize=resizedImageSize-16
+    data_transforms = {
+        'pretrain': transform.Compose([
+            transform.Resize((resizedImageSize,resizedImageSize)),
+            transform.RandomCrop((croppedImagesize, croppedImagesize)),       # 从中心开始裁剪
+            transform.RandomHorizontalFlip(p=0.5),  # 随机水平翻转 选择一个概率
+            transform.RandomVerticalFlip(p=0.5),    # 随机垂直翻转
+            # transform.RandomRotation(90),
+            transform.ToTensor(),
+            transform.ImageNormalize([0.485, 0.456, 0.406],
+                                    [0.229, 0.224, 0.225])  # 均值，标准差
+        ]),
+        'valid': transform.Compose([
+            transform.Resize((croppedImagesize, croppedImagesize)),
+            transform.ToTensor(),
+            transform.ImageNormalize([0.485, 0.456, 0.406],
+                                    [0.229, 0.224, 0.225])
+        ]),
+        'test': transform.Compose([
+            transform.Resize((croppedImagesize, croppedImagesize)),
+            transform.ToTensor(),
+            transform.ImageNormalize([0.485, 0.456, 0.406],
+                                    [0.229, 0.224, 0.225])
+        ])
+    }
+    batch_size = 256#trial.suggest_int("batch_size", 4, 32)
+    data_dir = '../data'
+    image_datasets = {x: jt.dataset.ImageFolder(os.path.join(data_dir, x), data_transforms[x]) for x in
+                    ['pretrain', 'valid', 'test']}
+    traindataset = image_datasets['pretrain'].set_attrs(batch_size=batch_size, shuffle=True)
+    # validdataset = image_datasets['valid'].set_attrs(batch_size=batch_size, shuffle=False)
+    # testdataset = image_datasets['test'].set_attrs(batch_size=1, shuffle=False)
+    # dataset_sizes = {x: len(image_datasets[x]) for x in ['train', 'valid', 'test']}
+    # train_num = len(traindataset)
+    # val_num = len(validdataset)
+    # test_num =len(testdataset)
+    # print("test_num",test_num)
+    # endregion
+
+    # region model and optimizer
+    # depth=12#trial.suggest_int("depth", 4, 16)
+    # dropout=0#trial.suggest_float("dropout", 0, 0.9)
+    # dim=512
+    # patch_size=16#trial.suggest_int("batch_size", 4, 16)
+    # model = VisionTransformer(patch_size=16, embed_dim=768, depth=8, num_heads=8, mlp_ratio=3.)
+    # model=Resnet50(num_classes=102)
+    criterion = nn.CrossEntropyLoss()
+    #lr=2e-5#trial.suggest_float("learningRate", 1e-6,5e-4,log=True)
+    # weight_decay=trial.suggest_float("weight_decay", 5e-2, 1e-4)
+    optimizer = nn.Adam(model.parameters(), lr=learningRate, weight_decay=1e-3)
+    # scheduler = MultiStepLR(optimizer, milestones=[40, 80, 160, 240], gamma=0.2) #learning rate decay
+    # T_max=15
+    
+    scheduler = CosineAnnealingLR(optimizer, 15, eta_min=etaMin)
+    # endregion
+
+    # region train and valid
+    # print("resizedImageSize:",resizedImageSize)
+    # print("depth:",depth)
+    # print("dropout:",dropout)
+    print("----------------- A new trial ---------------------")
+    print("modelName",modelName,"learning rate:",learningRate,"epochs",epochs)
+    # maxBearableEpochs=50
+    # noProgressEpochs=0
+    # stopEpoch=0
+    # epochs = 800
+    currentBestAccuracy=0.0
+    # currentBestEpoch=0
+    for epoch in range(epochs):
+        trainAccuracy=train_one_epoch(model, traindataset, criterion, optimizer, epoch, 1, scheduler)
+        # validAccuracy=valid_one_epoch(model, validdataset, epoch)
+        print("epoch:",epoch,"trainAccuracy:",trainAccuracy,"delta:",round(trainAccuracy-currentBestAccuracy,4))
+        writer.add_scalar(modelName+'/train', trainAccuracy, epoch)
+        if trainAccuracy > currentBestAccuracy:
+            currentBestAccuracy=trainAccuracy
+            # currentBestEpoch=epoch
+        if epoch%20==0:    
+            model.save("../model/"+modelName+"/pretrained.pkl")
+            # noProgressEpochs=0
+        # else:
+            # noProgressEpochs+=1
+            # if noProgressEpochs>=maxBearableEpochs:
+            #     stopEpoch=epoch
+            #     break
+        # stopEpoch=epoch
+        # Report intermediate objective value.
+        # trial.report(best_acc, epoch)
+        # Handle pruning based on the intermediate value.
+        # if trial.should_prune():
+        #     raise optuna.TrialPruned()
+    # testAccuracy=calculate_test_set_accuracy(model=model,test_loader=testdataset)
+    # print("==========================================================================================")
+    # print("validAccuracy",currentBestAccuracy,"bestEpoch",currentBestEpoch,"testAccuracy",testAccuracy,"stopEpoch",stopEpoch)
+    # print("==========================================================================================")
+    # return currentBestAccuracy,currentBestEpoch,testAccuracy
+
+def multicrop(model):
+    jt.set_global_seed(648)  
+
+    # region Processing data 
+    resizedImageSize = 256#trial.suggest_int("resizedImageSize", 256, 512,64)
+    croppedImagesize=resizedImageSize-32
+    data_transforms = {
+        'train': transform.Compose([
+            transform.Resize((resizedImageSize,resizedImageSize)),
+            transform.RandomCrop((croppedImagesize, croppedImagesize)),       # 从中心开始裁剪
+            transform.RandomHorizontalFlip(p=0.5),  # 随机水平翻转 选择一个概率
+            transform.RandomVerticalFlip(p=0.5),    # 随机垂直翻转
+            # transform.RandomRotation(90),
+            transform.ToTensor(),
+            transform.ImageNormalize([0.485, 0.456, 0.406],
+                                    [0.229, 0.224, 0.225])  # 均值，标准差
+        ]),
+        'valid': transform.Compose([
+            # transform.Resize((croppedImagesize, croppedImagesize)),
+            transform.Resize((resizedImageSize,resizedImageSize)),
+            transform.RandomCrop((croppedImagesize, croppedImagesize)),       # 从中心开始裁剪
+            transform.RandomHorizontalFlip(p=0.5),  # 随机水平翻转 选择一个概率
+            transform.RandomVerticalFlip(p=0.5),    # 随机垂直翻转
+            transform.ToTensor(),
+            transform.ImageNormalize([0.485, 0.456, 0.406],
+                                    [0.229, 0.224, 0.225])
+        ]),
+        'test': transform.Compose([
+            # transform.Resize((croppedImagesize, croppedImagesize)),
+            transform.Resize((resizedImageSize,resizedImageSize)),
+            transform.RandomCrop((croppedImagesize, croppedImagesize)),       # 从中心开始裁剪
+            transform.RandomHorizontalFlip(p=0.5),  # 随机水平翻转 选择一个概率
+            transform.RandomVerticalFlip(p=0.5),    # 随机垂直翻转
+            transform.ToTensor(),
+            transform.ImageNormalize([0.485, 0.456, 0.406],
+                                    [0.229, 0.224, 0.225])
+        ])
+    }
+    batch_size = 16#trial.suggest_int("batch_size", 4, 32)
+    data_dir = '../data'
+    image_datasets = {x: jt.dataset.ImageFolder(os.path.join(data_dir, x), data_transforms[x]) for x in
+                    ['train', 'valid', 'test']}
+    traindataset = image_datasets['train'].set_attrs(batch_size=batch_size, shuffle=True)
+    validdataset = image_datasets['valid'].set_attrs(batch_size=batch_size, shuffle=False)
+    testdataset = image_datasets['test'].set_attrs(batch_size=1, shuffle=False)
+    validAccuracy=valid_one_epoch(model, validdataset, 1)
+    testAccuracy=calculate_test_set_accuracy(model=model,test_loader=testdataset)
+    print("==========================================================================================")
+    print("validAccuracy",validAccuracy,"testAccuracy",testAccuracy)
+
+def divide_train_dataset():
+    # group=0
+    count=0
+    classDirList=os.listdir("../data/train/")
+    for classDir in tqdm(classDirList,desc="divide_train_dataset"):
+        imageNameList=os.listdir("../data/train/"+classDir+"/")
+        for imageName in imageNameList:
+            # if count%102==0
+            os.makedirs("../data/pretrain/"+str(count))
+            shutil.copyfile("../data/train/"+classDir+"/"+imageName, "../data/pretrain/"+str(count)+"/"+imageName)
+            count+=1
+
 if __name__=="__main__":
-    mlpMixerModel=MLPMixerForImageClassification(
-        in_channels=3,patch_size=16, d_model=512, depth=12, num_classes=102,image_size=224,dropout=0)
-    trial(model=mlpMixerModel,modelName="MLPMixer",learningRate=2.3e-5,epochs=200)
+    # mlpMixerModel=MLPMixerForImageClassification(
+        # in_channels=3,patch_size=16, d_model=512, depth=12, num_classes=102,image_size=224,dropout=0)
+    # trial(model=mlpMixerModel,modelName="MLPMixer",learningRate=2.3e-5,epochs=200)
     # convMixerModel=ConvMixer(dim = 768, depth = 32, kernel_size=7, patch_size=7,n_classes=102)
     # trial(model=convMixerModel,modelName="ConvMixer",learningRate=1e-4,epochs=500)
-    vitModel = VisionTransformer(patch_size=16, embed_dim=768, depth=8, num_heads=8, mlp_ratio=3.)
-    trial(model=vitModel,modelName="ViT",learningRate=5e-5,epochs=200)
-    writer.close()
+    vitModel = VisionTransformer(img_size=448,patch_size=16, embed_dim=768, depth=8, num_heads=8, mlp_ratio=3.,num_classes=1020)
+    vitModel.load("../model/ViT/finetuned.pkl")
+    # multicrop(vitModel)
+    trial(model=vitModel,modelName="ViT",learningRate=5e-4,epochs=800)
+    # pretrain(model=vitModel,modelName="ViT",learningRate=5e-4,epochs=800)
+    
+    # divide_train_dataset()
+    # writer.close()
     # resnetModel=Resnet50(num_classes=102)
     # trial(model=resnetModel,modelName="ResNet",learningRate=1e-4,epochs=1600)
 
