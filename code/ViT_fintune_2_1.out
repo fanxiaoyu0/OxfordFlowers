@@ -1,0 +1,43 @@
+[38;5;2m[i 0326 21:47:56.024353 52 compiler.py:944] Jittor(1.3.1.48) src: /root/miniconda3/envs/jittor-fanxiaoyu/lib/python3.9/site-packages/jittor[m
+[38;5;2m[i 0326 21:47:56.028279 52 compiler.py:945] g++ at /usr/bin/g++(9.4.0)[m
+[38;5;2m[i 0326 21:47:56.028385 52 compiler.py:946] cache_path: /root/.cache/jittor/jt1.3.1/g++9.4.0/py3.9.7/Linux-5.4.0-96xb0/IntelRXeonRCPUx84/default[m
+[38;5;2m[i 0326 21:47:56.032025 52 __init__.py:376] Found /usr/local/cuda/bin/nvcc(10.2.89) at /usr/local/cuda/bin/nvcc.[m
+[38;5;2m[i 0326 21:47:56.035757 52 __init__.py:376] Found addr2line(2.34) at /usr/bin/addr2line.[m
+[38;5;2m[i 0326 21:47:56.176465 52 compiler.py:999] cuda key:cu10.2.89_sm_61[m
+[38;5;2m[i 0326 21:47:56.423602 52 __init__.py:191] Total mem: 219.71GB, using 16 procs for compiling.[m
+[38;5;2m[i 0326 21:47:56.556109 52 jit_compiler.cc:27] Load cc_path: /usr/bin/g++[m
+[38;5;2m[i 0326 21:47:56.926225 52 init.cc:62] Found cuda archs: [61,][m
+[38;5;2m[i 0326 21:47:57.091308 52 __init__.py:376] Found mpicc(4.0.3) at /usr/bin/mpicc.[m
+[38;5;2m[i 0326 21:47:57.222577 52 compile_extern.py:29] found /usr/local/cuda/include/cublas.h[m
+[38;5;2m[i 0326 21:47:57.231139 52 compile_extern.py:29] found /usr/local/cuda/lib64/libcublas.so[m
+[38;5;2m[i 0326 21:47:57.231297 52 compile_extern.py:29] found /usr/local/cuda/lib64/libcublasLt.so.10[m
+[38;5;2m[i 0326 21:47:57.772480 52 compile_extern.py:29] found /usr/include/cudnn.h[m
+[38;5;2m[i 0326 21:47:57.793133 52 compile_extern.py:29] found /usr/lib/x86_64-linux-gnu/libcudnn.so[m
+[38;5;2m[i 0326 21:47:58.858681 52 compile_extern.py:29] found /usr/local/cuda/include/curand.h[m
+[38;5;2m[i 0326 21:47:58.909749 52 compile_extern.py:29] found /usr/local/cuda/lib64/libcurand.so[m
+[38;5;2m[i 0326 21:47:58.987523 52 cuda_flags.cc:32] CUDA enabled.[m
+[38;5;2m[i 0326 21:47:59.997014 52 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0326 21:48:00.006821 52 dataset.py:629] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0326 21:48:00.031987 52 dataset.py:629] Found 102 classes and 6149 images.[m
+----------------- A new trial ---------------------
+modelName ViT learning rate: 5e-05 epochs 200
+epoch: 0 validAccuracy: 0.0794 trainAccuracy: 0.0294 delta: 0.0794
+epoch: 1 validAccuracy: 0.2186 trainAccuracy: 0.1353 delta: 0.1392
+epoch: 2 validAccuracy: 0.2559 trainAccuracy: 0.302 delta: 0.0373
+epoch: 3 validAccuracy: 0.3324 trainAccuracy: 0.4206 delta: 0.0765
+epoch: 4 validAccuracy: 0.3343 trainAccuracy: 0.5373 delta: 0.0019
+epoch: 5 validAccuracy: 0.3892 trainAccuracy: 0.6402 delta: 0.0549
+epoch: 6 validAccuracy: 0.3804 trainAccuracy: 0.7314 delta: -0.0088
+epoch: 7 validAccuracy: 0.4088 trainAccuracy: 0.7922 delta: 0.0196
+epoch: 8 validAccuracy: 0.4069 trainAccuracy: 0.8853 delta: -0.0019
+epoch: 9 validAccuracy: 0.401 trainAccuracy: 0.9373 delta: -0.0078
+epoch: 10 validAccuracy: 0.4255 trainAccuracy: 0.9539 delta: 0.0167
+epoch: 11 validAccuracy: 0.4147 trainAccuracy: 0.9814 delta: -0.0108
+epoch: 12 validAccuracy: 0.4147 trainAccuracy: 0.9824 delta: -0.0108
+epoch: 13 validAccuracy: 0.4167 trainAccuracy: 0.9941 delta: -0.0088
+epoch: 14 validAccuracy: 0.4225 trainAccuracy: 0.9931 delta: -0.003
+epoch: 15 validAccuracy: 0.4255 trainAccuracy: 0.9961 delta: 0.0
+epoch: 16 validAccuracy: 0.4176 trainAccuracy: 0.999 delta: -0.0079
+epoch: 17 validAccuracy: 0.4186 trainAccuracy: 0.9971 delta: -0.0069
+epoch: 18 validAccuracy: 0.4147 trainAccuracy: 0.998 delta: -0.0108
+epoch: 19 validAccuracy: 0.4206 trainAccuracy: 0.9951 delta: -0.0049

@@ -4,7 +4,7 @@ import jittor as jt
 from jittor import nn
 from jittor.dataset import Dataset
 from jittor.lr_scheduler import CosineAnnealingLR, MultiStepLR
-from conv_mixer import ConvMixer
+
 import sys
 import argparse
 import numpy as np
@@ -13,6 +13,9 @@ from tqdm import tqdm
 import datetime    
 import json
 import matplotlib as plt
+from conv_mixer import ConvMixer
+from jittor import transform
+import os
 
 # from model import *
 # from tools.train import *
@@ -20,9 +23,10 @@ import matplotlib as plt
 
 from sklearn.metrics import confusion_matrix
 import matplotlib.pyplot as plt
-# https://mirrors.aliyun.com/pypi/simple/
 
-def plot_confusion_matrix(confusion_matrix, labels, title):
+jt.flags.use_cuda = 1
+
+def plot_confusion_matrix(confusion_matrix, labels, title, filename):
     #参考https://blog.csdn.net/kane7csdn/article/details/83756583绘制热力的混淆矩阵
     plt.figure(figsize=(20, 20))
     plt.imshow(confusion_matrix, interpolation='nearest')
@@ -33,14 +37,14 @@ def plot_confusion_matrix(confusion_matrix, labels, title):
     plt.yticks(num, labels)
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
-    plt.savefig("./ConvMixer.png")
+    plt.savefig(filename)
 
+
+
+
+# pkl_path = 'ConvMixer.pkl'
 model = ConvMixer(dim = 768, depth = 32, kernel_size=7, patch_size=7,n_classes=102)
-jt.flags.use_cuda = 1
-
-pkl_path = '../model/ConvMixer/best.pkl'
-model.load(pkl_path)
-jt.set_global_seed(648)  
+model.load('../model/ConvMixer/ConvMixer.pkl')
 
 # region Processing data 
 resizedImageSize = 256#trial.suggest_int("resizedImageSize", 256, 512,64)
@@ -76,8 +80,26 @@ image_datasets = {x: jt.dataset.ImageFolder(os.path.join(data_dir, x), data_tran
 traindataset = image_datasets['train'].set_attrs(batch_size=batch_size, shuffle=True)
 validdataset = image_datasets['valid'].set_attrs(batch_size=batch_size, shuffle=False)
 testdataset = image_datasets['test'].set_attrs(batch_size=1, shuffle=False)
-_, _, testdataset = dataloader()
+# _, _, testdataset = dataloader()
 
+
+def calculate_test_set_accuracy(model, test_loader):
+    # model.test()
+    total_acc = 0
+    total_num = 0
+    pbar = tqdm(test_loader, desc="calculate_test_set_accuracy")
+    for (images, labels) in pbar:#test_loader:
+        output = model(images)
+        pred = np.argmax(output.data, axis=1)
+        acc = np.sum(pred == labels.data)
+        total_acc += acc
+        total_num += labels.shape[0]
+
+        pbar.set_description(f'acc={total_acc / total_num:.2f}')
+
+    acc = total_acc / total_num
+    # run["eval/acc"].log(round(acc,2))
+    return round(acc,4)
 
 model.eval()
 
@@ -92,6 +114,7 @@ values = list(map_dict.values())
 keys = list(map_dict.keys())
 
 for i, (images, labels) in enumerate(pbar):
+    # print(images)
     output = model(images)
     pred = np.argmax(output.data, axis=1)
     acc = np.sum(pred == labels.data)
@@ -101,6 +124,10 @@ for i, (images, labels) in enumerate(pbar):
 
     pred_list.append(int(keys[values.index(int(pred))]))
     true_list.append(int(keys[values.index(int(labels.data))]))
+    
+    #if pred_list[i] == 49 and true_list[i] == 47:
+    #    plt.imshow(images[0].numpy().transpose(1, 2, 0))
+    #    plt.show()
 
     pbar.set_description(f'Epoch 1 acc={total_acc / total_num:.2f}')
 
@@ -109,6 +136,7 @@ print(f'test_acc: {acc:.3f}')
 
 cm = confusion_matrix(true_list, pred_list)
 cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
+np.savetxt("../model/ConvMixer/ConfusionMatrix.csv",cm,delimiter=',')
 
 label_list = list()
 for i in range(0,102):
@@ -117,5 +145,8 @@ for i in range(0,102):
     else:
         label_list.append("")
 
-plot_confusion_matrix(cm, label_list, "ConvMixer")
-np.savetxt("./ConvMixer.csv",cm,delimiter=',')
+plot_confusion_matrix(cm, label_list, "ConvMixer_all", "../model/ConvMixer/ConvMixer_all.png")
+
+for i in range(102):
+    cm[i][i] = 0
+plot_confusion_matrix(cm, label_list, "ConvMixer_without_diagonal", "../model/ConvMixer/ConvMixer_without_diagonal.png")

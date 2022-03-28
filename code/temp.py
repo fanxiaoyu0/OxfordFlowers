@@ -21,7 +21,7 @@ for n_iter in range(100):
     writer.add_scalar('data/scalar1', dummy_s1, n_iter)
     writer.add_scalar('data/scalar2', dummy_s2, n_iter)
 
-    writer.add_scalars('data/scalar_group', {'xsinx': n_iter * np.sin(n_iter),
+    writer.add_scalars('datascalar_group', {'xsinx': n_iter * np.sin(n_iter),
                                              'xcosx': n_iter * np.cos(n_iter),
                                              'arctanx': np.arctan(n_iter)}, n_iter)
 
@@ -52,5 +52,38 @@ for n_iter in range(100):
 # writer.add_embedding(features, metadata=label, label_img=images.unsqueeze(1))
 
 # export scalar data to JSON for external processing
-writer.export_scalars_to_json("./all_scalars.json")
+# writer.export_scalars_to_json("./all_scalars.json")
 writer.close()
+
+# import os
+
+# import tqdm
+# import tensorflow as tf
+
+
+# def tb_test():
+#     sess = tf.Session()
+
+#     x = tf.placeholder(dtype=tf.float32)
+#     summary = tf.summary.scalar('Values', x)
+#     merged = tf.summary.merge_all()
+
+#     sess.run(tf.global_variables_initializer())
+
+#     writer_1 = tf.summary.FileWriter(os.path.join('tb_summary', 'train'))
+#     writer_2 = tf.summary.FileWriter(os.path.join('tb_summary', 'eval'))
+
+#     for i in tqdm.tqdm(range(200)):
+#         # train
+#         summary_1 = sess.run(merged, feed_dict={x: i-10})
+#         writer_1.add_summary(summary_1, i)
+#         # eval
+#         summary_2 = sess.run(merged, feed_dict={x: i+10})            
+#         writer_2.add_summary(summary_2, i)
+
+#     writer_1.close()
+#     writer_2.close()
+
+
+# if __name__ == '__main__':
+#     tb_test()
