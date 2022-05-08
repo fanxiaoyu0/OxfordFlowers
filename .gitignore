@@ -1,8 +1,5 @@
 /data/
-/model/
-/code/__pycache__/
-/code/.neptune/
-/code/runs/
+/weight/
 
 *.pt
 *.jpg
