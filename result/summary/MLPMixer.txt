@@ -1,0 +1,4 @@
+modelName: MLPMixer  learning rate:2.3e-05  etaMin:1e-05  imgSize:224  savedName:1_1.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: MLPMixer  learning rate:2.3e-05  etaMin:1e-05  imgSize:224  savedName:1_1.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: MLPMixer  learning rate:2.3e-05  etaMin:1e-05  imgSize:224  batchSize:64  savedName:0_1.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: MLPMixer  learning rate:2.3e-05  etaMin:1e-05  imgSize:224  batchSize:64  savedName:1_2.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15

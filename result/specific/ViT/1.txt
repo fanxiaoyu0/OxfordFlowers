@@ -1,0 +1,275 @@
+[38;5;2m[i 0509 17:38:17.846779 72 compiler.py:951] Jittor(1.3.3.14) src: /home/prs01/miniconda3/envs/jittor/lib/python3.7/site-packages/jittor[m
+[38;5;2m[i 0509 17:38:17.862962 72 compiler.py:952] g++ at /usr/bin/g++(9.4.0)[m
+[38;5;2m[i 0509 17:38:17.863114 72 compiler.py:953] cache_path: /home/prs01/.cache/jittor/jt1.3.3/g++9.4.0/py3.7.13/Linux-5.4.0-10xc4/IntelRXeonRGolx7a/default[m
+[38;5;2m[i 0509 17:38:17.911070 72 install_cuda.py:53] cuda_driver_version: [11, 6][m
+[38;5;2m[i 0509 17:38:17.929762 72 __init__.py:411] Found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/bin/nvcc(11.2.152) at /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/bin/nvcc.[m
+[38;5;2m[i 0509 17:38:17.947691 72 __init__.py:411] Found addr2line(2.34) at /usr/bin/addr2line.[m
+[38;5;2m[i 0509 17:38:18.135083 72 compiler.py:1006] cuda key:cu11.2.152_sm_86[m
+[38;5;2m[i 0509 17:38:18.442232 72 __init__.py:227] Total mem: 251.56GB, using 16 procs for compiling.[m
+[38;5;2m[i 0509 17:38:18.612756 72 jit_compiler.cc:28] Load cc_path: /usr/bin/g++[m
+[38;5;2m[i 0509 17:38:18.765638 72 init.cc:62] Found cuda archs: [86,][m
+[38;5;2m[i 0509 17:38:18.919744 72 compile_extern.py:516] mpicc not found, distribution disabled.[m
+[38;5;2m[i 0509 17:38:18.989020 72 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/include/cublas.h[m
+[38;5;2m[i 0509 17:38:19.016331 72 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcublas.so[m
+[38;5;2m[i 0509 17:38:19.016609 72 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcublasLt.so.11[m
+[38;5;2m[i 0509 17:38:19.738735 72 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/include/cudnn.h[m
+[38;5;2m[i 0509 17:38:19.849154 72 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcudnn.so.8[m
+[38;5;2m[i 0509 17:38:19.849456 72 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcudnn_ops_infer.so.8[m
+[38;5;2m[i 0509 17:38:19.881359 72 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcudnn_ops_train.so.8[m
+[38;5;2m[i 0509 17:38:19.887189 72 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcudnn_cnn_infer.so.8[m
+[38;5;2m[i 0509 17:38:19.934858 72 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcudnn_cnn_train.so.8[m
+[38;5;2m[i 0509 17:38:20.616401 72 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/include/curand.h[m
+[38;5;2m[i 0509 17:38:20.687516 72 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcurand.so[m
+[38;5;2m[i 0509 17:38:20.714217 72 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/include/cufft.h[m
+[38;5;2m[i 0509 17:38:20.785249 72 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcufft.so[m
+[38;5;2m[i 0509 17:38:21.023620 72 cuda_flags.cc:32] CUDA enabled.[m
+Loading data...
+[38;5;2m[i 0509 17:38:21.864217 72 dataset.py:631] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0509 17:38:21.894981 72 dataset.py:631] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0509 17:38:21.962379 72 dataset.py:631] Found 102 classes and 6149 images.[m
+----------------- A new trial ---------------------
+modelName ViT learning rate: 5e-05 etaMin 1e-05 imgSize 224 savedName 1_1.pkl criterion CrossEntropyLoss weight_decay 0.001 TMax 15
+Training:   0%|          | 0/300 [00:00<?, ?it/s][38;5;3m[w 0509 17:38:22.400758 72 grad.cc:77] grads[0] 'cls_token' doesn't have gradient. It will be set to zero: Var(3189:1:2:2:i1:o1:s0:n1,float32,cls_token,0)[1,1,768,][m
+[38;5;3m[w 0509 17:38:22.400795 72 grad.cc:77] grads[1] 'pos_embed' doesn't have gradient. It will be set to zero: Var(3193:1:2:2:i1:o1:s0:n0,float32,pos_embed,0)[1,197,768,][m
+[38;5;3m[w 0509 17:38:22.400802 72 grad.cc:77] grads[2] 'patch_embed.proj.weight' doesn't have gradient. It will be set to zero: Var(3197:1:2:2:i1:o1:s0:n1,float32,patch_embed.proj.weight,0)[768,3,16,16,][m
+[38;5;3m[w 0509 17:38:22.400829 72 grad.cc:77] grads[3] 'patch_embed.proj.bias' doesn't have gradient. It will be set to zero: Var(3201:1:2:2:i1:o1:s0:n1,float32,patch_embed.proj.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.400835 72 grad.cc:77] grads[4] 'blocks.0.norm1.weight' doesn't have gradient. It will be set to zero: Var(3205:1:2:2:i1:o1:s0:n0,float32,blocks.0.norm1.weight,0)[768,][m
+[38;5;3m[w 0509 17:38:22.400840 72 grad.cc:77] grads[5] 'blocks.0.norm1.bias' doesn't have gradient. It will be set to zero: Var(3209:1:2:2:i1:o1:s0:n0,float32,blocks.0.norm1.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.400845 72 grad.cc:77] grads[6] 'blocks.0.attn.qkv.weight' doesn't have gradient. It will be set to zero: Var(3213:1:2:2:i1:o1:s0:n1,float32,blocks.0.attn.qkv.weight,0)[2304,768,][m
+[38;5;3m[w 0509 17:38:22.400850 72 grad.cc:77] grads[7] 'blocks.0.attn.proj.weight' doesn't have gradient. It will be set to zero: Var(3217:1:2:2:i1:o1:s0:n1,float32,blocks.0.attn.proj.weight,0)[768,768,][m
+[38;5;3m[w 0509 17:38:22.400855 72 grad.cc:77] grads[8] 'blocks.0.attn.proj.bias' doesn't have gradient. It will be set to zero: Var(3221:1:2:2:i1:o1:s0:n0,float32,blocks.0.attn.proj.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.400860 72 grad.cc:77] grads[9] 'blocks.0.norm2.weight' doesn't have gradient. It will be set to zero: Var(3225:1:2:2:i1:o1:s0:n0,float32,blocks.0.norm2.weight,0)[768,][m
+[38;5;3m[w 0509 17:38:22.400866 72 grad.cc:77] grads[10] 'blocks.0.norm2.bias' doesn't have gradient. It will be set to zero: Var(3229:1:2:2:i1:o1:s0:n0,float32,blocks.0.norm2.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.400871 72 grad.cc:77] grads[11] 'blocks.0.mlp.fc1.weight' doesn't have gradient. It will be set to zero: Var(3233:1:2:2:i1:o1:s0:n1,float32,blocks.0.mlp.fc1.weight,0)[2304,768,][m
+[38;5;3m[w 0509 17:38:22.400876 72 grad.cc:77] grads[12] 'blocks.0.mlp.fc1.bias' doesn't have gradient. It will be set to zero: Var(3237:1:2:2:i1:o1:s0:n0,float32,blocks.0.mlp.fc1.bias,0)[2304,][m
+[38;5;3m[w 0509 17:38:22.400881 72 grad.cc:77] grads[13] 'blocks.0.mlp.fc2.weight' doesn't have gradient. It will be set to zero: Var(3241:1:2:2:i1:o1:s0:n1,float32,blocks.0.mlp.fc2.weight,0)[768,2304,][m
+[38;5;3m[w 0509 17:38:22.400886 72 grad.cc:77] grads[14] 'blocks.0.mlp.fc2.bias' doesn't have gradient. It will be set to zero: Var(3245:1:2:2:i1:o1:s0:n0,float32,blocks.0.mlp.fc2.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.400891 72 grad.cc:77] grads[15] 'blocks.1.norm1.weight' doesn't have gradient. It will be set to zero: Var(3249:1:2:2:i1:o1:s0:n0,float32,blocks.1.norm1.weight,0)[768,][m
+[38;5;3m[w 0509 17:38:22.400896 72 grad.cc:77] grads[16] 'blocks.1.norm1.bias' doesn't have gradient. It will be set to zero: Var(3253:1:2:2:i1:o1:s0:n0,float32,blocks.1.norm1.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.400901 72 grad.cc:77] grads[17] 'blocks.1.attn.qkv.weight' doesn't have gradient. It will be set to zero: Var(3257:1:2:2:i1:o1:s0:n1,float32,blocks.1.attn.qkv.weight,0)[2304,768,][m
+[38;5;3m[w 0509 17:38:22.400907 72 grad.cc:77] grads[18] 'blocks.1.attn.proj.weight' doesn't have gradient. It will be set to zero: Var(3261:1:2:2:i1:o1:s0:n1,float32,blocks.1.attn.proj.weight,0)[768,768,][m
+[38;5;3m[w 0509 17:38:22.400912 72 grad.cc:77] grads[19] 'blocks.1.attn.proj.bias' doesn't have gradient. It will be set to zero: Var(3265:1:2:2:i1:o1:s0:n0,float32,blocks.1.attn.proj.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.400918 72 grad.cc:77] grads[20] 'blocks.1.norm2.weight' doesn't have gradient. It will be set to zero: Var(3269:1:2:2:i1:o1:s0:n0,float32,blocks.1.norm2.weight,0)[768,][m
+[38;5;3m[w 0509 17:38:22.400923 72 grad.cc:77] grads[21] 'blocks.1.norm2.bias' doesn't have gradient. It will be set to zero: Var(3273:1:2:2:i1:o1:s0:n0,float32,blocks.1.norm2.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.400928 72 grad.cc:77] grads[22] 'blocks.1.mlp.fc1.weight' doesn't have gradient. It will be set to zero: Var(3277:1:2:2:i1:o1:s0:n1,float32,blocks.1.mlp.fc1.weight,0)[2304,768,][m
+[38;5;3m[w 0509 17:38:22.413472 72 grad.cc:77] grads[23] 'blocks.1.mlp.fc1.bias' doesn't have gradient. It will be set to zero: Var(3281:1:2:2:i1:o1:s0:n0,float32,blocks.1.mlp.fc1.bias,0)[2304,][m
+[38;5;3m[w 0509 17:38:22.413479 72 grad.cc:77] grads[24] 'blocks.1.mlp.fc2.weight' doesn't have gradient. It will be set to zero: Var(3285:1:2:2:i1:o1:s0:n1,float32,blocks.1.mlp.fc2.weight,0)[768,2304,][m
+[38;5;3m[w 0509 17:38:22.413486 72 grad.cc:77] grads[25] 'blocks.1.mlp.fc2.bias' doesn't have gradient. It will be set to zero: Var(3289:1:2:2:i1:o1:s0:n0,float32,blocks.1.mlp.fc2.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413493 72 grad.cc:77] grads[26] 'blocks.2.norm1.weight' doesn't have gradient. It will be set to zero: Var(3293:1:2:2:i1:o1:s0:n0,float32,blocks.2.norm1.weight,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413499 72 grad.cc:77] grads[27] 'blocks.2.norm1.bias' doesn't have gradient. It will be set to zero: Var(3297:1:2:2:i1:o1:s0:n0,float32,blocks.2.norm1.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413505 72 grad.cc:77] grads[28] 'blocks.2.attn.qkv.weight' doesn't have gradient. It will be set to zero: Var(3301:1:2:2:i1:o1:s0:n1,float32,blocks.2.attn.qkv.weight,0)[2304,768,][m
+[38;5;3m[w 0509 17:38:22.413512 72 grad.cc:77] grads[29] 'blocks.2.attn.proj.weight' doesn't have gradient. It will be set to zero: Var(3305:1:2:2:i1:o1:s0:n1,float32,blocks.2.attn.proj.weight,0)[768,768,][m
+[38;5;3m[w 0509 17:38:22.413518 72 grad.cc:77] grads[30] 'blocks.2.attn.proj.bias' doesn't have gradient. It will be set to zero: Var(3309:1:2:2:i1:o1:s0:n0,float32,blocks.2.attn.proj.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413524 72 grad.cc:77] grads[31] 'blocks.2.norm2.weight' doesn't have gradient. It will be set to zero: Var(3313:1:2:2:i1:o1:s0:n0,float32,blocks.2.norm2.weight,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413530 72 grad.cc:77] grads[32] 'blocks.2.norm2.bias' doesn't have gradient. It will be set to zero: Var(3317:1:2:2:i1:o1:s0:n0,float32,blocks.2.norm2.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413536 72 grad.cc:77] grads[33] 'blocks.2.mlp.fc1.weight' doesn't have gradient. It will be set to zero: Var(3321:1:2:2:i1:o1:s0:n1,float32,blocks.2.mlp.fc1.weight,0)[2304,768,][m
+[38;5;3m[w 0509 17:38:22.413543 72 grad.cc:77] grads[34] 'blocks.2.mlp.fc1.bias' doesn't have gradient. It will be set to zero: Var(3325:1:2:2:i1:o1:s0:n0,float32,blocks.2.mlp.fc1.bias,0)[2304,][m
+[38;5;3m[w 0509 17:38:22.413548 72 grad.cc:77] grads[35] 'blocks.2.mlp.fc2.weight' doesn't have gradient. It will be set to zero: Var(3329:1:2:2:i1:o1:s0:n1,float32,blocks.2.mlp.fc2.weight,0)[768,2304,][m
+[38;5;3m[w 0509 17:38:22.413555 72 grad.cc:77] grads[36] 'blocks.2.mlp.fc2.bias' doesn't have gradient. It will be set to zero: Var(3333:1:2:2:i1:o1:s0:n0,float32,blocks.2.mlp.fc2.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413561 72 grad.cc:77] grads[37] 'blocks.3.norm1.weight' doesn't have gradient. It will be set to zero: Var(3337:1:2:2:i1:o1:s0:n0,float32,blocks.3.norm1.weight,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413567 72 grad.cc:77] grads[38] 'blocks.3.norm1.bias' doesn't have gradient. It will be set to zero: Var(3341:1:2:2:i1:o1:s0:n0,float32,blocks.3.norm1.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413573 72 grad.cc:77] grads[39] 'blocks.3.attn.qkv.weight' doesn't have gradient. It will be set to zero: Var(3345:1:2:2:i1:o1:s0:n1,float32,blocks.3.attn.qkv.weight,0)[2304,768,][m
+[38;5;3m[w 0509 17:38:22.413579 72 grad.cc:77] grads[40] 'blocks.3.attn.proj.weight' doesn't have gradient. It will be set to zero: Var(3349:1:2:2:i1:o1:s0:n1,float32,blocks.3.attn.proj.weight,0)[768,768,][m
+[38;5;3m[w 0509 17:38:22.413585 72 grad.cc:77] grads[41] 'blocks.3.attn.proj.bias' doesn't have gradient. It will be set to zero: Var(3353:1:2:2:i1:o1:s0:n0,float32,blocks.3.attn.proj.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413592 72 grad.cc:77] grads[42] 'blocks.3.norm2.weight' doesn't have gradient. It will be set to zero: Var(3357:1:2:2:i1:o1:s0:n0,float32,blocks.3.norm2.weight,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413616 72 grad.cc:77] grads[43] 'blocks.3.norm2.bias' doesn't have gradient. It will be set to zero: Var(3361:1:2:2:i1:o1:s0:n0,float32,blocks.3.norm2.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413623 72 grad.cc:77] grads[44] 'blocks.3.mlp.fc1.weight' doesn't have gradient. It will be set to zero: Var(3365:1:2:2:i1:o1:s0:n1,float32,blocks.3.mlp.fc1.weight,0)[2304,768,][m
+[38;5;3m[w 0509 17:38:22.413629 72 grad.cc:77] grads[45] 'blocks.3.mlp.fc1.bias' doesn't have gradient. It will be set to zero: Var(3369:1:2:2:i1:o1:s0:n0,float32,blocks.3.mlp.fc1.bias,0)[2304,][m
+[38;5;3m[w 0509 17:38:22.413636 72 grad.cc:77] grads[46] 'blocks.3.mlp.fc2.weight' doesn't have gradient. It will be set to zero: Var(3373:1:2:2:i1:o1:s0:n1,float32,blocks.3.mlp.fc2.weight,0)[768,2304,][m
+[38;5;3m[w 0509 17:38:22.413643 72 grad.cc:77] grads[47] 'blocks.3.mlp.fc2.bias' doesn't have gradient. It will be set to zero: Var(3377:1:2:2:i1:o1:s0:n0,float32,blocks.3.mlp.fc2.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413649 72 grad.cc:77] grads[48] 'blocks.4.norm1.weight' doesn't have gradient. It will be set to zero: Var(3381:1:2:2:i1:o1:s0:n0,float32,blocks.4.norm1.weight,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413656 72 grad.cc:77] grads[49] 'blocks.4.norm1.bias' doesn't have gradient. It will be set to zero: Var(3385:1:2:2:i1:o1:s0:n0,float32,blocks.4.norm1.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413662 72 grad.cc:77] grads[50] 'blocks.4.attn.qkv.weight' doesn't have gradient. It will be set to zero: Var(3389:1:2:2:i1:o1:s0:n1,float32,blocks.4.attn.qkv.weight,0)[2304,768,][m
+[38;5;3m[w 0509 17:38:22.413668 72 grad.cc:77] grads[51] 'blocks.4.attn.proj.weight' doesn't have gradient. It will be set to zero: Var(3393:1:2:2:i1:o1:s0:n1,float32,blocks.4.attn.proj.weight,0)[768,768,][m
+[38;5;3m[w 0509 17:38:22.413675 72 grad.cc:77] grads[52] 'blocks.4.attn.proj.bias' doesn't have gradient. It will be set to zero: Var(3397:1:2:2:i1:o1:s0:n0,float32,blocks.4.attn.proj.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413682 72 grad.cc:77] grads[53] 'blocks.4.norm2.weight' doesn't have gradient. It will be set to zero: Var(3401:1:2:2:i1:o1:s0:n0,float32,blocks.4.norm2.weight,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413688 72 grad.cc:77] grads[54] 'blocks.4.norm2.bias' doesn't have gradient. It will be set to zero: Var(3405:1:2:2:i1:o1:s0:n0,float32,blocks.4.norm2.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413694 72 grad.cc:77] grads[55] 'blocks.4.mlp.fc1.weight' doesn't have gradient. It will be set to zero: Var(3409:1:2:2:i1:o1:s0:n1,float32,blocks.4.mlp.fc1.weight,0)[2304,768,][m
+[38;5;3m[w 0509 17:38:22.413700 72 grad.cc:77] grads[56] 'blocks.4.mlp.fc1.bias' doesn't have gradient. It will be set to zero: Var(3413:1:2:2:i1:o1:s0:n0,float32,blocks.4.mlp.fc1.bias,0)[2304,][m
+[38;5;3m[w 0509 17:38:22.413706 72 grad.cc:77] grads[57] 'blocks.4.mlp.fc2.weight' doesn't have gradient. It will be set to zero: Var(3417:1:2:2:i1:o1:s0:n1,float32,blocks.4.mlp.fc2.weight,0)[768,2304,][m
+[38;5;3m[w 0509 17:38:22.413713 72 grad.cc:77] grads[58] 'blocks.4.mlp.fc2.bias' doesn't have gradient. It will be set to zero: Var(3421:1:2:2:i1:o1:s0:n0,float32,blocks.4.mlp.fc2.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413726 72 grad.cc:77] grads[59] 'blocks.5.norm1.weight' doesn't have gradient. It will be set to zero: Var(3425:1:2:2:i1:o1:s0:n0,float32,blocks.5.norm1.weight,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413732 72 grad.cc:77] grads[60] 'blocks.5.norm1.bias' doesn't have gradient. It will be set to zero: Var(3429:1:2:2:i1:o1:s0:n0,float32,blocks.5.norm1.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413738 72 grad.cc:77] grads[61] 'blocks.5.attn.qkv.weight' doesn't have gradient. It will be set to zero: Var(3433:1:2:2:i1:o1:s0:n1,float32,blocks.5.attn.qkv.weight,0)[2304,768,][m
+[38;5;3m[w 0509 17:38:22.413744 72 grad.cc:77] grads[62] 'blocks.5.attn.proj.weight' doesn't have gradient. It will be set to zero: Var(3437:1:2:2:i1:o1:s0:n1,float32,blocks.5.attn.proj.weight,0)[768,768,][m
+[38;5;3m[w 0509 17:38:22.413750 72 grad.cc:77] grads[63] 'blocks.5.attn.proj.bias' doesn't have gradient. It will be set to zero: Var(3441:1:2:2:i1:o1:s0:n0,float32,blocks.5.attn.proj.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413759 72 grad.cc:77] grads[64] 'blocks.5.norm2.weight' doesn't have gradient. It will be set to zero: Var(3445:1:2:2:i1:o1:s0:n0,float32,blocks.5.norm2.weight,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413765 72 grad.cc:77] grads[65] 'blocks.5.norm2.bias' doesn't have gradient. It will be set to zero: Var(3449:1:2:2:i1:o1:s0:n0,float32,blocks.5.norm2.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413771 72 grad.cc:77] grads[66] 'blocks.5.mlp.fc1.weight' doesn't have gradient. It will be set to zero: Var(3453:1:2:2:i1:o1:s0:n1,float32,blocks.5.mlp.fc1.weight,0)[2304,768,][m
+[38;5;3m[w 0509 17:38:22.413777 72 grad.cc:77] grads[67] 'blocks.5.mlp.fc1.bias' doesn't have gradient. It will be set to zero: Var(3457:1:2:2:i1:o1:s0:n0,float32,blocks.5.mlp.fc1.bias,0)[2304,][m
+[38;5;3m[w 0509 17:38:22.413783 72 grad.cc:77] grads[68] 'blocks.5.mlp.fc2.weight' doesn't have gradient. It will be set to zero: Var(3461:1:2:2:i1:o1:s0:n1,float32,blocks.5.mlp.fc2.weight,0)[768,2304,][m
+[38;5;3m[w 0509 17:38:22.413790 72 grad.cc:77] grads[69] 'blocks.5.mlp.fc2.bias' doesn't have gradient. It will be set to zero: Var(3465:1:2:2:i1:o1:s0:n0,float32,blocks.5.mlp.fc2.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413796 72 grad.cc:77] grads[70] 'blocks.6.norm1.weight' doesn't have gradient. It will be set to zero: Var(3469:1:2:2:i1:o1:s0:n0,float32,blocks.6.norm1.weight,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413803 72 grad.cc:77] grads[71] 'blocks.6.norm1.bias' doesn't have gradient. It will be set to zero: Var(3473:1:2:2:i1:o1:s0:n0,float32,blocks.6.norm1.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413809 72 grad.cc:77] grads[72] 'blocks.6.attn.qkv.weight' doesn't have gradient. It will be set to zero: Var(3477:1:2:2:i1:o1:s0:n1,float32,blocks.6.attn.qkv.weight,0)[2304,768,][m
+[38;5;3m[w 0509 17:38:22.413815 72 grad.cc:77] grads[73] 'blocks.6.attn.proj.weight' doesn't have gradient. It will be set to zero: Var(3481:1:2:2:i1:o1:s0:n1,float32,blocks.6.attn.proj.weight,0)[768,768,][m
+[38;5;3m[w 0509 17:38:22.413822 72 grad.cc:77] grads[74] 'blocks.6.attn.proj.bias' doesn't have gradient. It will be set to zero: Var(3485:1:2:2:i1:o1:s0:n0,float32,blocks.6.attn.proj.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413828 72 grad.cc:77] grads[75] 'blocks.6.norm2.weight' doesn't have gradient. It will be set to zero: Var(3489:1:2:2:i1:o1:s0:n0,float32,blocks.6.norm2.weight,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413834 72 grad.cc:77] grads[76] 'blocks.6.norm2.bias' doesn't have gradient. It will be set to zero: Var(3493:1:2:2:i1:o1:s0:n0,float32,blocks.6.norm2.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413841 72 grad.cc:77] grads[77] 'blocks.6.mlp.fc1.weight' doesn't have gradient. It will be set to zero: Var(3497:1:2:2:i1:o1:s0:n1,float32,blocks.6.mlp.fc1.weight,0)[2304,768,][m
+[38;5;3m[w 0509 17:38:22.413847 72 grad.cc:77] grads[78] 'blocks.6.mlp.fc1.bias' doesn't have gradient. It will be set to zero: Var(3501:1:2:2:i1:o1:s0:n0,float32,blocks.6.mlp.fc1.bias,0)[2304,][m
+[38;5;3m[w 0509 17:38:22.413854 72 grad.cc:77] grads[79] 'blocks.6.mlp.fc2.weight' doesn't have gradient. It will be set to zero: Var(3505:1:2:2:i1:o1:s0:n1,float32,blocks.6.mlp.fc2.weight,0)[768,2304,][m
+[38;5;3m[w 0509 17:38:22.413860 72 grad.cc:77] grads[80] 'blocks.6.mlp.fc2.bias' doesn't have gradient. It will be set to zero: Var(3509:1:2:2:i1:o1:s0:n0,float32,blocks.6.mlp.fc2.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413866 72 grad.cc:77] grads[81] 'blocks.7.norm1.weight' doesn't have gradient. It will be set to zero: Var(3513:1:2:2:i1:o1:s0:n0,float32,blocks.7.norm1.weight,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413872 72 grad.cc:77] grads[82] 'blocks.7.norm1.bias' doesn't have gradient. It will be set to zero: Var(3517:1:2:2:i1:o1:s0:n0,float32,blocks.7.norm1.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413878 72 grad.cc:77] grads[83] 'blocks.7.attn.qkv.weight' doesn't have gradient. It will be set to zero: Var(3521:1:2:2:i1:o1:s0:n1,float32,blocks.7.attn.qkv.weight,0)[2304,768,][m
+[38;5;3m[w 0509 17:38:22.413887 72 grad.cc:77] grads[84] 'blocks.7.attn.proj.weight' doesn't have gradient. It will be set to zero: Var(3525:1:2:2:i1:o1:s0:n1,float32,blocks.7.attn.proj.weight,0)[768,768,][m
+[38;5;3m[w 0509 17:38:22.413893 72 grad.cc:77] grads[85] 'blocks.7.attn.proj.bias' doesn't have gradient. It will be set to zero: Var(3529:1:2:2:i1:o1:s0:n0,float32,blocks.7.attn.proj.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413900 72 grad.cc:77] grads[86] 'blocks.7.norm2.weight' doesn't have gradient. It will be set to zero: Var(3533:1:2:2:i1:o1:s0:n0,float32,blocks.7.norm2.weight,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413906 72 grad.cc:77] grads[87] 'blocks.7.norm2.bias' doesn't have gradient. It will be set to zero: Var(3537:1:2:2:i1:o1:s0:n0,float32,blocks.7.norm2.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413912 72 grad.cc:77] grads[88] 'blocks.7.mlp.fc1.weight' doesn't have gradient. It will be set to zero: Var(3541:1:2:2:i1:o1:s0:n1,float32,blocks.7.mlp.fc1.weight,0)[2304,768,][m
+[38;5;3m[w 0509 17:38:22.413918 72 grad.cc:77] grads[89] 'blocks.7.mlp.fc1.bias' doesn't have gradient. It will be set to zero: Var(3545:1:2:2:i1:o1:s0:n0,float32,blocks.7.mlp.fc1.bias,0)[2304,][m
+[38;5;3m[w 0509 17:38:22.413924 72 grad.cc:77] grads[90] 'blocks.7.mlp.fc2.weight' doesn't have gradient. It will be set to zero: Var(3549:1:2:2:i1:o1:s0:n1,float32,blocks.7.mlp.fc2.weight,0)[768,2304,][m
+[38;5;3m[w 0509 17:38:22.413930 72 grad.cc:77] grads[91] 'blocks.7.mlp.fc2.bias' doesn't have gradient. It will be set to zero: Var(3553:1:2:2:i1:o1:s0:n0,float32,blocks.7.mlp.fc2.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413936 72 grad.cc:77] grads[92] 'norm.weight' doesn't have gradient. It will be set to zero: Var(3557:1:2:2:i1:o1:s0:n0,float32,norm.weight,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413942 72 grad.cc:77] grads[93] 'norm.bias' doesn't have gradient. It will be set to zero: Var(3561:1:2:2:i1:o1:s0:n0,float32,norm.bias,0)[768,][m
+[38;5;3m[w 0509 17:38:22.413949 72 grad.cc:77] grads[94] 'head.weight' doesn't have gradient. It will be set to zero: Var(3565:1:2:2:i1:o1:s0:n1,float32,head.weight,0)[5001,768,][m
+[38;5;3m[w 0509 17:38:22.413955 72 grad.cc:77] grads[95] 'head.bias' doesn't have gradient. It will be set to zero: Var(3569:1:2:2:i1:o1:s0:n0,float32,head.bias,0)[5001,][m
+epoch: 0 validateAccuracy: 0.0206 trainAccuracy: 0.0118 delta: 0.0206
+Training:   0%|          | 1/300 [00:24<2:01:53, 24.46s/it]epoch: 1 validateAccuracy: 0.0471 trainAccuracy: 0.0294 delta: 0.0265
+Training:   1%|          | 2/300 [00:45<1:50:33, 22.26s/it]epoch: 2 validateAccuracy: 0.0922 trainAccuracy: 0.0784 delta: 0.0451
+Training:   1%|          | 3/300 [01:05<1:46:22, 21.49s/it]epoch: 3 validateAccuracy: 0.1559 trainAccuracy: 0.1412 delta: 0.0637
+Training:   1%|▏         | 4/300 [01:26<1:44:26, 21.17s/it]epoch: 4 validateAccuracy: 0.1824 trainAccuracy: 0.202 delta: 0.0265
+Training:   2%|▏         | 5/300 [01:47<1:44:01, 21.16s/it]epoch: 5 validateAccuracy: 0.2314 trainAccuracy: 0.2608 delta: 0.049
+Training:   2%|▏         | 6/300 [02:08<1:43:40, 21.16s/it]epoch: 6 validateAccuracy: 0.2588 trainAccuracy: 0.3382 delta: 0.0274
+Training:   2%|▏         | 7/300 [02:29<1:42:55, 21.08s/it]epoch: 7 validateAccuracy: 0.2784 trainAccuracy: 0.3765 delta: 0.0196
+Training:   3%|▎         | 8/300 [02:51<1:44:27, 21.46s/it]epoch: 8 validateAccuracy: 0.2931 trainAccuracy: 0.4294 delta: 0.0147
+Training:   3%|▎         | 9/300 [03:15<1:46:57, 22.05s/it]epoch: 9 validateAccuracy: 0.302 trainAccuracy: 0.4588 delta: 0.0089
+Training:   3%|▎         | 10/300 [03:39<1:49:26, 22.64s/it]epoch: 10 validateAccuracy: 0.3225 trainAccuracy: 0.5157 delta: 0.0205
+Training:   4%|▎         | 11/300 [04:03<1:50:43, 22.99s/it]epoch: 11 validateAccuracy: 0.3078 trainAccuracy: 0.5422 delta: -0.0147
+Training:   4%|▍         | 12/300 [04:23<1:46:32, 22.20s/it]epoch: 12 validateAccuracy: 0.3382 trainAccuracy: 0.5922 delta: 0.0157
+Training:   4%|▍         | 13/300 [04:47<1:48:20, 22.65s/it]epoch: 13 validateAccuracy: 0.3225 trainAccuracy: 0.6118 delta: -0.0157
+Training:   5%|▍         | 14/300 [05:07<1:44:07, 21.84s/it]epoch: 14 validateAccuracy: 0.3324 trainAccuracy: 0.6373 delta: -0.0058
+Training:   5%|▌         | 15/300 [05:27<1:41:13, 21.31s/it]epoch: 15 validateAccuracy: 0.3324 trainAccuracy: 0.652 delta: -0.0058
+Training:   5%|▌         | 16/300 [05:47<1:40:03, 21.14s/it]epoch: 16 validateAccuracy: 0.3353 trainAccuracy: 0.6735 delta: -0.0029
+Training:   6%|▌         | 17/300 [06:08<1:38:58, 20.98s/it]epoch: 17 validateAccuracy: 0.3265 trainAccuracy: 0.701 delta: -0.0117
+Training:   6%|▌         | 18/300 [06:29<1:37:59, 20.85s/it]epoch: 18 validateAccuracy: 0.35 trainAccuracy: 0.7049 delta: 0.0118
+Training:   6%|▋         | 19/300 [06:52<1:41:59, 21.78s/it]epoch: 19 validateAccuracy: 0.3353 trainAccuracy: 0.7147 delta: -0.0147
+Training:   7%|▋         | 20/300 [07:13<1:40:16, 21.49s/it]epoch: 20 validateAccuracy: 0.3333 trainAccuracy: 0.7147 delta: -0.0167
+Training:   7%|▋         | 21/300 [07:34<1:38:33, 21.19s/it]epoch: 21 validateAccuracy: 0.3363 trainAccuracy: 0.7382 delta: -0.0137
+Training:   7%|▋         | 22/300 [07:54<1:37:18, 21.00s/it]epoch: 22 validateAccuracy: 0.3353 trainAccuracy: 0.7461 delta: -0.0147
+Training:   8%|▊         | 23/300 [08:15<1:36:44, 20.95s/it]epoch: 23 validateAccuracy: 0.3304 trainAccuracy: 0.7667 delta: -0.0196
+Training:   8%|▊         | 24/300 [08:36<1:35:52, 20.84s/it]epoch: 24 validateAccuracy: 0.3314 trainAccuracy: 0.7775 delta: -0.0186
+Training:   8%|▊         | 25/300 [08:57<1:35:22, 20.81s/it]epoch: 25 validateAccuracy: 0.3373 trainAccuracy: 0.7843 delta: -0.0127
+Training:   9%|▊         | 26/300 [09:17<1:35:13, 20.85s/it]epoch: 26 validateAccuracy: 0.3373 trainAccuracy: 0.7814 delta: -0.0127
+Training:   9%|▉         | 27/300 [09:38<1:34:43, 20.82s/it]epoch: 27 validateAccuracy: 0.3176 trainAccuracy: 0.8 delta: -0.0324
+Training:   9%|▉         | 28/300 [09:59<1:34:10, 20.77s/it]epoch: 28 validateAccuracy: 0.3559 trainAccuracy: 0.8422 delta: 0.0059
+Training:  10%|▉         | 29/300 [10:23<1:37:45, 21.64s/it]epoch: 29 validateAccuracy: 0.3216 trainAccuracy: 0.8245 delta: -0.0343
+Training:  10%|█         | 30/300 [10:43<1:35:59, 21.33s/it]epoch: 30 validateAccuracy: 0.3333 trainAccuracy: 0.849 delta: -0.0226
+Training:  10%|█         | 31/300 [11:04<1:34:47, 21.14s/it]epoch: 31 validateAccuracy: 0.3304 trainAccuracy: 0.8667 delta: -0.0255
+Training:  11%|█         | 32/300 [11:25<1:33:48, 21.00s/it]epoch: 32 validateAccuracy: 0.3343 trainAccuracy: 0.8794 delta: -0.0216
+Training:  11%|█         | 33/300 [11:45<1:32:30, 20.79s/it]epoch: 33 validateAccuracy: 0.3392 trainAccuracy: 0.9137 delta: -0.0167
+Training:  11%|█▏        | 34/300 [12:05<1:31:53, 20.73s/it]epoch: 34 validateAccuracy: 0.3392 trainAccuracy: 0.9441 delta: -0.0167
+Training:  12%|█▏        | 35/300 [12:26<1:31:15, 20.66s/it]epoch: 35 validateAccuracy: 0.3549 trainAccuracy: 0.951 delta: -0.001
+Training:  12%|█▏        | 36/300 [12:46<1:30:43, 20.62s/it]epoch: 36 validateAccuracy: 0.3353 trainAccuracy: 0.9618 delta: -0.0206
+Training:  12%|█▏        | 37/300 [13:07<1:30:09, 20.57s/it]epoch: 37 validateAccuracy: 0.3471 trainAccuracy: 0.9696 delta: -0.0088
+Training:  13%|█▎        | 38/300 [13:28<1:30:00, 20.61s/it]epoch: 38 validateAccuracy: 0.3441 trainAccuracy: 0.9814 delta: -0.0118
+Training:  13%|█▎        | 39/300 [13:49<1:30:11, 20.74s/it]epoch: 39 validateAccuracy: 0.3441 trainAccuracy: 0.9843 delta: -0.0118
+Training:  13%|█▎        | 40/300 [14:09<1:29:31, 20.66s/it]epoch: 40 validateAccuracy: 0.3539 trainAccuracy: 0.9863 delta: -0.002
+Training:  14%|█▎        | 41/300 [14:29<1:28:24, 20.48s/it]epoch: 41 validateAccuracy: 0.3529 trainAccuracy: 0.9892 delta: -0.003
+Training:  14%|█▍        | 42/300 [14:49<1:27:43, 20.40s/it]epoch: 42 validateAccuracy: 0.35 trainAccuracy: 0.9912 delta: -0.0059
+Training:  14%|█▍        | 43/300 [15:10<1:27:25, 20.41s/it]epoch: 43 validateAccuracy: 0.3471 trainAccuracy: 0.9961 delta: -0.0088
+Training:  15%|█▍        | 44/300 [15:31<1:27:33, 20.52s/it]epoch: 44 validateAccuracy: 0.35 trainAccuracy: 0.9941 delta: -0.0059
+Training:  15%|█▌        | 45/300 [15:51<1:26:52, 20.44s/it]epoch: 45 validateAccuracy: 0.3608 trainAccuracy: 0.9961 delta: 0.0049
+Training:  15%|█▌        | 46/300 [16:15<1:31:17, 21.56s/it]epoch: 46 validateAccuracy: 0.3539 trainAccuracy: 0.998 delta: -0.0069
+Training:  16%|█▌        | 47/300 [16:36<1:30:16, 21.41s/it]epoch: 47 validateAccuracy: 0.3529 trainAccuracy: 0.9931 delta: -0.0079
+Training:  16%|█▌        | 48/300 [16:57<1:28:59, 21.19s/it]epoch: 48 validateAccuracy: 0.3549 trainAccuracy: 0.9961 delta: -0.0059
+Training:  16%|█▋        | 49/300 [17:17<1:27:28, 20.91s/it]epoch: 49 validateAccuracy: 0.3578 trainAccuracy: 0.9971 delta: -0.003
+Training:  17%|█▋        | 50/300 [17:38<1:26:43, 20.82s/it]epoch: 50 validateAccuracy: 0.351 trainAccuracy: 0.999 delta: -0.0098
+Training:  17%|█▋        | 51/300 [17:59<1:26:42, 20.89s/it]epoch: 51 validateAccuracy: 0.352 trainAccuracy: 0.9951 delta: -0.0088
+Training:  17%|█▋        | 52/300 [18:20<1:26:21, 20.89s/it]epoch: 52 validateAccuracy: 0.3539 trainAccuracy: 0.9941 delta: -0.0069
+Training:  18%|█▊        | 53/300 [18:40<1:25:25, 20.75s/it]epoch: 53 validateAccuracy: 0.3412 trainAccuracy: 0.9931 delta: -0.0196
+Training:  18%|█▊        | 54/300 [19:01<1:25:33, 20.87s/it]epoch: 54 validateAccuracy: 0.3402 trainAccuracy: 0.9863 delta: -0.0206
+Training:  18%|█▊        | 55/300 [19:22<1:25:05, 20.84s/it]epoch: 55 validateAccuracy: 0.3431 trainAccuracy: 0.9912 delta: -0.0177
+Training:  19%|█▊        | 56/300 [19:43<1:24:49, 20.86s/it]epoch: 56 validateAccuracy: 0.3549 trainAccuracy: 0.9931 delta: -0.0059
+Training:  19%|█▉        | 57/300 [20:04<1:24:25, 20.85s/it]epoch: 57 validateAccuracy: 0.3529 trainAccuracy: 0.9853 delta: -0.0079
+Training:  19%|█▉        | 58/300 [20:24<1:23:36, 20.73s/it]epoch: 58 validateAccuracy: 0.3588 trainAccuracy: 0.9843 delta: -0.002
+Training:  20%|█▉        | 59/300 [20:45<1:23:16, 20.73s/it]epoch: 59 validateAccuracy: 0.3402 trainAccuracy: 0.9775 delta: -0.0206
+Training:  20%|██        | 60/300 [21:06<1:23:32, 20.88s/it]epoch: 60 validateAccuracy: 0.3353 trainAccuracy: 0.9725 delta: -0.0255
+Training:  20%|██        | 61/300 [21:26<1:22:39, 20.75s/it]epoch: 61 validateAccuracy: 0.352 trainAccuracy: 0.9735 delta: -0.0088
+Training:  21%|██        | 62/300 [21:47<1:21:49, 20.63s/it]epoch: 62 validateAccuracy: 0.3402 trainAccuracy: 0.9843 delta: -0.0206
+Training:  21%|██        | 63/300 [22:08<1:21:40, 20.68s/it]epoch: 63 validateAccuracy: 0.3412 trainAccuracy: 0.9794 delta: -0.0196
+Training:  21%|██▏       | 64/300 [22:28<1:21:26, 20.71s/it]epoch: 64 validateAccuracy: 0.3402 trainAccuracy: 0.9755 delta: -0.0206
+Training:  22%|██▏       | 65/300 [22:49<1:20:57, 20.67s/it]epoch: 65 validateAccuracy: 0.3412 trainAccuracy: 0.9833 delta: -0.0196
+Training:  22%|██▏       | 66/300 [23:09<1:20:19, 20.60s/it]epoch: 66 validateAccuracy: 0.349 trainAccuracy: 0.9922 delta: -0.0118
+Training:  22%|██▏       | 67/300 [23:30<1:19:56, 20.59s/it]epoch: 67 validateAccuracy: 0.3647 trainAccuracy: 0.9961 delta: 0.0039
+Training:  23%|██▎       | 68/300 [23:53<1:22:43, 21.39s/it]epoch: 68 validateAccuracy: 0.3618 trainAccuracy: 0.9941 delta: -0.0029
+Training:  23%|██▎       | 69/300 [24:14<1:21:22, 21.14s/it]epoch: 69 validateAccuracy: 0.3686 trainAccuracy: 0.999 delta: 0.0039
+Training:  23%|██▎       | 70/300 [24:38<1:24:36, 22.07s/it]epoch: 70 validateAccuracy: 0.3716 trainAccuracy: 1.0 delta: 0.003
+Training:  24%|██▎       | 71/300 [25:02<1:26:17, 22.61s/it]epoch: 71 validateAccuracy: 0.3696 trainAccuracy: 1.0 delta: -0.002
+Training:  24%|██▍       | 72/300 [25:23<1:23:48, 22.05s/it]epoch: 72 validateAccuracy: 0.3716 trainAccuracy: 1.0 delta: 0.0
+Training:  24%|██▍       | 73/300 [25:43<1:21:33, 21.56s/it]epoch: 73 validateAccuracy: 0.3686 trainAccuracy: 1.0 delta: -0.003
+Training:  25%|██▍       | 74/300 [26:04<1:20:12, 21.29s/it]epoch: 74 validateAccuracy: 0.3696 trainAccuracy: 1.0 delta: -0.002
+Training:  25%|██▌       | 75/300 [26:24<1:18:43, 20.99s/it]epoch: 75 validateAccuracy: 0.3686 trainAccuracy: 0.999 delta: -0.003
+Training:  25%|██▌       | 76/300 [26:45<1:18:09, 20.93s/it]epoch: 76 validateAccuracy: 0.3667 trainAccuracy: 1.0 delta: -0.0049
+Training:  26%|██▌       | 77/300 [27:05<1:17:11, 20.77s/it]epoch: 77 validateAccuracy: 0.3647 trainAccuracy: 1.0 delta: -0.0069
+Training:  26%|██▌       | 78/300 [27:26<1:16:51, 20.77s/it]epoch: 78 validateAccuracy: 0.3667 trainAccuracy: 1.0 delta: -0.0049
+Training:  26%|██▋       | 79/300 [27:47<1:16:20, 20.73s/it]epoch: 79 validateAccuracy: 0.3706 trainAccuracy: 1.0 delta: -0.001
+Training:  27%|██▋       | 80/300 [28:07<1:15:55, 20.71s/it]epoch: 80 validateAccuracy: 0.3627 trainAccuracy: 0.999 delta: -0.0089
+Training:  27%|██▋       | 81/300 [28:28<1:15:28, 20.68s/it]epoch: 81 validateAccuracy: 0.3667 trainAccuracy: 0.998 delta: -0.0049
+Training:  27%|██▋       | 82/300 [28:48<1:15:02, 20.65s/it]epoch: 82 validateAccuracy: 0.3637 trainAccuracy: 1.0 delta: -0.0079
+Training:  28%|██▊       | 83/300 [29:09<1:14:58, 20.73s/it]epoch: 83 validateAccuracy: 0.3667 trainAccuracy: 1.0 delta: -0.0049
+Training:  28%|██▊       | 84/300 [29:30<1:14:39, 20.74s/it]epoch: 84 validateAccuracy: 0.3745 trainAccuracy: 0.998 delta: 0.0029
+Training:  28%|██▊       | 85/300 [29:54<1:17:18, 21.57s/it]epoch: 85 validateAccuracy: 0.3618 trainAccuracy: 1.0 delta: -0.0127
+Training:  29%|██▊       | 86/300 [30:14<1:15:37, 21.20s/it]epoch: 86 validateAccuracy: 0.3569 trainAccuracy: 1.0 delta: -0.0176
+Training:  29%|██▉       | 87/300 [30:35<1:14:39, 21.03s/it]epoch: 87 validateAccuracy: 0.35 trainAccuracy: 1.0 delta: -0.0245
+Training:  29%|██▉       | 88/300 [30:56<1:14:26, 21.07s/it]epoch: 88 validateAccuracy: 0.3569 trainAccuracy: 0.9971 delta: -0.0176
+Training:  30%|██▉       | 89/300 [31:17<1:13:45, 20.97s/it]epoch: 89 validateAccuracy: 0.3471 trainAccuracy: 0.9843 delta: -0.0274
+Training:  30%|███       | 90/300 [31:37<1:13:08, 20.90s/it]epoch: 90 validateAccuracy: 0.3186 trainAccuracy: 0.9725 delta: -0.0559
+Training:  30%|███       | 91/300 [31:57<1:12:05, 20.70s/it]epoch: 91 validateAccuracy: 0.3275 trainAccuracy: 0.9618 delta: -0.047
+Training:  31%|███       | 92/300 [32:17<1:11:00, 20.48s/it]epoch: 92 validateAccuracy: 0.3294 trainAccuracy: 0.9539 delta: -0.0451
+Training:  31%|███       | 93/300 [32:38<1:10:20, 20.39s/it]epoch: 93 validateAccuracy: 0.3333 trainAccuracy: 0.9667 delta: -0.0412
+Training:  31%|███▏      | 94/300 [32:58<1:10:11, 20.44s/it]epoch: 94 validateAccuracy: 0.3588 trainAccuracy: 0.9765 delta: -0.0157
+Training:  32%|███▏      | 95/300 [33:19<1:09:50, 20.44s/it]epoch: 95 validateAccuracy: 0.3539 trainAccuracy: 0.9794 delta: -0.0206
+Training:  32%|███▏      | 96/300 [33:39<1:09:21, 20.40s/it]epoch: 96 validateAccuracy: 0.3461 trainAccuracy: 0.9843 delta: -0.0284
+Training:  32%|███▏      | 97/300 [34:00<1:09:10, 20.45s/it]epoch: 97 validateAccuracy: 0.3627 trainAccuracy: 0.9922 delta: -0.0118
+Training:  33%|███▎      | 98/300 [34:20<1:08:28, 20.34s/it]epoch: 98 validateAccuracy: 0.3539 trainAccuracy: 0.999 delta: -0.0206
+Training:  33%|███▎      | 99/300 [34:40<1:08:18, 20.39s/it]epoch: 99 validateAccuracy: 0.3676 trainAccuracy: 0.999 delta: -0.0069
+Training:  33%|███▎      | 100/300 [35:00<1:07:47, 20.34s/it]epoch: 100 validateAccuracy: 0.3667 trainAccuracy: 0.999 delta: -0.0078
+Training:  34%|███▎      | 101/300 [35:21<1:07:25, 20.33s/it]epoch: 101 validateAccuracy: 0.3637 trainAccuracy: 1.0 delta: -0.0108
+Training:  34%|███▍      | 102/300 [35:41<1:07:35, 20.48s/it]epoch: 102 validateAccuracy: 0.3716 trainAccuracy: 1.0 delta: -0.0029
+Training:  34%|███▍      | 103/300 [36:02<1:07:18, 20.50s/it]epoch: 103 validateAccuracy: 0.3676 trainAccuracy: 0.999 delta: -0.0069
+Training:  35%|███▍      | 104/300 [36:23<1:07:07, 20.55s/it]epoch: 104 validateAccuracy: 0.3647 trainAccuracy: 1.0 delta: -0.0098
+Training:  35%|███▌      | 105/300 [36:43<1:06:47, 20.55s/it]epoch: 105 validateAccuracy: 0.3676 trainAccuracy: 1.0 delta: -0.0069
+Training:  35%|███▌      | 106/300 [37:03<1:06:05, 20.44s/it]epoch: 106 validateAccuracy: 0.3706 trainAccuracy: 0.999 delta: -0.0039
+Training:  36%|███▌      | 107/300 [37:24<1:05:45, 20.44s/it]epoch: 107 validateAccuracy: 0.3745 trainAccuracy: 1.0 delta: 0.0
+Training:  36%|███▌      | 108/300 [37:45<1:05:57, 20.61s/it]epoch: 108 validateAccuracy: 0.3735 trainAccuracy: 1.0 delta: -0.001
+Training:  36%|███▋      | 109/300 [38:05<1:05:36, 20.61s/it]epoch: 109 validateAccuracy: 0.3725 trainAccuracy: 1.0 delta: -0.002
+Training:  37%|███▋      | 110/300 [38:26<1:05:36, 20.72s/it]epoch: 110 validateAccuracy: 0.3716 trainAccuracy: 1.0 delta: -0.0029
+Training:  37%|███▋      | 111/300 [38:47<1:05:06, 20.67s/it]epoch: 111 validateAccuracy: 0.3686 trainAccuracy: 1.0 delta: -0.0059
+Training:  37%|███▋      | 112/300 [39:08<1:04:43, 20.66s/it]epoch: 112 validateAccuracy: 0.3725 trainAccuracy: 1.0 delta: -0.002
+Training:  38%|███▊      | 113/300 [39:28<1:04:21, 20.65s/it]epoch: 113 validateAccuracy: 0.3725 trainAccuracy: 1.0 delta: -0.002
+Training:  38%|███▊      | 114/300 [39:49<1:03:54, 20.62s/it]epoch: 114 validateAccuracy: 0.3696 trainAccuracy: 1.0 delta: -0.0049
+Training:  38%|███▊      | 115/300 [40:09<1:03:27, 20.58s/it]epoch: 115 validateAccuracy: 0.3696 trainAccuracy: 1.0 delta: -0.0049
+Training:  39%|███▊      | 116/300 [40:30<1:03:06, 20.58s/it]epoch: 116 validateAccuracy: 0.3735 trainAccuracy: 1.0 delta: -0.001
+Training:  39%|███▉      | 117/300 [40:51<1:03:00, 20.66s/it]epoch: 117 validateAccuracy: 0.3637 trainAccuracy: 1.0 delta: -0.0108
+Training:  39%|███▉      | 118/300 [41:12<1:02:55, 20.74s/it]epoch: 118 validateAccuracy: 0.3647 trainAccuracy: 0.999 delta: -0.0098
+Training:  40%|███▉      | 119/300 [41:32<1:02:05, 20.58s/it]epoch: 119 validateAccuracy: 0.3686 trainAccuracy: 1.0 delta: -0.0059
+Training:  40%|████      | 120/300 [41:52<1:01:44, 20.58s/it]epoch: 120 validateAccuracy: 0.3627 trainAccuracy: 1.0 delta: -0.0118
+Training:  40%|████      | 121/300 [42:13<1:01:22, 20.57s/it]epoch: 121 validateAccuracy: 0.3706 trainAccuracy: 1.0 delta: -0.0039
+Training:  41%|████      | 122/300 [42:34<1:01:10, 20.62s/it]epoch: 122 validateAccuracy: 0.3686 trainAccuracy: 1.0 delta: -0.0059
+Training:  41%|████      | 123/300 [42:55<1:01:04, 20.70s/it]epoch: 123 validateAccuracy: 0.3657 trainAccuracy: 0.998 delta: -0.0088
+Training:  41%|████▏     | 124/300 [43:15<1:00:48, 20.73s/it]epoch: 124 validateAccuracy: 0.3549 trainAccuracy: 1.0 delta: -0.0196
+Training:  42%|████▏     | 125/300 [43:36<1:00:03, 20.59s/it]epoch: 125 validateAccuracy: 0.3735 trainAccuracy: 1.0 delta: -0.001
+Training:  42%|████▏     | 126/300 [43:57<59:57, 20.68s/it]  epoch: 126 validateAccuracy: 0.3588 trainAccuracy: 0.999 delta: -0.0157
+Training:  42%|████▏     | 127/300 [44:17<59:37, 20.68s/it]epoch: 127 validateAccuracy: 0.3676 trainAccuracy: 0.999 delta: -0.0069
+Training:  43%|████▎     | 128/300 [44:38<59:15, 20.67s/it]epoch: 128 validateAccuracy: 0.3706 trainAccuracy: 0.999 delta: -0.0039
+Training:  43%|████▎     | 129/300 [44:59<59:05, 20.73s/it]epoch: 129 validateAccuracy: 0.3618 trainAccuracy: 1.0 delta: -0.0127
+Training:  43%|████▎     | 130/300 [45:19<58:32, 20.66s/it]epoch: 130 validateAccuracy: 0.3627 trainAccuracy: 1.0 delta: -0.0118
+Training:  44%|████▎     | 131/300 [45:39<57:41, 20.48s/it]epoch: 131 validateAccuracy: 0.3706 trainAccuracy: 1.0 delta: -0.0039
+Training:  44%|████▍     | 132/300 [46:00<57:09, 20.41s/it]epoch: 132 validateAccuracy: 0.3676 trainAccuracy: 1.0 delta: -0.0069
+Training:  44%|████▍     | 133/300 [46:21<57:21, 20.61s/it]epoch: 133 validateAccuracy: 0.3686 trainAccuracy: 1.0 delta: -0.0059
+Training:  45%|████▍     | 134/300 [46:42<57:19, 20.72s/it]epoch: 134 validateAccuracy: 0.3696 trainAccuracy: 1.0 delta: -0.0049
+Training:  45%|████▍     | 134/300 [47:03<58:17, 21.07s/it]
+Loading data...
+[38;5;2m[i 0509 18:25:25.267360 72 dataset.py:631] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0509 18:25:25.294268 72 dataset.py:631] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0509 18:25:25.357706 72 dataset.py:631] Found 102 classes and 6149 images.[m
+Traceback (most recent call last):
+  File "main.py", line 303, in <module>
+    #     resnetModel=Resnet50(num_classes=5001)
+  File "main.py", line 294, in train
+    #     mlpMixerModel=MLPMixerForImageClassification(
+  File "main.py", line 222, in get_test_data_set_accuracy
+    transform.ToTensor(),
+TypeError: validate_one_epoch() missing 1 required positional argument: 'criterion'

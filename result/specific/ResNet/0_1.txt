@@ -1,0 +1,305 @@
+[38;5;2m[i 0510 01:34:35.333829 36 compiler.py:951] Jittor(1.3.3.14) src: /home/prs01/miniconda3/envs/jittor/lib/python3.7/site-packages/jittor[m
+[38;5;2m[i 0510 01:34:35.349675 36 compiler.py:952] g++ at /usr/bin/g++(9.4.0)[m
+[38;5;2m[i 0510 01:34:35.349806 36 compiler.py:953] cache_path: /home/prs01/.cache/jittor/jt1.3.3/g++9.4.0/py3.7.13/Linux-5.4.0-10xc4/IntelRXeonRGolx7a/default[m
+[38;5;2m[i 0510 01:34:35.387713 36 install_cuda.py:53] cuda_driver_version: [11, 6][m
+[38;5;2m[i 0510 01:34:35.405391 36 __init__.py:411] Found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/bin/nvcc(11.2.152) at /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/bin/nvcc.[m
+[38;5;2m[i 0510 01:34:35.423589 36 __init__.py:411] Found addr2line(2.34) at /usr/bin/addr2line.[m
+[38;5;2m[i 0510 01:34:35.651933 36 compiler.py:1006] cuda key:cu11.2.152_sm_86[m
+[38;5;2m[i 0510 01:34:35.963996 36 __init__.py:227] Total mem: 251.56GB, using 16 procs for compiling.[m
+[38;5;2m[i 0510 01:34:36.131636 36 jit_compiler.cc:28] Load cc_path: /usr/bin/g++[m
+[38;5;2m[i 0510 01:34:36.317792 36 init.cc:62] Found cuda archs: [86,][m
+[38;5;2m[i 0510 01:34:36.480787 36 compile_extern.py:516] mpicc not found, distribution disabled.[m
+[38;5;2m[i 0510 01:34:36.560451 36 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/include/cublas.h[m
+[38;5;2m[i 0510 01:34:36.582295 36 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcublas.so[m
+[38;5;2m[i 0510 01:34:36.582520 36 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcublasLt.so.11[m
+[38;5;2m[i 0510 01:34:37.378047 36 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/include/cudnn.h[m
+[38;5;2m[i 0510 01:34:37.423149 36 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcudnn.so.8[m
+[38;5;2m[i 0510 01:34:37.423405 36 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcudnn_ops_infer.so.8[m
+[38;5;2m[i 0510 01:34:37.440206 36 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcudnn_ops_train.so.8[m
+[38;5;2m[i 0510 01:34:37.446445 36 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcudnn_cnn_infer.so.8[m
+[38;5;2m[i 0510 01:34:37.484605 36 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcudnn_cnn_train.so.8[m
+[38;5;2m[i 0510 01:34:38.126321 36 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/include/curand.h[m
+[38;5;2m[i 0510 01:34:38.183067 36 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcurand.so[m
+[38;5;2m[i 0510 01:34:38.201522 36 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/include/cufft.h[m
+[38;5;2m[i 0510 01:34:38.257780 36 compile_extern.py:30] found /home/prs01/.cache/jittor/jtcuda/cuda11.2_cudnn8_linux/lib64/libcufft.so[m
+[38;5;2m[i 0510 01:34:38.397104 36 cuda_flags.cc:32] CUDA enabled.[m
+Loading data...
+[38;5;2m[i 0510 01:34:38.459426 36 dataset.py:631] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0510 01:34:38.486749 36 dataset.py:631] Found 102 classes and 1020 images.[m
+[38;5;2m[i 0510 01:34:38.555217 36 dataset.py:631] Found 102 classes and 6149 images.[m
+----------------- A new trial ---------------------
+modelName ResNet learning rate: 0.0001 etaMin 1e-07 imgSize 224 batchSize 64 savedName 0_1.pkl criterion CrossEntropyLoss weight_decay 0.001 TMax 15
+Training:   0%|          | 0/1600 [00:00<?, ?it/s]
+0it [00:00, ?it/s][A[38;5;3m[w 0510 01:34:38.999801 36 grad.cc:77] grads[0] 'conv1.weight' doesn't have gradient. It will be set to zero: Var(32:1:2:2:i1:o1:s0:n1,float32,conv1.weight,0)[64,3,7,7,][m
+[38;5;3m[w 0510 01:34:38.999838 36 grad.cc:77] grads[1] 'bn1.weight' doesn't have gradient. It will be set to zero: Var(40:1:3:3:i1:o2:s0:n1,float32,bn1.weight,0)[64,][m
+[38;5;3m[w 0510 01:34:38.999850 36 grad.cc:77] grads[2] 'bn1.bias' doesn't have gradient. It will be set to zero: Var(45:1:2:2:i1:o1:s0:n1,float32,bn1.bias,0)[64,][m
+[38;5;3m[w 0510 01:34:38.999855 36 grad.cc:77] grads[3] 'layer1.0.conv1.weight' doesn't have gradient. It will be set to zero: Var(140:1:3:3:i1:o2:s0:n1,float32,layer1.0.conv1.weight,0)[64,64,1,1,][m
+[38;5;3m[w 0510 01:34:38.999862 36 grad.cc:77] grads[4] 'layer1.0.bn1.weight' doesn't have gradient. It will be set to zero: Var(148:1:3:3:i1:o2:s0:n1,float32,layer1.0.bn1.weight,0)[64,][m
+[38;5;3m[w 0510 01:34:38.999868 36 grad.cc:77] grads[5] 'layer1.0.bn1.bias' doesn't have gradient. It will be set to zero: Var(153:1:2:2:i1:o1:s0:n1,float32,layer1.0.bn1.bias,0)[64,][m
+[38;5;3m[w 0510 01:34:38.999874 36 grad.cc:77] grads[6] 'layer1.0.conv2.weight' doesn't have gradient. It will be set to zero: Var(194:1:3:3:i1:o2:s0:n1,float32,layer1.0.conv2.weight,0)[64,64,3,3,][m
+[38;5;3m[w 0510 01:34:38.999879 36 grad.cc:77] grads[7] 'layer1.0.bn2.weight' doesn't have gradient. It will be set to zero: Var(202:1:3:3:i1:o2:s0:n1,float32,layer1.0.bn2.weight,0)[64,][m
+[38;5;3m[w 0510 01:34:38.999884 36 grad.cc:77] grads[8] 'layer1.0.bn2.bias' doesn't have gradient. It will be set to zero: Var(207:1:2:2:i1:o1:s0:n1,float32,layer1.0.bn2.bias,0)[64,][m
+[38;5;3m[w 0510 01:34:38.999889 36 grad.cc:77] grads[9] 'layer1.0.conv3.weight' doesn't have gradient. It will be set to zero: Var(248:1:3:3:i1:o2:s0:n1,float32,layer1.0.conv3.weight,0)[256,64,1,1,][m
+[38;5;3m[w 0510 01:34:38.999895 36 grad.cc:77] grads[10] 'layer1.0.bn3.weight' doesn't have gradient. It will be set to zero: Var(256:1:3:3:i1:o2:s0:n1,float32,layer1.0.bn3.weight,0)[256,][m
+[38;5;3m[w 0510 01:34:38.999900 36 grad.cc:77] grads[11] 'layer1.0.bn3.bias' doesn't have gradient. It will be set to zero: Var(261:1:2:2:i1:o1:s0:n1,float32,layer1.0.bn3.bias,0)[256,][m
+[38;5;3m[w 0510 01:34:38.999921 36 grad.cc:77] grads[12] 'layer1.0.downsample.0.weight' doesn't have gradient. It will be set to zero: Var(86:1:3:3:i1:o2:s0:n1,float32,layer1.0.downsample.0.weight,0)[256,64,1,1,][m
+[38;5;3m[w 0510 01:34:38.999928 36 grad.cc:77] grads[13] 'layer1.0.downsample.1.weight' doesn't have gradient. It will be set to zero: Var(94:1:3:3:i1:o2:s0:n1,float32,layer1.0.downsample.1.weight,0)[256,][m
+[38;5;3m[w 0510 01:34:38.999933 36 grad.cc:77] grads[14] 'layer1.0.downsample.1.bias' doesn't have gradient. It will be set to zero: Var(99:1:2:2:i1:o1:s0:n1,float32,layer1.0.downsample.1.bias,0)[256,][m
+[38;5;3m[w 0510 01:34:38.999938 36 grad.cc:77] grads[15] 'layer1.1.conv1.weight' doesn't have gradient. It will be set to zero: Var(302:1:3:3:i1:o2:s0:n1,float32,layer1.1.conv1.weight,0)[64,256,1,1,][m
+[38;5;3m[w 0510 01:34:38.999944 36 grad.cc:77] grads[16] 'layer1.1.bn1.weight' doesn't have gradient. It will be set to zero: Var(310:1:3:3:i1:o2:s0:n1,float32,layer1.1.bn1.weight,0)[64,][m
+[38;5;3m[w 0510 01:34:38.999950 36 grad.cc:77] grads[17] 'layer1.1.bn1.bias' doesn't have gradient. It will be set to zero: Var(315:1:2:2:i1:o1:s0:n1,float32,layer1.1.bn1.bias,0)[64,][m
+[38;5;3m[w 0510 01:34:38.999956 36 grad.cc:77] grads[18] 'layer1.1.conv2.weight' doesn't have gradient. It will be set to zero: Var(356:1:3:3:i1:o2:s0:n1,float32,layer1.1.conv2.weight,0)[64,64,3,3,][m
+[38;5;3m[w 0510 01:34:38.999964 36 grad.cc:77] grads[19] 'layer1.1.bn2.weight' doesn't have gradient. It will be set to zero: Var(364:1:3:3:i1:o2:s0:n1,float32,layer1.1.bn2.weight,0)[64,][m
+[38;5;3m[w 0510 01:34:39.102060 36 grad.cc:77] grads[20] 'layer1.1.bn2.bias' doesn't have gradient. It will be set to zero: Var(369:1:2:2:i1:o1:s0:n1,float32,layer1.1.bn2.bias,0)[64,][m
+[38;5;3m[w 0510 01:34:39.102094 36 grad.cc:77] grads[21] 'layer1.1.conv3.weight' doesn't have gradient. It will be set to zero: Var(410:1:3:3:i1:o2:s0:n1,float32,layer1.1.conv3.weight,0)[256,64,1,1,][m
+[38;5;3m[w 0510 01:34:39.102111 36 grad.cc:77] grads[22] 'layer1.1.bn3.weight' doesn't have gradient. It will be set to zero: Var(418:1:3:3:i1:o2:s0:n1,float32,layer1.1.bn3.weight,0)[256,][m
+[38;5;3m[w 0510 01:34:39.102133 36 grad.cc:77] grads[23] 'layer1.1.bn3.bias' doesn't have gradient. It will be set to zero: Var(423:1:2:2:i1:o1:s0:n1,float32,layer1.1.bn3.bias,0)[256,][m
+[38;5;3m[w 0510 01:34:39.102148 36 grad.cc:77] grads[24] 'layer1.2.conv1.weight' doesn't have gradient. It will be set to zero: Var(464:1:3:3:i1:o2:s0:n1,float32,layer1.2.conv1.weight,0)[64,256,1,1,][m
+[38;5;3m[w 0510 01:34:39.102163 36 grad.cc:77] grads[25] 'layer1.2.bn1.weight' doesn't have gradient. It will be set to zero: Var(472:1:3:3:i1:o2:s0:n1,float32,layer1.2.bn1.weight,0)[64,][m
+[38;5;3m[w 0510 01:34:39.102176 36 grad.cc:77] grads[26] 'layer1.2.bn1.bias' doesn't have gradient. It will be set to zero: Var(477:1:2:2:i1:o1:s0:n1,float32,layer1.2.bn1.bias,0)[64,][m
+[38;5;3m[w 0510 01:34:39.102188 36 grad.cc:77] grads[27] 'layer1.2.conv2.weight' doesn't have gradient. It will be set to zero: Var(518:1:3:3:i1:o2:s0:n1,float32,layer1.2.conv2.weight,0)[64,64,3,3,][m
+[38;5;3m[w 0510 01:34:39.102201 36 grad.cc:77] grads[28] 'layer1.2.bn2.weight' doesn't have gradient. It will be set to zero: Var(526:1:3:3:i1:o2:s0:n1,float32,layer1.2.bn2.weight,0)[64,][m
+[38;5;3m[w 0510 01:34:39.102232 36 grad.cc:77] grads[29] 'layer1.2.bn2.bias' doesn't have gradient. It will be set to zero: Var(531:1:2:2:i1:o1:s0:n1,float32,layer1.2.bn2.bias,0)[64,][m
+[38;5;3m[w 0510 01:34:39.102247 36 grad.cc:77] grads[30] 'layer1.2.conv3.weight' doesn't have gradient. It will be set to zero: Var(572:1:3:3:i1:o2:s0:n1,float32,layer1.2.conv3.weight,0)[256,64,1,1,][m
+[38;5;3m[w 0510 01:34:39.102261 36 grad.cc:77] grads[31] 'layer1.2.bn3.weight' doesn't have gradient. It will be set to zero: Var(580:1:3:3:i1:o2:s0:n1,float32,layer1.2.bn3.weight,0)[256,][m
+[38;5;3m[w 0510 01:34:39.102278 36 grad.cc:77] grads[32] 'layer1.2.bn3.bias' doesn't have gradient. It will be set to zero: Var(585:1:2:2:i1:o1:s0:n1,float32,layer1.2.bn3.bias,0)[256,][m
+[38;5;3m[w 0510 01:34:39.102293 36 grad.cc:77] grads[33] 'layer2.0.conv1.weight' doesn't have gradient. It will be set to zero: Var(680:1:3:3:i1:o2:s0:n1,float32,layer2.0.conv1.weight,0)[128,256,1,1,][m
+[38;5;3m[w 0510 01:34:39.102309 36 grad.cc:77] grads[34] 'layer2.0.bn1.weight' doesn't have gradient. It will be set to zero: Var(688:1:3:3:i1:o2:s0:n1,float32,layer2.0.bn1.weight,0)[128,][m
+[38;5;3m[w 0510 01:34:39.102325 36 grad.cc:77] grads[35] 'layer2.0.bn1.bias' doesn't have gradient. It will be set to zero: Var(693:1:2:2:i1:o1:s0:n1,float32,layer2.0.bn1.bias,0)[128,][m
+[38;5;3m[w 0510 01:34:39.193670 36 grad.cc:77] grads[36] 'layer2.0.conv2.weight' doesn't have gradient. It will be set to zero: Var(734:1:3:3:i1:o2:s0:n1,float32,layer2.0.conv2.weight,0)[128,128,3,3,][m
+[38;5;3m[w 0510 01:34:39.193700 36 grad.cc:77] grads[37] 'layer2.0.bn2.weight' doesn't have gradient. It will be set to zero: Var(742:1:3:3:i1:o2:s0:n1,float32,layer2.0.bn2.weight,0)[128,][m
+[38;5;3m[w 0510 01:34:39.193732 36 grad.cc:77] grads[38] 'layer2.0.bn2.bias' doesn't have gradient. It will be set to zero: Var(747:1:2:2:i1:o1:s0:n1,float32,layer2.0.bn2.bias,0)[128,][m
+[38;5;3m[w 0510 01:34:39.193746 36 grad.cc:77] grads[39] 'layer2.0.conv3.weight' doesn't have gradient. It will be set to zero: Var(788:1:3:3:i1:o2:s0:n1,float32,layer2.0.conv3.weight,0)[512,128,1,1,][m
+[38;5;3m[w 0510 01:34:39.193761 36 grad.cc:77] grads[40] 'layer2.0.bn3.weight' doesn't have gradient. It will be set to zero: Var(796:1:3:3:i1:o2:s0:n1,float32,layer2.0.bn3.weight,0)[512,][m
+[38;5;3m[w 0510 01:34:39.193773 36 grad.cc:77] grads[41] 'layer2.0.bn3.bias' doesn't have gradient. It will be set to zero: Var(801:1:2:2:i1:o1:s0:n1,float32,layer2.0.bn3.bias,0)[512,][m
+[38;5;3m[w 0510 01:34:39.193786 36 grad.cc:77] grads[42] 'layer2.0.downsample.0.weight' doesn't have gradient. It will be set to zero: Var(626:1:3:3:i1:o2:s0:n1,float32,layer2.0.downsample.0.weight,0)[512,256,1,1,][m
+[38;5;3m[w 0510 01:34:39.193802 36 grad.cc:77] grads[43] 'layer2.0.downsample.1.weight' doesn't have gradient. It will be set to zero: Var(634:1:3:3:i1:o2:s0:n1,float32,layer2.0.downsample.1.weight,0)[512,][m
+[38;5;3m[w 0510 01:34:39.193825 36 grad.cc:77] grads[44] 'layer2.0.downsample.1.bias' doesn't have gradient. It will be set to zero: Var(639:1:2:2:i1:o1:s0:n1,float32,layer2.0.downsample.1.bias,0)[512,][m
+[38;5;3m[w 0510 01:34:39.193838 36 grad.cc:77] grads[45] 'layer2.1.conv1.weight' doesn't have gradient. It will be set to zero: Var(842:1:3:3:i1:o2:s0:n1,float32,layer2.1.conv1.weight,0)[128,512,1,1,][m
+[38;5;3m[w 0510 01:34:39.193851 36 grad.cc:77] grads[46] 'layer2.1.bn1.weight' doesn't have gradient. It will be set to zero: Var(850:1:3:3:i1:o2:s0:n1,float32,layer2.1.bn1.weight,0)[128,][m
+[38;5;3m[w 0510 01:34:39.193865 36 grad.cc:77] grads[47] 'layer2.1.bn1.bias' doesn't have gradient. It will be set to zero: Var(855:1:2:2:i1:o1:s0:n1,float32,layer2.1.bn1.bias,0)[128,][m
+[38;5;3m[w 0510 01:34:39.193878 36 grad.cc:77] grads[48] 'layer2.1.conv2.weight' doesn't have gradient. It will be set to zero: Var(896:1:3:3:i1:o2:s0:n1,float32,layer2.1.conv2.weight,0)[128,128,3,3,][m
+[38;5;3m[w 0510 01:34:39.193892 36 grad.cc:77] grads[49] 'layer2.1.bn2.weight' doesn't have gradient. It will be set to zero: Var(904:1:3:3:i1:o2:s0:n1,float32,layer2.1.bn2.weight,0)[128,][m
+[38;5;3m[w 0510 01:34:39.193910 36 grad.cc:77] grads[50] 'layer2.1.bn2.bias' doesn't have gradient. It will be set to zero: Var(909:1:2:2:i1:o1:s0:n1,float32,layer2.1.bn2.bias,0)[128,][m
+[38;5;3m[w 0510 01:34:39.193923 36 grad.cc:77] grads[51] 'layer2.1.conv3.weight' doesn't have gradient. It will be set to zero: Var(950:1:3:3:i1:o2:s0:n1,float32,layer2.1.conv3.weight,0)[512,128,1,1,][m
+[38;5;3m[w 0510 01:34:39.193957 36 grad.cc:77] grads[52] 'layer2.1.bn3.weight' doesn't have gradient. It will be set to zero: Var(958:1:3:3:i1:o2:s0:n1,float32,layer2.1.bn3.weight,0)[512,][m
+[38;5;3m[w 0510 01:34:39.275870 36 grad.cc:77] grads[53] 'layer2.1.bn3.bias' doesn't have gradient. It will be set to zero: Var(963:1:2:2:i1:o1:s0:n1,float32,layer2.1.bn3.bias,0)[512,][m
+[38;5;3m[w 0510 01:34:39.275910 36 grad.cc:77] grads[54] 'layer2.2.conv1.weight' doesn't have gradient. It will be set to zero: Var(1004:1:3:3:i1:o2:s0:n1,float32,layer2.2.conv1.weight,0)[128,512,1,1,][m
+[38;5;3m[w 0510 01:34:39.275929 36 grad.cc:77] grads[55] 'layer2.2.bn1.weight' doesn't have gradient. It will be set to zero: Var(1012:1:3:3:i1:o2:s0:n1,float32,layer2.2.bn1.weight,0)[128,][m
+[38;5;3m[w 0510 01:34:39.275944 36 grad.cc:77] grads[56] 'layer2.2.bn1.bias' doesn't have gradient. It will be set to zero: Var(1017:1:2:2:i1:o1:s0:n1,float32,layer2.2.bn1.bias,0)[128,][m
+[38;5;3m[w 0510 01:34:39.275960 36 grad.cc:77] grads[57] 'layer2.2.conv2.weight' doesn't have gradient. It will be set to zero: Var(1058:1:3:3:i1:o2:s0:n1,float32,layer2.2.conv2.weight,0)[128,128,3,3,][m
+[38;5;3m[w 0510 01:34:39.275974 36 grad.cc:77] grads[58] 'layer2.2.bn2.weight' doesn't have gradient. It will be set to zero: Var(1066:1:3:3:i1:o2:s0:n1,float32,layer2.2.bn2.weight,0)[128,][m
+[38;5;3m[w 0510 01:34:39.275988 36 grad.cc:77] grads[59] 'layer2.2.bn2.bias' doesn't have gradient. It will be set to zero: Var(1071:1:2:2:i1:o1:s0:n1,float32,layer2.2.bn2.bias,0)[128,][m
+[38;5;3m[w 0510 01:34:39.276006 36 grad.cc:77] grads[60] 'layer2.2.conv3.weight' doesn't have gradient. It will be set to zero: Var(1112:1:3:3:i1:o2:s0:n1,float32,layer2.2.conv3.weight,0)[512,128,1,1,][m
+[38;5;3m[w 0510 01:34:39.276022 36 grad.cc:77] grads[61] 'layer2.2.bn3.weight' doesn't have gradient. It will be set to zero: Var(1120:1:3:3:i1:o2:s0:n1,float32,layer2.2.bn3.weight,0)[512,][m
+[38;5;3m[w 0510 01:34:39.276035 36 grad.cc:77] grads[62] 'layer2.2.bn3.bias' doesn't have gradient. It will be set to zero: Var(1125:1:2:2:i1:o1:s0:n1,float32,layer2.2.bn3.bias,0)[512,][m
+[38;5;3m[w 0510 01:34:39.276050 36 grad.cc:77] grads[63] 'layer2.3.conv1.weight' doesn't have gradient. It will be set to zero: Var(1166:1:3:3:i1:o2:s0:n1,float32,layer2.3.conv1.weight,0)[128,512,1,1,][m
+[38;5;3m[w 0510 01:34:39.276064 36 grad.cc:77] grads[64] 'layer2.3.bn1.weight' doesn't have gradient. It will be set to zero: Var(1174:1:3:3:i1:o2:s0:n1,float32,layer2.3.bn1.weight,0)[128,][m
+[38;5;3m[w 0510 01:34:39.276086 36 grad.cc:77] grads[65] 'layer2.3.bn1.bias' doesn't have gradient. It will be set to zero: Var(1179:1:2:2:i1:o1:s0:n1,float32,layer2.3.bn1.bias,0)[128,][m
+[38;5;3m[w 0510 01:34:39.276100 36 grad.cc:77] grads[66] 'layer2.3.conv2.weight' doesn't have gradient. It will be set to zero: Var(1220:1:3:3:i1:o2:s0:n1,float32,layer2.3.conv2.weight,0)[128,128,3,3,][m
+[38;5;3m[w 0510 01:34:39.276114 36 grad.cc:77] grads[67] 'layer2.3.bn2.weight' doesn't have gradient. It will be set to zero: Var(1228:1:3:3:i1:o2:s0:n1,float32,layer2.3.bn2.weight,0)[128,][m
+[38;5;3m[w 0510 01:34:39.276128 36 grad.cc:77] grads[68] 'layer2.3.bn2.bias' doesn't have gradient. It will be set to zero: Var(1233:1:2:2:i1:o1:s0:n1,float32,layer2.3.bn2.bias,0)[128,][m
+[38;5;3m[w 0510 01:34:39.276141 36 grad.cc:77] grads[69] 'layer2.3.conv3.weight' doesn't have gradient. It will be set to zero: Var(1274:1:3:3:i1:o2:s0:n1,float32,layer2.3.conv3.weight,0)[512,128,1,1,][m
+[38;5;3m[w 0510 01:34:39.276157 36 grad.cc:77] grads[70] 'layer2.3.bn3.weight' doesn't have gradient. It will be set to zero: Var(1282:1:3:3:i1:o2:s0:n1,float32,layer2.3.bn3.weight,0)[512,][m
+[38;5;3m[w 0510 01:34:39.306863 36 grad.cc:77] grads[71] 'layer2.3.bn3.bias' doesn't have gradient. It will be set to zero: Var(1287:1:2:2:i1:o1:s0:n1,float32,layer2.3.bn3.bias,0)[512,][m
+[38;5;3m[w 0510 01:34:39.306921 36 grad.cc:77] grads[72] 'layer3.0.conv1.weight' doesn't have gradient. It will be set to zero: Var(1382:1:3:3:i1:o2:s0:n1,float32,layer3.0.conv1.weight,0)[256,512,1,1,][m
+[38;5;3m[w 0510 01:34:39.306949 36 grad.cc:77] grads[73] 'layer3.0.bn1.weight' doesn't have gradient. It will be set to zero: Var(1390:1:3:3:i1:o2:s0:n1,float32,layer3.0.bn1.weight,0)[256,][m
+[38;5;3m[w 0510 01:34:39.306971 36 grad.cc:77] grads[74] 'layer3.0.bn1.bias' doesn't have gradient. It will be set to zero: Var(1395:1:2:2:i1:o1:s0:n1,float32,layer3.0.bn1.bias,0)[256,][m
+[38;5;3m[w 0510 01:34:39.306993 36 grad.cc:77] grads[75] 'layer3.0.conv2.weight' doesn't have gradient. It will be set to zero: Var(1436:1:3:3:i1:o2:s0:n1,float32,layer3.0.conv2.weight,0)[256,256,3,3,][m
+[38;5;3m[w 0510 01:34:39.307020 36 grad.cc:77] grads[76] 'layer3.0.bn2.weight' doesn't have gradient. It will be set to zero: Var(1444:1:3:3:i1:o2:s0:n1,float32,layer3.0.bn2.weight,0)[256,][m
+[38;5;3m[w 0510 01:34:39.307041 36 grad.cc:77] grads[77] 'layer3.0.bn2.bias' doesn't have gradient. It will be set to zero: Var(1449:1:2:2:i1:o1:s0:n1,float32,layer3.0.bn2.bias,0)[256,][m
+[38;5;3m[w 0510 01:34:39.317238 36 grad.cc:77] grads[78] 'layer3.0.conv3.weight' doesn't have gradient. It will be set to zero: Var(1490:1:3:3:i1:o2:s0:n1,float32,layer3.0.conv3.weight,0)[1024,256,1,1,][m
+[38;5;3m[w 0510 01:34:39.317283 36 grad.cc:77] grads[79] 'layer3.0.bn3.weight' doesn't have gradient. It will be set to zero: Var(1498:1:3:3:i1:o2:s0:n1,float32,layer3.0.bn3.weight,0)[1024,][m
+[38;5;3m[w 0510 01:34:39.317306 36 grad.cc:77] grads[80] 'layer3.0.bn3.bias' doesn't have gradient. It will be set to zero: Var(1503:1:2:2:i1:o1:s0:n1,float32,layer3.0.bn3.bias,0)[1024,][m
+[38;5;3m[w 0510 01:34:39.317330 36 grad.cc:77] grads[81] 'layer3.0.downsample.0.weight' doesn't have gradient. It will be set to zero: Var(1328:1:3:3:i1:o2:s0:n1,float32,layer3.0.downsample.0.weight,0)[1024,512,1,1,][m
+[38;5;3m[w 0510 01:34:39.317353 36 grad.cc:77] grads[82] 'layer3.0.downsample.1.weight' doesn't have gradient. It will be set to zero: Var(1336:1:3:3:i1:o2:s0:n1,float32,layer3.0.downsample.1.weight,0)[1024,][m
+[38;5;3m[w 0510 01:34:39.317374 36 grad.cc:77] grads[83] 'layer3.0.downsample.1.bias' doesn't have gradient. It will be set to zero: Var(1341:1:2:2:i1:o1:s0:n1,float32,layer3.0.downsample.1.bias,0)[1024,][m
+[38;5;3m[w 0510 01:34:39.317396 36 grad.cc:77] grads[84] 'layer3.1.conv1.weight' doesn't have gradient. It will be set to zero: Var(1544:1:3:3:i1:o2:s0:n1,float32,layer3.1.conv1.weight,0)[256,1024,1,1,][m
+[38;5;3m[w 0510 01:34:39.317422 36 grad.cc:77] grads[85] 'layer3.1.bn1.weight' doesn't have gradient. It will be set to zero: Var(1552:1:3:3:i1:o2:s0:n1,float32,layer3.1.bn1.weight,0)[256,][m
+[38;5;3m[w 0510 01:34:39.317457 36 grad.cc:77] grads[86] 'layer3.1.bn1.bias' doesn't have gradient. It will be set to zero: Var(1557:1:2:2:i1:o1:s0:n1,float32,layer3.1.bn1.bias,0)[256,][m
+[38;5;3m[w 0510 01:34:39.317478 36 grad.cc:77] grads[87] 'layer3.1.conv2.weight' doesn't have gradient. It will be set to zero: Var(1598:1:3:3:i1:o2:s0:n1,float32,layer3.1.conv2.weight,0)[256,256,3,3,][m
+[38;5;3m[w 0510 01:34:39.317501 36 grad.cc:77] grads[88] 'layer3.1.bn2.weight' doesn't have gradient. It will be set to zero: Var(1606:1:3:3:i1:o2:s0:n1,float32,layer3.1.bn2.weight,0)[256,][m
+[38;5;3m[w 0510 01:34:39.317536 36 grad.cc:77] grads[89] 'layer3.1.bn2.bias' doesn't have gradient. It will be set to zero: Var(1611:1:2:2:i1:o1:s0:n1,float32,layer3.1.bn2.bias,0)[256,][m
+[38;5;3m[w 0510 01:34:39.329051 36 grad.cc:77] grads[90] 'layer3.1.conv3.weight' doesn't have gradient. It will be set to zero: Var(1652:1:3:3:i1:o2:s0:n1,float32,layer3.1.conv3.weight,0)[1024,256,1,1,][m
+[38;5;3m[w 0510 01:34:39.329093 36 grad.cc:77] grads[91] 'layer3.1.bn3.weight' doesn't have gradient. It will be set to zero: Var(1660:1:3:3:i1:o2:s0:n1,float32,layer3.1.bn3.weight,0)[1024,][m
+[38;5;3m[w 0510 01:34:39.329116 36 grad.cc:77] grads[92] 'layer3.1.bn3.bias' doesn't have gradient. It will be set to zero: Var(1665:1:2:2:i1:o1:s0:n1,float32,layer3.1.bn3.bias,0)[1024,][m
+[38;5;3m[w 0510 01:34:39.329138 36 grad.cc:77] grads[93] 'layer3.2.conv1.weight' doesn't have gradient. It will be set to zero: Var(1706:1:3:3:i1:o2:s0:n1,float32,layer3.2.conv1.weight,0)[256,1024,1,1,][m
+[38;5;3m[w 0510 01:34:39.329161 36 grad.cc:77] grads[94] 'layer3.2.bn1.weight' doesn't have gradient. It will be set to zero: Var(1714:1:3:3:i1:o2:s0:n1,float32,layer3.2.bn1.weight,0)[256,][m
+[38;5;3m[w 0510 01:34:39.329181 36 grad.cc:77] grads[95] 'layer3.2.bn1.bias' doesn't have gradient. It will be set to zero: Var(1719:1:2:2:i1:o1:s0:n1,float32,layer3.2.bn1.bias,0)[256,][m
+[38;5;3m[w 0510 01:34:39.329203 36 grad.cc:77] grads[96] 'layer3.2.conv2.weight' doesn't have gradient. It will be set to zero: Var(1760:1:3:3:i1:o2:s0:n1,float32,layer3.2.conv2.weight,0)[256,256,3,3,][m
+[38;5;3m[w 0510 01:34:39.329226 36 grad.cc:77] grads[97] 'layer3.2.bn2.weight' doesn't have gradient. It will be set to zero: Var(1768:1:3:3:i1:o2:s0:n1,float32,layer3.2.bn2.weight,0)[256,][m
+[38;5;3m[w 0510 01:34:39.329248 36 grad.cc:77] grads[98] 'layer3.2.bn2.bias' doesn't have gradient. It will be set to zero: Var(1773:1:2:2:i1:o1:s0:n1,float32,layer3.2.bn2.bias,0)[256,][m
+[38;5;3m[w 0510 01:34:39.329269 36 grad.cc:77] grads[99] 'layer3.2.conv3.weight' doesn't have gradient. It will be set to zero: Var(1814:1:3:3:i1:o2:s0:n1,float32,layer3.2.conv3.weight,0)[1024,256,1,1,][m
+[38;5;3m[w 0510 01:34:39.329292 36 grad.cc:77] grads[100] 'layer3.2.bn3.weight' doesn't have gradient. It will be set to zero: Var(1822:1:3:3:i1:o2:s0:n1,float32,layer3.2.bn3.weight,0)[1024,][m
+[38;5;3m[w 0510 01:34:39.329314 36 grad.cc:77] grads[101] 'layer3.2.bn3.bias' doesn't have gradient. It will be set to zero: Var(1827:1:2:2:i1:o1:s0:n1,float32,layer3.2.bn3.bias,0)[1024,][m
+[38;5;3m[w 0510 01:34:39.329335 36 grad.cc:77] grads[102] 'layer3.3.conv1.weight' doesn't have gradient. It will be set to zero: Var(1868:1:3:3:i1:o2:s0:n1,float32,layer3.3.conv1.weight,0)[256,1024,1,1,][m
+[38;5;3m[w 0510 01:34:39.340182 36 grad.cc:77] grads[103] 'layer3.3.bn1.weight' doesn't have gradient. It will be set to zero: Var(1876:1:3:3:i1:o2:s0:n1,float32,layer3.3.bn1.weight,0)[256,][m
+[38;5;3m[w 0510 01:34:39.340223 36 grad.cc:77] grads[104] 'layer3.3.bn1.bias' doesn't have gradient. It will be set to zero: Var(1881:1:2:2:i1:o1:s0:n1,float32,layer3.3.bn1.bias,0)[256,][m
+[38;5;3m[w 0510 01:34:39.340247 36 grad.cc:77] grads[105] 'layer3.3.conv2.weight' doesn't have gradient. It will be set to zero: Var(1922:1:3:3:i1:o2:s0:n1,float32,layer3.3.conv2.weight,0)[256,256,3,3,][m
+[38;5;3m[w 0510 01:34:39.340281 36 grad.cc:77] grads[106] 'layer3.3.bn2.weight' doesn't have gradient. It will be set to zero: Var(1930:1:3:3:i1:o2:s0:n1,float32,layer3.3.bn2.weight,0)[256,][m
+[38;5;3m[w 0510 01:34:39.340302 36 grad.cc:77] grads[107] 'layer3.3.bn2.bias' doesn't have gradient. It will be set to zero: Var(1935:1:2:2:i1:o1:s0:n1,float32,layer3.3.bn2.bias,0)[256,][m
+[38;5;3m[w 0510 01:34:39.340324 36 grad.cc:77] grads[108] 'layer3.3.conv3.weight' doesn't have gradient. It will be set to zero: Var(1976:1:3:3:i1:o2:s0:n1,float32,layer3.3.conv3.weight,0)[1024,256,1,1,][m
+[38;5;3m[w 0510 01:34:39.340346 36 grad.cc:77] grads[109] 'layer3.3.bn3.weight' doesn't have gradient. It will be set to zero: Var(1984:1:3:3:i1:o2:s0:n1,float32,layer3.3.bn3.weight,0)[1024,][m
+[38;5;3m[w 0510 01:34:39.340366 36 grad.cc:77] grads[110] 'layer3.3.bn3.bias' doesn't have gradient. It will be set to zero: Var(1989:1:2:2:i1:o1:s0:n1,float32,layer3.3.bn3.bias,0)[1024,][m
+[38;5;3m[w 0510 01:34:39.340388 36 grad.cc:77] grads[111] 'layer3.4.conv1.weight' doesn't have gradient. It will be set to zero: Var(2030:1:3:3:i1:o2:s0:n1,float32,layer3.4.conv1.weight,0)[256,1024,1,1,][m
+[38;5;3m[w 0510 01:34:39.340410 36 grad.cc:77] grads[112] 'layer3.4.bn1.weight' doesn't have gradient. It will be set to zero: Var(2038:1:3:3:i1:o2:s0:n1,float32,layer3.4.bn1.weight,0)[256,][m
+[38;5;3m[w 0510 01:34:39.340431 36 grad.cc:77] grads[113] 'layer3.4.bn1.bias' doesn't have gradient. It will be set to zero: Var(2043:1:2:2:i1:o1:s0:n1,float32,layer3.4.bn1.bias,0)[256,][m
+[38;5;3m[w 0510 01:34:39.340453 36 grad.cc:77] grads[114] 'layer3.4.conv2.weight' doesn't have gradient. It will be set to zero: Var(2084:1:3:3:i1:o2:s0:n1,float32,layer3.4.conv2.weight,0)[256,256,3,3,][m
+[38;5;3m[w 0510 01:34:39.340475 36 grad.cc:77] grads[115] 'layer3.4.bn2.weight' doesn't have gradient. It will be set to zero: Var(2092:1:3:3:i1:o2:s0:n1,float32,layer3.4.bn2.weight,0)[256,][m
+[38;5;3m[w 0510 01:34:39.340495 36 grad.cc:77] grads[116] 'layer3.4.bn2.bias' doesn't have gradient. It will be set to zero: Var(2097:1:2:2:i1:o1:s0:n1,float32,layer3.4.bn2.bias,0)[256,][m
+[38;5;3m[w 0510 01:34:39.350483 36 grad.cc:77] grads[117] 'layer3.4.conv3.weight' doesn't have gradient. It will be set to zero: Var(2138:1:3:3:i1:o2:s0:n1,float32,layer3.4.conv3.weight,0)[1024,256,1,1,][m
+[38;5;3m[w 0510 01:34:39.350525 36 grad.cc:77] grads[118] 'layer3.4.bn3.weight' doesn't have gradient. It will be set to zero: Var(2146:1:3:3:i1:o2:s0:n1,float32,layer3.4.bn3.weight,0)[1024,][m
+[38;5;3m[w 0510 01:34:39.350549 36 grad.cc:77] grads[119] 'layer3.4.bn3.bias' doesn't have gradient. It will be set to zero: Var(2151:1:2:2:i1:o1:s0:n1,float32,layer3.4.bn3.bias,0)[1024,][m
+[38;5;3m[w 0510 01:34:39.350572 36 grad.cc:77] grads[120] 'layer3.5.conv1.weight' doesn't have gradient. It will be set to zero: Var(2192:1:3:3:i1:o2:s0:n1,float32,layer3.5.conv1.weight,0)[256,1024,1,1,][m
+[38;5;3m[w 0510 01:34:39.350596 36 grad.cc:77] grads[121] 'layer3.5.bn1.weight' doesn't have gradient. It will be set to zero: Var(2200:1:3:3:i1:o2:s0:n1,float32,layer3.5.bn1.weight,0)[256,][m
+[38;5;3m[w 0510 01:34:39.350617 36 grad.cc:77] grads[122] 'layer3.5.bn1.bias' doesn't have gradient. It will be set to zero: Var(2205:1:2:2:i1:o1:s0:n1,float32,layer3.5.bn1.bias,0)[256,][m
+[38;5;3m[w 0510 01:34:39.350639 36 grad.cc:77] grads[123] 'layer3.5.conv2.weight' doesn't have gradient. It will be set to zero: Var(2246:1:3:3:i1:o2:s0:n1,float32,layer3.5.conv2.weight,0)[256,256,3,3,][m
+[38;5;3m[w 0510 01:34:39.350662 36 grad.cc:77] grads[124] 'layer3.5.bn2.weight' doesn't have gradient. It will be set to zero: Var(2254:1:3:3:i1:o2:s0:n1,float32,layer3.5.bn2.weight,0)[256,][m
+[38;5;3m[w 0510 01:34:39.350683 36 grad.cc:77] grads[125] 'layer3.5.bn2.bias' doesn't have gradient. It will be set to zero: Var(2259:1:2:2:i1:o1:s0:n1,float32,layer3.5.bn2.bias,0)[256,][m
+[38;5;3m[w 0510 01:34:39.350704 36 grad.cc:77] grads[126] 'layer3.5.conv3.weight' doesn't have gradient. It will be set to zero: Var(2300:1:3:3:i1:o2:s0:n1,float32,layer3.5.conv3.weight,0)[1024,256,1,1,][m
+[38;5;3m[w 0510 01:34:39.350736 36 grad.cc:77] grads[127] 'layer3.5.bn3.weight' doesn't have gradient. It will be set to zero: Var(2308:1:3:3:i1:o2:s0:n1,float32,layer3.5.bn3.weight,0)[1024,][m
+[38;5;3m[w 0510 01:34:39.350757 36 grad.cc:77] grads[128] 'layer3.5.bn3.bias' doesn't have gradient. It will be set to zero: Var(2313:1:2:2:i1:o1:s0:n1,float32,layer3.5.bn3.bias,0)[1024,][m
+[38;5;3m[w 0510 01:34:39.350778 36 grad.cc:77] grads[129] 'layer4.0.conv1.weight' doesn't have gradient. It will be set to zero: Var(2408:1:3:3:i1:o2:s0:n1,float32,layer4.0.conv1.weight,0)[512,1024,1,1,][m
+[38;5;3m[w 0510 01:34:39.350801 36 grad.cc:77] grads[130] 'layer4.0.bn1.weight' doesn't have gradient. It will be set to zero: Var(2416:1:3:3:i1:o2:s0:n1,float32,layer4.0.bn1.weight,0)[512,][m
+[38;5;3m[w 0510 01:34:39.362276 36 grad.cc:77] grads[131] 'layer4.0.bn1.bias' doesn't have gradient. It will be set to zero: Var(2421:1:2:2:i1:o1:s0:n1,float32,layer4.0.bn1.bias,0)[512,][m
+[38;5;3m[w 0510 01:34:39.362317 36 grad.cc:77] grads[132] 'layer4.0.conv2.weight' doesn't have gradient. It will be set to zero: Var(2462:1:3:3:i1:o2:s0:n1,float32,layer4.0.conv2.weight,0)[512,512,3,3,][m
+[38;5;3m[w 0510 01:34:39.362340 36 grad.cc:77] grads[133] 'layer4.0.bn2.weight' doesn't have gradient. It will be set to zero: Var(2470:1:3:3:i1:o2:s0:n1,float32,layer4.0.bn2.weight,0)[512,][m
+[38;5;3m[w 0510 01:34:39.362359 36 grad.cc:77] grads[134] 'layer4.0.bn2.bias' doesn't have gradient. It will be set to zero: Var(2475:1:2:2:i1:o1:s0:n1,float32,layer4.0.bn2.bias,0)[512,][m
+[38;5;3m[w 0510 01:34:39.362378 36 grad.cc:77] grads[135] 'layer4.0.conv3.weight' doesn't have gradient. It will be set to zero: Var(2516:1:3:3:i1:o2:s0:n1,float32,layer4.0.conv3.weight,0)[2048,512,1,1,][m
+[38;5;3m[w 0510 01:34:39.362398 36 grad.cc:77] grads[136] 'layer4.0.bn3.weight' doesn't have gradient. It will be set to zero: Var(2524:1:3:3:i1:o2:s0:n1,float32,layer4.0.bn3.weight,0)[2048,][m
+[38;5;3m[w 0510 01:34:39.362417 36 grad.cc:77] grads[137] 'layer4.0.bn3.bias' doesn't have gradient. It will be set to zero: Var(2529:1:2:2:i1:o1:s0:n1,float32,layer4.0.bn3.bias,0)[2048,][m
+[38;5;3m[w 0510 01:34:39.362437 36 grad.cc:77] grads[138] 'layer4.0.downsample.0.weight' doesn't have gradient. It will be set to zero: Var(2354:1:3:3:i1:o2:s0:n1,float32,layer4.0.downsample.0.weight,0)[2048,1024,1,1,][m
+[38;5;3m[w 0510 01:34:39.362456 36 grad.cc:77] grads[139] 'layer4.0.downsample.1.weight' doesn't have gradient. It will be set to zero: Var(2362:1:3:3:i1:o2:s0:n1,float32,layer4.0.downsample.1.weight,0)[2048,][m
+[38;5;3m[w 0510 01:34:39.362475 36 grad.cc:77] grads[140] 'layer4.0.downsample.1.bias' doesn't have gradient. It will be set to zero: Var(2367:1:2:2:i1:o1:s0:n1,float32,layer4.0.downsample.1.bias,0)[2048,][m
+[38;5;3m[w 0510 01:34:39.362495 36 grad.cc:77] grads[141] 'layer4.1.conv1.weight' doesn't have gradient. It will be set to zero: Var(2570:1:3:3:i1:o2:s0:n1,float32,layer4.1.conv1.weight,0)[512,2048,1,1,][m
+[38;5;3m[w 0510 01:34:39.362515 36 grad.cc:77] grads[142] 'layer4.1.bn1.weight' doesn't have gradient. It will be set to zero: Var(2578:1:3:3:i1:o2:s0:n1,float32,layer4.1.bn1.weight,0)[512,][m
+[38;5;3m[w 0510 01:34:39.362536 36 grad.cc:77] grads[143] 'layer4.1.bn1.bias' doesn't have gradient. It will be set to zero: Var(2583:1:2:2:i1:o1:s0:n1,float32,layer4.1.bn1.bias,0)[512,][m
+[38;5;3m[w 0510 01:34:39.373464 36 grad.cc:77] grads[144] 'layer4.1.conv2.weight' doesn't have gradient. It will be set to zero: Var(2624:1:3:3:i1:o2:s0:n1,float32,layer4.1.conv2.weight,0)[512,512,3,3,][m
+[38;5;3m[w 0510 01:34:39.373505 36 grad.cc:77] grads[145] 'layer4.1.bn2.weight' doesn't have gradient. It will be set to zero: Var(2632:1:3:3:i1:o2:s0:n1,float32,layer4.1.bn2.weight,0)[512,][m
+[38;5;3m[w 0510 01:34:39.373527 36 grad.cc:77] grads[146] 'layer4.1.bn2.bias' doesn't have gradient. It will be set to zero: Var(2637:1:2:2:i1:o1:s0:n1,float32,layer4.1.bn2.bias,0)[512,][m
+[38;5;3m[w 0510 01:34:39.373559 36 grad.cc:77] grads[147] 'layer4.1.conv3.weight' doesn't have gradient. It will be set to zero: Var(2678:1:3:3:i1:o2:s0:n1,float32,layer4.1.conv3.weight,0)[2048,512,1,1,][m
+[38;5;3m[w 0510 01:34:39.373580 36 grad.cc:77] grads[148] 'layer4.1.bn3.weight' doesn't have gradient. It will be set to zero: Var(2686:1:3:3:i1:o2:s0:n1,float32,layer4.1.bn3.weight,0)[2048,][m
+[38;5;3m[w 0510 01:34:39.373599 36 grad.cc:77] grads[149] 'layer4.1.bn3.bias' doesn't have gradient. It will be set to zero: Var(2691:1:2:2:i1:o1:s0:n1,float32,layer4.1.bn3.bias,0)[2048,][m
+[38;5;3m[w 0510 01:34:39.373619 36 grad.cc:77] grads[150] 'layer4.2.conv1.weight' doesn't have gradient. It will be set to zero: Var(2732:1:3:3:i1:o2:s0:n1,float32,layer4.2.conv1.weight,0)[512,2048,1,1,][m
+[38;5;3m[w 0510 01:34:39.373639 36 grad.cc:77] grads[151] 'layer4.2.bn1.weight' doesn't have gradient. It will be set to zero: Var(2740:1:3:3:i1:o2:s0:n1,float32,layer4.2.bn1.weight,0)[512,][m
+[38;5;3m[w 0510 01:34:39.373658 36 grad.cc:77] grads[152] 'layer4.2.bn1.bias' doesn't have gradient. It will be set to zero: Var(2745:1:2:2:i1:o1:s0:n1,float32,layer4.2.bn1.bias,0)[512,][m
+[38;5;3m[w 0510 01:34:39.373677 36 grad.cc:77] grads[153] 'layer4.2.conv2.weight' doesn't have gradient. It will be set to zero: Var(2786:1:3:3:i1:o2:s0:n1,float32,layer4.2.conv2.weight,0)[512,512,3,3,][m
+[38;5;3m[w 0510 01:34:39.373697 36 grad.cc:77] grads[154] 'layer4.2.bn2.weight' doesn't have gradient. It will be set to zero: Var(2794:1:3:3:i1:o2:s0:n1,float32,layer4.2.bn2.weight,0)[512,][m
+[38;5;3m[w 0510 01:34:39.373716 36 grad.cc:77] grads[155] 'layer4.2.bn2.bias' doesn't have gradient. It will be set to zero: Var(2799:1:2:2:i1:o1:s0:n1,float32,layer4.2.bn2.bias,0)[512,][m
+[38;5;3m[w 0510 01:34:39.409059 36 grad.cc:77] grads[156] 'layer4.2.conv3.weight' doesn't have gradient. It will be set to zero: Var(2840:1:3:3:i1:o2:s0:n1,float32,layer4.2.conv3.weight,0)[2048,512,1,1,][m
+[38;5;3m[w 0510 01:34:39.409102 36 grad.cc:77] grads[157] 'layer4.2.bn3.weight' doesn't have gradient. It will be set to zero: Var(2848:1:3:3:i1:o2:s0:n1,float32,layer4.2.bn3.weight,0)[2048,][m
+[38;5;3m[w 0510 01:34:39.409125 36 grad.cc:77] grads[158] 'layer4.2.bn3.bias' doesn't have gradient. It will be set to zero: Var(2853:1:2:2:i1:o1:s0:n1,float32,layer4.2.bn3.bias,0)[2048,][m
+[38;5;3m[w 0510 01:34:39.409148 36 grad.cc:77] grads[159] 'fc.weight' doesn't have gradient. It will be set to zero: Var(2877:1:2:2:i1:o1:s0:n1,float32,fc.weight,0)[102,2048,][m
+[38;5;3m[w 0510 01:34:39.409170 36 grad.cc:77] grads[160] 'fc.bias' doesn't have gradient. It will be set to zero: Var(2894:1:2:2:i1:o1:s0:n0,float32,fc.bias,0)[102,][m
+
+1it [00:02,  2.89s/it][A
+2it [00:04,  2.12s/it][A
+3it [00:05,  1.53s/it][A
+4it [00:05,  1.13s/it][A
+5it [00:06,  1.10it/s][A
+6it [00:06,  1.29it/s][A
+7it [00:07,  1.43it/s][A
+8it [00:07,  1.55it/s][A
+9it [00:08,  1.64it/s][A
+10it [00:08,  1.73it/s][A
+11it [00:09,  1.79it/s][A
+12it [00:09,  1.82it/s][A
+13it [00:10,  1.84it/s][A
+14it [00:11,  1.85it/s][A
+15it [00:11,  1.87it/s][A
+16it [00:12,  1.68it/s][A16it [00:12,  1.30it/s]
+epoch: 0 validateAccuracy: 0.0186 trainAccuracy: 0.0059 delta: 0.0186
+Training:   0%|          | 1/1600 [00:20<9:01:25, 20.32s/it]
+0it [00:00, ?it/s][A
+1it [00:00,  1.47it/s][A
+2it [00:01,  1.40it/s][A
+3it [00:01,  1.63it/s][A
+4it [00:02,  1.76it/s][A
+5it [00:02,  1.83it/s][A
+6it [00:03,  1.88it/s][A
+7it [00:03,  1.93it/s][A
+8it [00:04,  1.96it/s][A
+9it [00:04,  1.98it/s][A
+10it [00:05,  2.00it/s][A
+11it [00:05,  2.00it/s][A
+12it [00:06,  1.93it/s][A
+13it [00:06,  1.95it/s][A
+14it [00:07,  1.96it/s][A
+15it [00:07,  1.98it/s][A
+16it [00:08,  2.02it/s][A16it [00:08,  1.90it/s]
+epoch: 1 validateAccuracy: 0.0098 trainAccuracy: 0.0147 delta: -0.0088
+Training:   0%|          | 2/1600 [00:34<7:21:51, 16.59s/it]
+0it [00:00, ?it/s][A
+1it [00:00,  2.08it/s][A
+2it [00:00,  2.26it/s][A
+3it [00:01,  2.17it/s][A
+4it [00:01,  2.10it/s][A
+5it [00:02,  2.07it/s][A
+6it [00:02,  2.04it/s][A
+7it [00:03,  2.05it/s][A
+8it [00:03,  2.03it/s][A
+9it [00:04,  2.03it/s][A
+10it [00:04,  2.03it/s][A
+11it [00:05,  2.03it/s][A
+12it [00:05,  2.04it/s][A
+13it [00:06,  2.05it/s][A
+14it [00:06,  2.04it/s][A
+15it [00:07,  2.03it/s][A
+16it [00:07,  2.05it/s][A16it [00:07,  2.05it/s]
+epoch: 2 validateAccuracy: 0.0245 trainAccuracy: 0.0245 delta: 0.0059
+Training:   0%|          | 3/1600 [00:49<7:01:31, 15.84s/it]
+0it [00:00, ?it/s][A
+1it [00:00,  1.89it/s][A
+2it [00:00,  2.16it/s][A
+3it [00:01,  2.09it/s][A
+4it [00:01,  2.07it/s][A
+5it [00:02,  1.88it/s][A
+6it [00:03,  1.74it/s][A
+7it [00:03,  1.82it/s][A
+8it [00:04,  1.87it/s][A
+9it [00:04,  1.90it/s][A
+10it [00:05,  1.93it/s][A
+11it [00:05,  1.95it/s][A
+12it [00:06,  1.98it/s][A
+13it [00:06,  2.00it/s][A
+14it [00:07,  2.02it/s][A
+15it [00:07,  2.01it/s][A
+16it [00:08,  2.03it/s][A16it [00:08,  1.96it/s]
+epoch: 3 validateAccuracy: 0.0441 trainAccuracy: 0.0412 delta: 0.0196
+Training:   0%|          | 4/1600 [01:04<6:56:51, 15.67s/it]
+0it [00:00, ?it/s][A
+1it [00:00,  1.87it/s][A
+2it [00:00,  2.15it/s][A
+3it [00:01,  2.09it/s][A
+4it [00:01,  2.08it/s][A
+5it [00:02,  2.05it/s][A
+6it [00:03,  1.91it/s][A
+7it [00:03,  1.83it/s][A
+8it [00:04,  1.81it/s][A
+9it [00:04,  1.90it/s][A
+10it [00:05,  1.95it/s][A
+11it [00:05,  1.97it/s][A
+12it [00:06,  1.98it/s][A
+13it [00:06,  1.89it/s][A
+14it [00:07,  1.94it/s][A
+15it [00:07,  1.97it/s][A
+16it [00:08,  2.00it/s][A16it [00:08,  1.95it/s]
+epoch: 4 validateAccuracy: 0.0539 trainAccuracy: 0.0627 delta: 0.0098
+Training:   0%|          | 5/1600 [01:19<6:51:48, 15.49s/it]
+0it [00:00, ?it/s][A
+1it [00:00,  1.74it/s][A
+2it [00:00,  2.07it/s][A
+3it [00:01,  2.06it/s][A
+4it [00:01,  2.04it/s][A
+5it [00:02,  2.04it/s][A
+6it [00:02,  2.05it/s][A
+7it [00:03,  1.96it/s][A
+8it [00:04,  1.95it/s][A
+9it [00:04,  1.97it/s][A
+10it [00:05,  1.99it/s][A
+11it [00:05,  1.99it/s][A
+12it [00:06,  2.01it/s][A
+13it [00:06,  2.01it/s][A
+14it [00:06,  2.02it/s][A
+15it [00:07,  2.04it/s][A
+16it [00:07,  2.07it/s][A16it [00:07,  2.01it/s]
