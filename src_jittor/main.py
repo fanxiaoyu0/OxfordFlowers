@@ -165,8 +165,44 @@ def pretrain_one_epoch(model:nn.Module, train_loader, criterion, optimizer, accu
     scheduler.step()
     return round(total_acc/total_num,4),round(sum(lossList)/len(lossList),4)
 
-def train_one_epoch(model:nn.Module, trainDataSet, criterion, optimizer, scheduler):
+def train_one_epoch(model:VisionTransformer, trainDataSet, criterion, optimizer, scheduler, epoch):
     model.train()
+    # model.patch_embed.eval()
+    # model.pos_drop.eval()
+    # model.blocks.eval()
+    # model.norm.train()
+    # model.head.train()
+    # if epoch < 100:
+    #     model.patch_embed.eval()
+    #     model.pos_drop.eval()
+    #     model.blocks.eval()
+    #     # for i in range(len(model.blocks)-1):
+    #     #     model.blocks[i].eval()
+    #     # model.blocks[-1].train()
+    #     # print(model.blocks[1])
+    #     # model.blocks[0].eval()
+    #     # model.norm.eval()
+    #     model.norm.train()
+    #     model.head.train()
+    #     # fsdhkj
+    # else:
+    #     model.train()
+    
+    # model.eval()
+    # for (name,module) in model.named_modules():
+    #     if 'head' not in name:
+    #         module.eval()
+    #     else:
+    #         module.eval()
+    # model.blocks.eval()
+    # for module in model.modules():
+
+    # model.head.train()
+    # blocks1=model.blocks.state_dict()
+    # head1=model.head.state_dict()
+    # print("blocks",blocks1['7.attn.qkv.weight'])
+    # print("head",head1['weight'])
+    # print(head1)
     rightCount = 0
     totalCount = 0
     lossList = []
@@ -181,10 +217,16 @@ def train_one_epoch(model:nn.Module, trainDataSet, criterion, optimizer, schedul
         totalCount += labels.shape[0]
         lossList.append(loss.data[0])
     scheduler.step()
+    # blocks2=model.blocks.state_dict()
+    # head2=model.head.state_dict()
+    # print(head2)
+    # print("blocks",blocks2['7.attn.qkv.weight'])
+    # print("head",head2['weight'])
+    # fdskfj
     return round(rightCount/totalCount,4),round(sum(lossList)/len(lossList),4)
 
 def validate_one_epoch(model:nn.Module, validateDataSet,criterion):
-    model.eval()
+    # model.eval()
     rightCount = 0
     totalCount = 0
     lossList = []
@@ -286,7 +328,7 @@ def train(model:nn.Module,modelName,learningRate,epochs,etaMin,imageSize,batchSi
     currentBestAccuracy=0.0
     currentBestEpoch=0
     for epoch in tqdm(range(epochs),desc="Training"):
-        trainAccuracy,trainLoss=train_one_epoch(model, trainDataSet, criterion, optimizer, scheduler)
+        trainAccuracy,trainLoss=train_one_epoch(model, trainDataSet, criterion, optimizer, scheduler, epoch)
         validateAccuracy,validateLoss=validate_one_epoch(model, validateDataSet,criterion)
         print("epoch:",epoch,"validateAccuracy:",validateAccuracy,"trainAccuracy:",trainAccuracy,"delta:",round(validateAccuracy-currentBestAccuracy,4))
         writer.add_scalars(modelName,{'trainAccuracy':trainAccuracy,'validateAccuracy':validateAccuracy,"trainLoss":trainLoss,"validateLoss":validateLoss}, epoch)
@@ -311,18 +353,42 @@ def train(model:nn.Module,modelName,learningRate,epochs,etaMin,imageSize,batchSi
 
 if __name__=="__main__":
     # vitPretrainedModel = VisionTransformer(img_size=224,patch_size=16, embed_dim=768, depth=8, num_heads=8, mlp_ratio=3.,num_classes=5001)
+    # vitPretrainedModel.head.eval()
+    # fhdk
     # vitModel.load("../../FSPT/weight/ViT/0.pkl")
-    # vitPretrainedModel=pickle.load(open("../../FSPT/weight/ViT/1.pkl","rb"))
-    # vitModel = VisionTransformer(img_size=224,patch_size=16, embed_dim=768, depth=8, num_heads=8, mlp_ratio=3.,num_classes=102)
-    # vitModel.save("../weight/ViT/temp.pkl")
-    # vitModel=pickle.load(open("../weight/ViT/temp.pkl","rb"))
-    # for key in vitModel.keys():
-    #     if 'head' not in key:
-    #         vitModel[key]=vitPretrainedModel[key]
-    # pickle.dump(vitModel,open("../weight/ViT/1_2.pkl","wb"))
-    # vitModel = VisionTransformer(img_size=224,patch_size=16, embed_dim=768, depth=8, num_heads=8, mlp_ratio=3.,num_classes=102)
-    # vitModel.load("../weight/ViT/1_2.pkl")
-    # train(model=vitModel,modelName="ViT",learningRate=5e-5,epochs=200,etaMin=1e-5,imageSize=224,batchSize=16,savedName="1_2.pkl",)
+
+    vitPretrainedModel=pickle.load(open("../../FSPT/weight/ViT/1.pkl","rb"))
+    vitModel = VisionTransformer(img_size=224,patch_size=16, embed_dim=768, depth=8, num_heads=8, mlp_ratio=3.,num_classes=102)
+    vitModel.save("../weight/ViT/temp.pkl")
+    vitModel=pickle.load(open("../weight/ViT/temp.pkl","rb"))
+    # print(vitModel.keys())
+
+    # fdshjs
+    layerNameList=['blocks.4.norm1.weight', 'blocks.4.norm1.bias', 'blocks.4.attn.qkv.weight', 'blocks.4.attn.proj.weight', 'blocks.4.attn.proj.bias',\
+        'blocks.4.norm2.weight', 'blocks.4.norm2.bias', 'blocks.4.mlp.fc1.weight', 'blocks.4.mlp.fc1.bias', 'blocks.4.mlp.fc2.weight', \
+        'blocks.4.mlp.fc2.bias', 'blocks.5.norm1.weight', 'blocks.5.norm1.bias', 'blocks.5.attn.qkv.weight', 'blocks.5.attn.proj.weight', \
+        'blocks.5.attn.proj.bias', 'blocks.5.norm2.weight', 'blocks.5.norm2.bias', 'blocks.5.mlp.fc1.weight', 'blocks.5.mlp.fc1.bias', \
+        'blocks.5.mlp.fc2.weight', 'blocks.5.mlp.fc2.bias', 'blocks.6.norm1.weight', 'blocks.6.norm1.bias', 'blocks.6.attn.qkv.weight', \
+        'blocks.6.attn.proj.weight', 'blocks.6.attn.proj.bias', 'blocks.6.norm2.weight', 'blocks.6.norm2.bias', 'blocks.6.mlp.fc1.weight', \
+        'blocks.6.mlp.fc1.bias', 'blocks.6.mlp.fc2.weight', 'blocks.6.mlp.fc2.bias', 'blocks.7.norm1.weight', 'blocks.7.norm1.bias', \
+        'blocks.7.attn.qkv.weight', 'blocks.7.attn.proj.weight', 'blocks.7.attn.proj.bias', 'blocks.7.norm2.weight', 'blocks.7.norm2.bias', \
+        'blocks.7.mlp.fc1.weight', 'blocks.7.mlp.fc1.bias', 'blocks.7.mlp.fc2.weight', 'blocks.7.mlp.fc2.bias', 'norm.weight', 'norm.bias', \
+        'head.weight', 'head.bias']
+    for key in vitModel.keys():
+        if key not in layerNameList:
+            # print(key)
+            vitModel[key]=vitPretrainedModel[key]
+    pickle.dump(vitModel,open("../weight/ViT/1_3.pkl","wb"))
+    vitModel = VisionTransformer(img_size=224,patch_size=16, embed_dim=768, depth=8, num_heads=8, mlp_ratio=3.,num_classes=102)
+    vitModel.load("../weight/ViT/1_3.pkl")
+    # vitModel.__module__
+    # print(vitModel.named_modules())
+    # print(vitModel.modules()[0])
+    # for i in range(len(vitModel.modules())):
+        # print(i,vitModel.modules()[i])
+    # print(vitModel.modules())
+    # fdshkj
+    train(model=vitModel,modelName="ViT",learningRate=5e-5,epochs=200,etaMin=1e-5,imageSize=224,batchSize=16,savedName="1_3.pkl",)
 
     # vitModel=VisionTransformer(img_size=224,patch_size=16, embed_dim=768, depth=8, num_heads=8, mlp_ratio=3.,num_classes=102)
     # # vitModel=pickle.load(open("../weight/ViT/0_2.pkl","rb"))
@@ -335,19 +401,20 @@ if __name__=="__main__":
     # mlpMixerModel=MLPMixerForImageClassification(
     #     in_channels=3,patch_size=16, d_model=512, depth=12, num_classes=102,image_size=224,dropout=0)
     # # mlpMixerModel.load("../../FSPT/weight/MLPMixer/1.pkl")
-    mlpMixerPretrainedModel=pickle.load(open("../../FSPT/weight/MLPMixer/1.pkl","rb"))
-    mlpMixerModel = MLPMixerForImageClassification(
-        in_channels=3,patch_size=16, d_model=512, depth=12, num_classes=102,image_size=224,dropout=0)
-    mlpMixerModel.save("../weight/MLPMixer/temp.pkl")
-    mlpMixerModel=pickle.load(open("../weight/MLPMixer/temp.pkl","rb"))
-    for key in mlpMixerModel.keys():
-        if 'head' not in key:
-            mlpMixerModel[key]=mlpMixerPretrainedModel[key]
-    pickle.dump(mlpMixerModel,open("../weight/MLPMixer/1_2.pkl","wb"))
-    mlpMixerModel = MLPMixerForImageClassification(
-        in_channels=3,patch_size=16, d_model=512, depth=12, num_classes=102,image_size=224,dropout=0)
-    mlpMixerModel.load("../weight/MLPMixer/1_2.pkl")
-    train(model=mlpMixerModel,modelName="MLPMixer",learningRate=2.3e-5,epochs=200,etaMin=1e-5,imageSize=224,batchSize=64,savedName="1_2.pkl")
+
+    # mlpMixerPretrainedModel=pickle.load(open("../../FSPT/weight/MLPMixer/1.pkl","rb"))
+    # mlpMixerModel = MLPMixerForImageClassification(
+    #     in_channels=3,patch_size=16, d_model=512, depth=12, num_classes=102,image_size=224,dropout=0)
+    # mlpMixerModel.save("../weight/MLPMixer/temp.pkl")
+    # mlpMixerModel=pickle.load(open("../weight/MLPMixer/temp.pkl","rb"))
+    # for key in mlpMixerModel.keys():
+    #     if 'head' not in key:
+    #         mlpMixerModel[key]=mlpMixerPretrainedModel[key]
+    # pickle.dump(mlpMixerModel,open("../weight/MLPMixer/1_2.pkl","wb"))
+    # mlpMixerModel = MLPMixerForImageClassification(
+    #     in_channels=3,patch_size=16, d_model=512, depth=12, num_classes=102,image_size=224,dropout=0)
+    # mlpMixerModel.load("../weight/MLPMixer/1_2.pkl")
+    # train(model=mlpMixerModel,modelName="MLPMixer",learningRate=2.3e-5,epochs=200,etaMin=1e-5,imageSize=224,batchSize=64,savedName="1_2.pkl")
 
     # mlpMixerModel=MLPMixerForImageClassification(
     #     in_channels=3,patch_size=16, d_model=512, depth=12, num_classes=102,image_size=224,dropout=0)

@@ -1,0 +1,5 @@
+/home/prs01/miniconda3/envs/pytorch/lib/python3.9/site-packages/torch/functional.py:568: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2228.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Constructing data loader ...
+----------------- A new trial ---------------------
+modelName ViT learning rate: 5e-05 etaMin 1e-06 batchSize 12 savedName 0_7.pkl criterion CrossEntropyLoss weight_decay 0.001 TMax 15

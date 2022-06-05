@@ -1,3 +1,21 @@
+经典超参数：learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:64  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+
+===========
+0: 采用上一轮的预训练方法+微调 
+0_1: 不预训练，batch_size=16
+0_2: 不预训练，batch_size=64
+0_3: batchSize=16，随机初始化backbone 而且冻结backbone，只训练全连接层
+
+
+
+========================
+1_1: 微调，batch_size=64
+1_2: 微调，batch_size=16
+1_3: 微调，batch_size=16，只迁移block前4层
+
+
+
+
 modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  savedName:1_1.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
 modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  savedName:1_1.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
 modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  savedName:0_1.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
@@ -7,3 +25,37 @@ modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  savedName:0_1.pk
 modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:64  savedName:0_2.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
 modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_2.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
 modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_2.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_4.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_5.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_5.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_5.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_5.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_5.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_5.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_5.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_5.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_5.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_5.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:0_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15
+modelName: ViT  learning rate:5e-05  etaMin:1e-05  imgSize:224  batchSize:16  savedName:1_3.pkl  criterion:  CrossEntropyLoss  weight_decay:0.001  TMax:15

@@ -1,0 +1,20 @@
+Constructing data loader ...
+----------------- A new trial ---------------------
+modelName ViT learning rate: 2e-05 etaMin 1e-06 batchSize 12 savedName 0_6.pkl criterion CrossEntropyLoss weight_decay 0.001 TMax 15
+epoch: 0 validateAccuracy: 0.0324 trainAccuracy: 0.0353 delta: 0.0324
+epoch: 1 validateAccuracy: 0.0578 trainAccuracy: 0.0343 delta: 0.0254
+epoch: 2 validateAccuracy: 0.0833 trainAccuracy: 0.0461 delta: 0.0255
+epoch: 3 validateAccuracy: 0.1098 trainAccuracy: 0.0686 delta: 0.0265
+epoch: 4 validateAccuracy: 0.1196 trainAccuracy: 0.1088 delta: 0.0098
+epoch: 5 validateAccuracy: 0.1118 trainAccuracy: 0.1176 delta: -0.0078
+epoch: 6 validateAccuracy: 0.1314 trainAccuracy: 0.1294 delta: 0.0118
+epoch: 7 validateAccuracy: 0.1294 trainAccuracy: 0.149 delta: -0.002
+epoch: 8 validateAccuracy: 0.1441 trainAccuracy: 0.1706 delta: 0.0127
+epoch: 9 validateAccuracy: 0.1578 trainAccuracy: 0.1814 delta: 0.0137
+epoch: 10 validateAccuracy: 0.1471 trainAccuracy: 0.1716 delta: -0.0107
+epoch: 11 validateAccuracy: 0.1647 trainAccuracy: 0.1873 delta: 0.0069
+epoch: 12 validateAccuracy: 0.1676 trainAccuracy: 0.1931 delta: 0.0029
+epoch: 13 validateAccuracy: 0.1716 trainAccuracy: 0.1931 delta: 0.004
+epoch: 14 validateAccuracy: 0.1676 trainAccuracy: 0.1971 delta: -0.004
+epoch: 15 validateAccuracy: 0.1676 trainAccuracy: 0.199 delta: -0.004
+epoch: 16 validateAccuracy: 0.1686 trainAccuracy: 0.2039 delta: -0.003
