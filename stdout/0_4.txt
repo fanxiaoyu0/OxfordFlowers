@@ -93,3 +93,16 @@ epoch: 88 validateAccuracy: 0.348 trainAccuracy: 0.8971 delta: -0.04710000000000
 epoch: 89 validateAccuracy: 0.349 trainAccuracy: 0.9176 delta: -0.04610000000000003
 epoch: 90 validateAccuracy: 0.3647 trainAccuracy: 0.9284 delta: -0.030399999999999983
 epoch: 91 validateAccuracy: 0.3784 trainAccuracy: 0.9255 delta: -0.016699999999999993
+epoch: 92 validateAccuracy: 0.3637 trainAccuracy: 0.9559 delta: -0.031399999999999983
+epoch: 93 validateAccuracy: 0.3627 trainAccuracy: 0.9578 delta: -0.032399999999999984
+epoch: 94 validateAccuracy: 0.3765 trainAccuracy: 0.9637 delta: -0.018600000000000005
+epoch: 95 validateAccuracy: 0.3716 trainAccuracy: 0.9755 delta: -0.02350000000000002
+epoch: 96 validateAccuracy: 0.3706 trainAccuracy: 0.9833 delta: -0.024500000000000022
+epoch: 97 validateAccuracy: 0.3676 trainAccuracy: 0.9824 delta: -0.027500000000000024
+epoch: 98 validateAccuracy: 0.3745 trainAccuracy: 0.9853 delta: -0.020600000000000007
+epoch: 99 validateAccuracy: 0.3784 trainAccuracy: 0.9951 delta: -0.016699999999999993
+epoch: 100 validateAccuracy: 0.3833 trainAccuracy: 0.998 delta: -0.011800000000000033
+epoch: 101 validateAccuracy: 0.3755 trainAccuracy: 0.9931 delta: -0.019600000000000006
+epoch: 102 validateAccuracy: 0.3853 trainAccuracy: 0.9971 delta: -0.009800000000000031
+epoch: 103 validateAccuracy: 0.3725 trainAccuracy: 0.9951 delta: -0.02260000000000001
+epoch: 104 validateAccuracy: 0.3725 trainAccuracy: 0.999 delta: -0.02260000000000001

@@ -14,6 +14,7 @@ from torchvision.utils import _log_api_usage_once
 sys.path.insert(0, "../lib/GaborNet")
 
 from GaborNet import GaborConv2d
+# from ..lib.GaborNet.GaborNet import GaborConv2d
 
 
 
@@ -317,12 +318,16 @@ def _vision_transformer(
 class GaborViT(nn.Module):
     def __init__(self):
         super(GaborViT, self).__init__()
-        self.gabor=GaborConv2d(in_channels=3,out_channels=96, kernel_size=(11, 11),)
+        self.gabor=GaborConv2d(in_channels=3,out_channels=96, kernel_size=(31,31),)
         self.vit=vit_b_16(in_channels=96,image_size=224,num_classes=102)
+        # for param in self.gabor.parameters():
+            # param.requires_grad = False
     def forward(self,x):
-        x=self.gabor(x)
+        y=self.gabor(x)
+        # x=torch.concat([x,y],1)
         # print(x.shape)
-        x=self.vit(x)
+        # fsdhj
+        x=self.vit(y)
         return x
 
 

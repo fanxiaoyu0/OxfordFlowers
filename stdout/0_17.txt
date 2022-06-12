@@ -1,0 +1,47 @@
+/home/prs01/miniconda3/envs/pytorch-gpu/lib/python3.9/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: /home/prs01/miniconda3/envs/pytorch-gpu/lib/python3.9/site-packages/torchvision/image.so: undefined symbol: _ZN3c105ErrorC2ENS_14SourceLocationESs
+  warn(f"Failed to load image Python extension: {e}")
+Constructing data loader ...
+----------------- A new trial ---------------------
+modelName ViT learning rate: 5e-05 etaMin 1e-06 batchSize 16 savedName 0_17.pkl criterion CrossEntropyLoss weight_decay 0.001 TMax 15
+epoch: 0 validateAccuracy: 0.4167 trainAccuracy: 0.9373 delta: 0.4167
+epoch: 1 validateAccuracy: 0.4275 trainAccuracy: 0.9402 delta: 0.0108
+epoch: 2 validateAccuracy: 0.4294 trainAccuracy: 0.9529 delta: 0.0019
+epoch: 3 validateAccuracy: 0.4324 trainAccuracy: 0.9451 delta: 0.003
+epoch: 4 validateAccuracy: 0.452 trainAccuracy: 0.9657 delta: 0.0196
+epoch: 5 validateAccuracy: 0.449 trainAccuracy: 0.9794 delta: -0.003
+epoch: 6 validateAccuracy: 0.448 trainAccuracy: 0.9765 delta: -0.004
+epoch: 7 validateAccuracy: 0.4588 trainAccuracy: 0.9922 delta: 0.0068
+epoch: 8 validateAccuracy: 0.452 trainAccuracy: 0.9951 delta: -0.0068
+epoch: 9 validateAccuracy: 0.4451 trainAccuracy: 0.9941 delta: -0.0137
+epoch: 10 validateAccuracy: 0.4539 trainAccuracy: 0.999 delta: -0.0049
+epoch: 11 validateAccuracy: 0.448 trainAccuracy: 0.9941 delta: -0.0108
+epoch: 12 validateAccuracy: 0.4539 trainAccuracy: 0.9971 delta: -0.0049
+epoch: 13 validateAccuracy: 0.451 trainAccuracy: 0.9961 delta: -0.0078
+epoch: 14 validateAccuracy: 0.4539 trainAccuracy: 1.0 delta: -0.0049
+epoch: 15 validateAccuracy: 0.4559 trainAccuracy: 0.999 delta: -0.0029
+epoch: 16 validateAccuracy: 0.4559 trainAccuracy: 1.0 delta: -0.0029
+epoch: 17 validateAccuracy: 0.4539 trainAccuracy: 0.9971 delta: -0.0049
+epoch: 18 validateAccuracy: 0.4569 trainAccuracy: 0.9961 delta: -0.0019
+epoch: 19 validateAccuracy: 0.4569 trainAccuracy: 0.999 delta: -0.0019
+epoch: 20 validateAccuracy: 0.4549 trainAccuracy: 0.9931 delta: -0.0039
+epoch: 21 validateAccuracy: 0.4569 trainAccuracy: 0.9863 delta: -0.0019
+epoch: 22 validateAccuracy: 0.449 trainAccuracy: 0.9814 delta: -0.0098
+epoch: 23 validateAccuracy: 0.4451 trainAccuracy: 0.9765 delta: -0.0137
+epoch: 24 validateAccuracy: 0.4167 trainAccuracy: 0.9353 delta: -0.0421
+epoch: 25 validateAccuracy: 0.4167 trainAccuracy: 0.9029 delta: -0.0421
+epoch: 26 validateAccuracy: 0.4265 trainAccuracy: 0.9059 delta: -0.0323
+epoch: 27 validateAccuracy: 0.3814 trainAccuracy: 0.8902 delta: -0.0774
+epoch: 28 validateAccuracy: 0.4039 trainAccuracy: 0.8833 delta: -0.0549
+epoch: 29 validateAccuracy: 0.4069 trainAccuracy: 0.9225 delta: -0.0519
+epoch: 30 validateAccuracy: 0.402 trainAccuracy: 0.9314 delta: -0.0568
+epoch: 31 validateAccuracy: 0.4304 trainAccuracy: 0.9216 delta: -0.0284
+epoch: 32 validateAccuracy: 0.4275 trainAccuracy: 0.9441 delta: -0.0313
+epoch: 33 validateAccuracy: 0.4216 trainAccuracy: 0.9539 delta: -0.0372
+epoch: 34 validateAccuracy: 0.4284 trainAccuracy: 0.9775 delta: -0.0304
+epoch: 35 validateAccuracy: 0.4441 trainAccuracy: 0.9863 delta: -0.0147
+epoch: 36 validateAccuracy: 0.4422 trainAccuracy: 0.9922 delta: -0.0166
+epoch: 37 validateAccuracy: 0.4471 trainAccuracy: 0.9971 delta: -0.0117
+Traceback (most recent call last):
+  File "/work/fanxiaoyu/OxfordFlowers/src_pytorch/main.py", line 204, in <module>
+    dfjjk
+NameError: name 'dfjjk' is not defined

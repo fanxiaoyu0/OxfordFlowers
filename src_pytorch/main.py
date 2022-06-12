@@ -10,11 +10,12 @@ from PIL import Image
 import torch
 from torch import nn
 from torchinfo import summary
-from torchvision.io import read_image
+# from torchvision.io import read_image
 from torch.utils.data import Dataset,DataLoader
 import torchvision.transforms as T
 from torch import optim
-from torch.utils.tensorboard import SummaryWriter
+# from torch.utils.tensorboard import SummaryWriter
+from torchvision import utils
 
 from ViT import vit_b_16,GaborViT
 
@@ -22,7 +23,7 @@ torch.random.manual_seed(1024)
 torch.cuda.manual_seed(1024)
 random.seed(1024)
 np.random.seed(1024)
-writer=SummaryWriter()
+# writer=SummaryWriter()
 
 class MyDataset(Dataset):
     def __init__(self, image_dir, transform):
@@ -88,9 +89,13 @@ def construct_data_loader(batch_size):
         T.Normalize([0.485, 0.456, 0.406],[0.229, 0.224, 0.225])
     ])
 
-    train_dataset=MyDataset(image_dir='../data/train',transform=train_transform)
+    train_dataset=MyDataset(image_dir='../data/train/',transform=train_transform)
     validate_dataset=MyDataset(image_dir='../data/validate',transform=validate_transform)
     test_dataset=MyDataset(image_dir='../data/test',transform=test_transform)
+
+    # train_dataset=MyDataset(image_dir='/work/majiahao/FSPT/data_concise/train/',transform=train_transform)
+    # validate_dataset=MyDataset(image_dir='/work/majiahao/FSPT/data_concise/validate',transform=validate_transform)
+    # test_dataset=MyDataset(image_dir='/work/majiahao/FSPT/data_concise/test',transform=test_transform)
 
     train_data_loader=DataLoader(train_dataset,batch_size=batch_size,shuffle=True)
     validate_data_loader=DataLoader(validate_dataset,batch_size=batch_size,shuffle=True)
@@ -137,40 +142,18 @@ def validate_one_epoch(model:nn.Module, validateDataSet,criterion):
         lossList.append(loss.item())
     return round((rightCount/totalCount).item(),4),round(sum(lossList)/len(lossList),4)
 
-def get_three_data_set_accuracy(model,imageSize,batchSize):
-    trainDataSet, validateDataSet, testDataSet=construct_data_loader(imageSize=imageSize,batchSize=batchSize)
+def get_three_data_set_accuracy(model,batchSize):
+    trainDataSet, validateDataSet, testDataSet=construct_data_loader(batchSize)
     model.eval()
-    print("Calculating train data set accuracy...")
-    rightCount = 0
-    totalCount = 0
-    for index, (images, labels) in enumerate(trainDataSet):
-        output = model(images)
-        predictLabel = np.argmax(output.data, axis=1)
-        rightCount += np.sum(predictLabel == labels.data)
-        totalCount += labels.shape[0]
-    trainAccuracy=round(rightCount/totalCount,4)
-    print("Train data set accuracy:",trainAccuracy)
-    print("Calculating validate data set accuracy...")
-    rightCount = 0
-    totalCount = 0
-    for index, (images, labels) in enumerate(validateDataSet):
-        output = model(images)
-        predictLabel = np.argmax(output.data, axis=1)
-        rightCount += np.sum(predictLabel == labels.data)
-        totalCount += labels.shape[0]
-    validateAccuracy=round(rightCount/totalCount,4)
-    print("Validate data set accuracy:",validateAccuracy)
-    print("Calculating test data set accuracy...")
-    rightCount = 0
-    totalCount = 0
-    for index, (images, labels) in enumerate(testDataSet):
-        output = model(images)
-        predictLabel = np.argmax(output.data, axis=1)
-        rightCount += np.sum(predictLabel == labels.data)
-        totalCount += labels.shape[0]
-    testAccuracy=round(rightCount/totalCount,4)
-    print("Test data set accuracy:",testAccuracy)
-    return trainAccuracy,validateAccuracy,testAccuracy 
+    for dataset in [trainDataSet, validateDataSet, testDataSet]:
+        rightCount = 0
+        totalCount = 0
+        for (images, labels) in tqdm(dataset):
+            output = model(images)
+            predictLabel = torch.argmax(output, axis=1)
+            rightCount += torch.sum(predictLabel == labels)
+            totalCount += labels.shape[0]
+        print(round((rightCount/totalCount).item(),4))
 
 def trial(model:nn.Module,modelName,learningRate,epochs,etaMin,batchSize,savedName):
     trainDataSet, validateDataSet, testDataSet=construct_data_loader(batchSize) 
@@ -193,7 +176,7 @@ def trial(model:nn.Module,modelName,learningRate,epochs,etaMin,batchSize,savedNa
         trainAccuracy,trainLoss=train_one_epoch(model, trainDataSet, criterion, optimizer, scheduler)
         validateAccuracy,validateLoss=validate_one_epoch(model, validateDataSet,criterion)
         print("epoch:",epoch,"validateAccuracy:",validateAccuracy,"trainAccuracy:",trainAccuracy,"delta:",round(validateAccuracy-currentBestAccuracy,4))
-        writer.add_scalars(modelName,{'trainAccuracy':trainAccuracy,'validateAccuracy':validateAccuracy,"trainLoss":trainLoss,"validateLoss":validateLoss}, epoch)
+        # writer.add_scalars(modelName,{'trainAccuracy':trainAccuracy,'validateAccuracy':validateAccuracy,"trainLoss":trainLoss,"validateLoss":validateLoss}, epoch)
         if validateAccuracy > currentBestAccuracy:
             currentBestAccuracy=validateAccuracy
             currentBestEpoch=epoch
@@ -209,16 +192,124 @@ def trial(model:nn.Module,modelName,learningRate,epochs,etaMin,batchSize,savedNa
     # print("==========================================================================================")
     # send_email_to_myself(modelName+" Training Completed!")
 
+
+
+def visTensor(tensor, ch=0, allkernels=False, nrow=8, padding=1): 
+    n,c,w,h = tensor.shape
+
+    if allkernels: tensor = tensor.view(n*c, -1, w, h)
+    elif c != 3: tensor = tensor[:,ch,:,:].unsqueeze(dim=1)
+
+    rows = np.min((tensor.shape[0] // nrow + 1, 64))    
+    grid = utils.make_grid(tensor, nrow=nrow, normalize=True, padding=padding)
+    plt.figure( figsize=(nrow,rows) )
+    plt.imshow(grid.numpy().transpose((1, 2, 0)))
+
+
+# if __name__ == "__main__":
+#     layer = 1
+#     filter = model.features[layer].weight.data.clone()
+#     visTensor(filter, ch=0, allkernels=False)
+
+#     plt.axis('off')
+#     plt.ioff()
+#     plt.show()
+
+def plot_filters_multi_channel(t):
+    
+    #get the number of kernals
+    num_kernels = t.shape[0]    
+    
+    #define number of columns for subplots
+    num_cols = 12
+    #rows = num of kernels
+    num_rows = num_kernels*3
+    
+    #set the figure size
+    fig = plt.figure(figsize=(num_cols,num_rows))
+    
+    #looping through all the kernels
+    for i in range(t.shape[0]):
+        
+        
+        #for each kernel, we convert the tensor to numpy 
+        npimg = np.array(t[i].numpy(), np.float32)
+        #standardize the numpy image
+        npimg = (npimg - np.mean(npimg)) / np.std(npimg)
+        npimg = np.minimum(1, np.maximum(0, (npimg + 0.5)))
+        npimg = npimg.transpose((1, 2, 0))
+        for j in range(3):
+
+            ax1 = fig.add_subplot(num_rows,num_cols,3*i+j+1)
+
+            ax1.imshow(npimg[:,:,j:j+1])
+            ax1.axis('off')
+            # ax1.set_title(str(i))
+            # ax1.set_xticklabels([])
+            # ax1.set_yticklabels([])
+        
+    plt.savefig('../result/specific/ViT/filter.png', dpi=100)    
+    # plt.tight_layout()
+    # plt.show()
+
+
+def plot_weights(weight_tensor):
+  
+  #extracting the model features at the particular layer number
+#   layer = model.features[layer_num]
+  
+  #checking whether the layer is convolution layer or not 
+#   if isinstance(layer, nn.Conv2d):
+    #getting the weight tensor data
+    # weight_tensor = model.features[layer_num].weight.data
+    
+    
+    if weight_tensor.shape[1] == 3:
+        plot_filters_multi_channel(weight_tensor)
+    else:
+        print("Can only plot weights with three channels with single channel = False")
+        
+#   else:
+    # print("Can only visualize layers which are convolutional")
+        
+#visualize weights for alexnet - first conv layer
+# plot_weights(alexnet, 0, single_channel = False)
+
 if __name__=="__main__":
     # vitModel=vit_b_16(image_size=224,num_classes=102)
     # vitModel.to('cuda')
     # trial(model=vitModel,modelName="ViT",learningRate=2e-5,epochs=200,etaMin=1e-6,batchSize=12,savedName="0_6.pkl",)
-    # fsdhjk
+    
+    model:GaborViT=torch.load("../weight/ViT/0_12.pkl")
+    # model.to('cuda')
+    # print(model.gabor)
+    # fsdhkj
+    # plot_weights(model.gabor.weight.data.cpu())
+    
+    # fdshk
+    for param in model.gabor.parameters():
+        if param.shape == (96,3,21,21):
+            print(torch.sum(torch.abs(param.data)))
+            plot_weights(param.data.cpu())
+            # break
+        # print(param.shape)
+        # param.requires_grad = False
+    fhsd
+    # for param in model.gabor.parameters():
+        # print(param)
+    trial(model=model,modelName="ViT",learningRate=5e-5,epochs=200,etaMin=1e-6,batchSize=16,savedName="0_19.pkl",)
+    dfjjk
 
     gabor_vit=GaborViT()
     gabor_vit.to('cuda')
-    trial(model=gabor_vit,modelName="ViT",learningRate=5e-5,epochs=200,etaMin=1e-6,batchSize=12,savedName="0_7.pkl",)
+    trial(model=gabor_vit,modelName="ViT",learningRate=5e-5,epochs=200,etaMin=1e-6,batchSize=16,savedName="0_18.pkl",)
     vfghj
+
+    model=torch.load("../weight/ViT/0_9.pkl")
+    model.to('cuda')
+    get_three_data_set_accuracy(model,8)
+    fdshfkj
+
     # summary(vitModel,input_size=(1,3,224,224))
     # fdshfkj
     # # vitModel=pickle.load(open("../weight/ViT/0_2.pkl","rb"))

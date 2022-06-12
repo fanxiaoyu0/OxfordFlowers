@@ -1,6 +1,9 @@
 /data/
 /weight/
-/src/__pycache__/
+/src_jittor/__pycache__/
+/src_pytorch/__pycache__/
+/src_jittor/runs/
+/src_pytorch/runs/
 
 *.pt
 *.jpg
